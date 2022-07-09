@@ -1,0 +1,69 @@
+on:
+  workflow_call:
+    inputs:
+      netlifyDeployArgs:
+        description: Extra args to pass to `netlify deploy ...`
+        required: false
+        type: string
+
+    secrets:
+      NETLIFY_TOKEN:
+        description: Token used to deploy to netlify
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup-node
+
+      - run: yarn build
+
+      - run: tar czvf public.tar.gz public/
+      - uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: public.tar.gz
+          if-no-files-found: error
+
+  publish:
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup-node
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: build
+      - run: tar xvzf public.tar.gz
+
+      - name: Publish to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+        run: yarn netlify deploy --site dotboris-io --dir public/ ${{ inputs.netlifyDeployArgs }} | tee deploy.log
+
+      - name: Parse deploy log
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs/promises')
+
+            const logs = await fs.readFile('deploy.log')
+
+            const logsUrlMatch = /Logs:.*(https:\/\/.*)$/gmi.exec(logs)
+            if (logsUrlMatch) {
+              const logsUrl = logsUrlMatch[1]
+              core.setOutput('logsUrl', logsUrl)
+              core.notice(logsUrl, {title: 'Logs URL'})
+            }
+
+            const websiteUrlMatch = /Website(?: Draft)? URL:.*(https:\/\/.*)$/gmi.exec(logs)
+            if (websiteUrlMatch) {
+              const websiteUrl = websiteUrlMatch[1]
+              core.setOutput('websiteUrl', websiteUrl)
+              core.notice(websiteUrl, {title: 'Website URL'})
+            }
