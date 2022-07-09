@@ -43,12 +43,12 @@ jobs:
             if (logsUrlMatch) {
               const logsUrl = logsUrlMatch[1]
               core.setOutput('logsUrl', logsUrl)
-              core.info(logsUrl, {title: 'Logs URL'})
+              core.notice(logsUrl, {title: 'Logs URL'})
             }
 
-            const websiteUrlMatch = /Website( Draft)? URL:.*(https:\/\/.*)$/gmi.exec(logs)
+            const websiteUrlMatch = /Website(?: Draft)? URL:.*(https:\/\/.*)$/gmi.exec(logs)
             if (websiteUrlMatch) {
               const websiteUrl = websiteUrlMatch[1]
               core.setOutput('websiteUrl', websiteUrl)
-              core.info(websiteUrl, {title: 'Website URL'})
+              core.notice(websiteUrl, {title: 'Website URL'})
             }
