@@ -8,3 +8,4 @@ jobs:
     uses: ./.github/workflows/_build-and-publish.yml
     with:
       netlifyDeployArgs: --alias 'pr-${{ github.event.number }}'
+      NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
