@@ -4,7 +4,6 @@ runs:
   using: composite
 
   steps:
-    - uses: ./.github/actions/setup-node
     - run: yarn build
       shell: bash
     - run: tar czvf public.tar.gz public/
