@@ -42,7 +42,7 @@ jobs:
             const logsUrlMatch = /Logs:.*(https:\/\/.*)$/gmi.exec(logs)
             if (logsUrlMatch) {
               const logsUrl = logsUrlMatch[1]
-              core.setOutput('logsUrl', logsUlr)
+              core.setOutput('logsUrl', logsUrl)
               core.info(logsUrl, {title: 'Logs URL'})
             }
 
