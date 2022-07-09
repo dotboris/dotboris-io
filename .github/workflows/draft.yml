@@ -29,7 +29,7 @@ jobs:
         env:
           PR_NUMBER: ${{ github.event.number }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
-        run: yarn netlify deploy --site dotboris-io --alias "pr-$PR_NUMBER" | tee deploy.log
+        run: yarn netlify deploy --site dotboris-io --dir public/ --alias "pr-$PR_NUMBER" | tee deploy.log
 
       - name: Parse deploy log
         uses: actions/github-script@v6
