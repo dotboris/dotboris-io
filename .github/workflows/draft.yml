@@ -28,6 +28,7 @@ jobs:
       - name: Publish to Netlify
         env:
           PR_NUMBER: ${{ github.event.number }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
         run: yarn netlify deploy --site dotboris-io --alias "pr-$PR_NUMBER" | tee deploy.log
 
       - name: Parse deploy log
