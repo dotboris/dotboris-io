@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "start": "gatsby develop",
+    "build": "gatsby build",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
