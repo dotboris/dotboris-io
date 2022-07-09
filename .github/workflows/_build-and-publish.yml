@@ -1,7 +1,15 @@
-name: Publish Draft
-
 on:
-  pull_request:
+  workflow_call:
+    inputs:
+      netlifyDeployArgs:
+        description: Extra args to pass to `netlify deploy ...`
+        required: false
+        type: string
+
+    secrets:
+      NETLIFY_TOKEN:
+        description: Token used to deploy to netlify
+        required: true
 
 jobs:
   build:
@@ -9,7 +17,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/setup-node
-      - uses: ./.github/actions/build
+
+      - run: yarn build
+
+      - run: tar czvf public.tar.gz public/
+      - uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: public.tar.gz
+          if-no-files-found: error
 
   publish:
     runs-on: ubuntu-latest
@@ -27,9 +43,8 @@ jobs:
 
       - name: Publish to Netlify
         env:
-          PR_NUMBER: ${{ github.event.number }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
-        run: yarn netlify deploy --site dotboris-io --dir public/ --alias "pr-$PR_NUMBER" | tee deploy.log
+        run: yarn netlify deploy --site dotboris-io --dir public/ ${{ inputs.netlifyDeployArgs }} | tee deploy.log
 
       - name: Parse deploy log
         uses: actions/github-script@v6
