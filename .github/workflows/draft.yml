@@ -1,0 +1,48 @@
+name: Publish Draft
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/build
+
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup-node
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: build
+      - run: tar xvzf public.tar.gz
+
+      - name: Publish to Netlify
+        env:
+          PR_NUMBER: ${{ github.event.number }}
+        run: yarn netlify deploy --site dotboris-io --alias "pr-$PR_NUMBER" | tee deploy.log
+
+      - name: Parse deploy log
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs/promises')
+
+            const logs = await fs.readFile('deploy.log')
+
+            const logsUrlMatch = /Logs:.*(https:\/\/.*)$/gmi.exec(logs)
+            if (logsUrlMatch) {
+              const logsUrl = logsUrlMatch[1]
+              core.setOutput('logsUrl', logsUlr)
+              core.info(logsUrl, {title: 'Logs URL'})
+            }
+
+            const websiteUrlMatch = /Website( Draft)? URL:.*(https:\/\/.*)$/gmi.exec(logs)
+            if (websiteUrlMatch) {
+              const websiteUrl = websiteUrlMatch[1]
+              core.setOutput('websiteUrl', websiteUrl)
+              core.info(websiteUrl, {title: 'Website URL'})
+            }

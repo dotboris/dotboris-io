@@ -1,0 +1,17 @@
+name: Build
+description: Build the site and upload it as an artifact
+runs:
+  using: composite
+
+  steps:
+    - uses: actions/checkout@v3
+    - uses: ./.github/actions/setup-node
+    - run: yarn build
+      shell: bash
+    - run: tar czvf public.tar.gz public/
+      shell: bash
+    - uses: actions/upload-artifact@v3
+      with:
+        name: build
+        path: public.tar.gz
+        if-no-files-found: error
