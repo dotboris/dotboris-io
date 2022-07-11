@@ -1,0 +1,11 @@
+@import "./values.scss";
+
+html,
+body {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  line-height: $line-height;
+  font-size: $font-size;
+
+  padding: 0;
+  margin: 0;
+}

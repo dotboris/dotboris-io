@@ -1,10 +1,10 @@
 import React, { ReactElement } from 'react'
+import { Layout } from '../layout'
 
 export default function IndexPage(): ReactElement {
-
   return (
-    <main>
+    <Layout>
       Hello world
-    </main>
+    </Layout>
   )
 }

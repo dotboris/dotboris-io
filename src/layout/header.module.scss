@@ -1,0 +1,61 @@
+@import '../values.scss';
+
+.header {
+  // height: 100vh;
+  background-color: $black;
+  color: $white;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  a[href] {
+    color: $white;
+  }
+
+  .welcomer {
+    display: flex;
+    align-items: flex-start;
+
+    img {
+      border-radius: 100%;
+      width: 100px;
+      height: 100px;
+    }
+
+    .bubble::before {
+      // Swoosh or arrow that makes this a speech bubble.
+      // It's built with CSS and plenty of jank ready beware.
+      position: absolute;
+
+      $box-size: 1rem;
+      $arrow-width: 0.5rem;
+      $arrow-height: 1rem;
+
+      // Make this pseudo-element a box and put it to the left of the bubble
+      // aligned with the top of the bubble
+      content: "";
+      left: -$box-size;
+      top: 0;
+      width: $box-size;
+      height: $box-size;
+
+      background-color: transparent;
+      border-top-right-radius: $arrow-width $arrow-height;
+      box-shadow: $arrow-width 0 0 0 $white;
+    }
+
+    .bubble {
+      $min-lines: 1;
+
+      position: relative;
+      margin: 1rem 0 0 1rem;
+      flex: 1;
+      border-radius: 0 0.5rem 0.5rem;
+      padding: 0.25rem 0.5rem;
+      min-height: $min-lines * ($line-height * $font-size);
+      background: $white;
+      color: $black;
+    }
+  }
+}

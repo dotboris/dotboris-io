@@ -9,7 +9,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@fontsource/atkinson-hyperlegible": "^4.5.7",
     "gatsby": "^4.18.0",
+    "gatsby-plugin-sass": "^5.18.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -18,6 +20,7 @@
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "netlify-cli": "^10.7.1",
+    "sass": "^1.53.0",
     "typescript": "^4.7.4"
   }
 }

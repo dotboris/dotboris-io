@@ -5,7 +5,9 @@ const config: GatsbyConfig = {
     siteUrl: `https://dotboris.io`,
   },
   graphqlTypegen: true,
-  plugins: [],
+  plugins: [
+    'gatsby-plugin-sass',
+  ],
 }
 
 export default config
