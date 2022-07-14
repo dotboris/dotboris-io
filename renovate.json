@@ -5,8 +5,7 @@
     ":ignoreModulesAndTests",
     "group:monorepos",
     "group:recommended",
-    "group:allNonMajor",
-    //"workarounds:all"
+    "group:allNonMajor"
   ],
   "rangeStrategy": "update-lockfile"
 }
