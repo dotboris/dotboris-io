@@ -1,4 +1,5 @@
 import classNames from "classnames"
+import { StaticImage } from "gatsby-plugin-image"
 import React, { ReactElement, useEffect, useState } from "react"
 import * as classes from "./chatter.module.scss"
 
@@ -12,7 +13,14 @@ export function Chatter(): ReactElement {
       className={classes.chatter}
       onClick={addLine}
     >
-      <img src="https://picsum.photos/100" alt="" />
+      <StaticImage
+        src="../../assets/avatar.png"
+        alt="dotboris' avatar. A yellow anime duck with its mouth open"
+        className={classes.avatar}
+        layout="fixed"
+        width={100}
+        height={100}
+      />
       <div className={classes.bubblesWrapper}>
         <ul className={classes.bubbles}>
           {typedLine !== ""
