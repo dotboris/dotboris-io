@@ -1,9 +1,11 @@
 import classNames from "classnames"
-import React, { ReactElement, useState } from "react"
+import React, { ReactElement, useEffect, useState } from "react"
 import * as classes from "./chatter.module.scss"
 
 export function Chatter(): ReactElement {
   const { lines, addLine } = useLines([`\u{1f44b} Hi! I'm Boris.`])
+  const [firstLine, ...rest] = lines
+  const typedLine = useTypewriter(firstLine)
 
   return (
     <div
@@ -13,7 +15,8 @@ export function Chatter(): ReactElement {
       <img src="https://picsum.photos/100" alt="" />
       <div className={classes.bubblesWrapper}>
         <ul className={classes.bubbles}>
-          {lines.map((line, index) => <li key={index}>{line}</li>)}
+          <li>{typedLine}</li>
+          {rest.map((line, index) => <li key={index}>{line}</li>)}
         </ul>
 
         {/*
@@ -50,4 +53,32 @@ function useLines(initialState: string[]) {
     lines,
     addLine,
   }
+}
+
+function useTypewriter(text: string) {
+  const [typedCount, setTypedCount] = useState(0)
+
+  useEffect(
+    () => {
+      setTypedCount(0)
+
+      const timer = setInterval(
+        () => setTypedCount(count => {
+          const newCount = count + 1
+
+          if (newCount >= text.length) {
+            clearInterval(timer)
+          }
+
+          return newCount
+        }),
+        50
+      )
+
+      return () => clearInterval(timer)
+    },
+    [text]
+  )
+
+  return text.substring(0, typedCount)
 }
