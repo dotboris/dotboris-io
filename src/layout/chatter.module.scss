@@ -1,0 +1,78 @@
+@import "../values.scss";
+
+.chatter {
+  display: flex;
+  align-items: flex-end;
+
+  img {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .bubbles {
+    // This is technically a ul / li pair so there's some cleanup here
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0 1rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    >* {
+      // Spacing
+      margin: 0.25rem 0 0 0;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+
+    >* {
+      // Individual bubble
+      $radius: 0.5rem;
+
+      position: relative;
+      border-radius: $radius;
+      padding: 0.25rem 0.5rem;
+      background: $white;
+      color: $black;
+
+      &:last-child {
+        // Only the last child has a swoosh
+        border-radius: $radius $radius $radius 0;
+
+        &::before {
+          // Swoosh or arrow that makes this a speech bubble.
+          // It's built with CSS and plenty of jank reader beware.
+          position: absolute;
+
+          $box-size: 1rem;
+          $arrow-width: 0.5rem;
+          $arrow-height: 1rem;
+
+          // Make this pseudo-element a box and put it to the left of the bubble
+          // aligned with the bottom of the bubble
+          content: "";
+          left: -$box-size;
+          bottom: 0;
+          width: $box-size;
+          height: $box-size;
+
+
+          // Give it a radius that's the inverse of the shape you want. We're
+          // using this to "cut" out the value of the box. (I did promise jank)
+          border-bottom-right-radius: $arrow-width $arrow-height;
+
+          // The box itself is transparent but it's box shadow is not giving us a
+          // sort of inverted rectangle shape where the actual box with the radius
+          // is cut out and the swoosh is left behind.
+          background-color: transparent;
+          box-shadow: $arrow-width 0 0 0 $white;
+        }
+      }
+    }
+  }
+}
