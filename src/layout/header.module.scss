@@ -6,15 +6,8 @@
   color: $white;
   padding: 3rem 1.5rem;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
 
   a[href] {
     color: $white;
-  }
-
-  .chatter {
-    flex: 1;
   }
 }
