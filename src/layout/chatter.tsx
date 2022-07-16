@@ -14,7 +14,7 @@ export function Chatter(): ReactElement {
       onClick={addLine}
     >
       <StaticImage
-        src="../../assets/avatar.png"
+        src="../assets/avatar.png"
         alt="dotboris' avatar. A yellow anime duck with its mouth open"
         className={classes.avatar}
         layout="fixed"
