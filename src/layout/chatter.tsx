@@ -15,7 +15,9 @@ export function Chatter(): ReactElement {
       <img src="https://picsum.photos/100" alt="" />
       <div className={classes.bubblesWrapper}>
         <ul className={classes.bubbles}>
-          <li>{typedLine}</li>
+          {typedLine !== ""
+            ? <li>{typedLine}</li>
+            : null}
           {rest.map((line, index) => <li key={index}>{line}</li>)}
         </ul>
 
