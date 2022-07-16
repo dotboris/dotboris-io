@@ -10,8 +10,7 @@
   },
   "dependencies": {
     "@fontsource/atkinson-hyperlegible": "^4.5.7",
-    "gatsby": "^4.18.0",
-    "gatsby-plugin-sass": "^5.18.0",
+    "gatsby": "^4.18.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -19,7 +18,8 @@
     "@types/node": "^18.0.3",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
-    "netlify-cli": "^10.7.1",
+    "gatsby-plugin-sass": "^5.18.1",
+    "netlify-cli": "^10.9.0",
     "sass": "^1.53.0",
     "typescript": "^4.7.4"
   }
