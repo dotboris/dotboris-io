@@ -1,11 +1,13 @@
 import classNames from "classnames"
+import { graphql, useStaticQuery } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import React, { ReactElement } from "react"
 import * as classes from "./chatter.module.scss"
 import { useRandomLines } from "./random-lines"
 
 export function Chatter(): ReactElement {
-  const { lines, startNewLine } = useRandomLines(`\u{1f44b} Hi! I'm Boris.`)
+  const allLines = useLinesDb()
+  const { lines, startNewLine } = useRandomLines(`\u{1f44b} Hi! I'm Boris.`, allLines)
 
   return (
     <div
@@ -35,4 +37,20 @@ export function Chatter(): ReactElement {
       </div>
     </div>
   )
+}
+
+function useLinesDb(): string[] {
+  const data = useStaticQuery<{ allDataYaml: Queries.DataYamlConnection }>(
+    graphql`{
+      allDataYaml(filter: {}) {
+        nodes{
+          lines
+        }
+      }
+    }
+  `)
+
+  return data.allDataYaml.nodes
+    .flatMap(node => node.lines)
+    .flatMap(line => line ? [line] : [])
 }
