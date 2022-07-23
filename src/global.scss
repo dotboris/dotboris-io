@@ -1,4 +1,4 @@
-@import "./values.scss";
+@use "./values.scss" as *;
 
 html,
 body {

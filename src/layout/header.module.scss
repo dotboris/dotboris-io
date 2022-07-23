@@ -1,4 +1,4 @@
-@import '../values.scss';
+@use '../values.scss' as *;
 
 .header {
   // The goal is to have the header as tall as the page height so that it looks
