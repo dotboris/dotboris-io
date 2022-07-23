@@ -19,14 +19,55 @@
 
     .avatar {
       border: transparent 3px solid;
-      outline: $white 3px solid;
+      outline: $highlight 3px solid;
     }
 
-    &:hover {
+    // When a real hover device is available (ex: a mouse), we do the usual
+    // hover thing.
+    @media (hover: hover) {
       cursor: pointer;
 
+      &:hover {
+        .avatar {
+          outline-color: $white;
+        }
+      }
+    }
+
+    // When we don't have a hover device (ex: on mobile), we avoid using :hover
+    // because it's "sticky" in the sense that clicking an element once leaves
+    // it in a :hover state until something else is clicked. We use :active
+    // instead to give feedback to the user that they're touch worked.
+    @media (hover: none) {
+      // We use transition here in a bit of a funny way. We want the :active
+      // effect to lag or stay around for a little bit. This is because of
+      // mobile the active state is gone in a flash and it's pretty jarring. We
+      // do this funny move because `transition` doesn't let you add a delay on
+      // the tail end of something. We have to manage that ourselves.
+      //
+      // There are two states:
+      // - not :active -> delay on outline-color
+      // - :active -> no delay on outline-color
+      //
+      // This makes it so that the delay only happens when we leave the :active
+      // state. Here's what the timeline looks like:
+      // - User touches
+      // - :active state is set (instant)
+      // - delay is removed (instant)
+      // - color is changed (instant)
+      // - User stops touching (usually instant since it's a tap)
+      // - :active state is removed (instant)
+      // - delay is set (instant)
+      // - color is changed back (after the delay)
       .avatar {
-        outline-color: $highlight;
+        transition: outline-color 0s 0.2s;
+      }
+
+      &:active {
+        .avatar {
+          outline-color: $white;
+          transition: outline-color 0s;
+        }
       }
     }
   }
