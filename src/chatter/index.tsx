@@ -10,18 +10,21 @@ export function Chatter(): ReactElement {
   const { lines, startNewLine } = useRandomLines(`\u{1f44b} Hi! I'm Boris.`, allLines)
 
   return (
-    <div
-      className={classes.chatter}
-      onClick={startNewLine}
-    >
-      <StaticImage
-        src="../assets/avatar.png"
-        alt="dotboris' avatar. A yellow anime duck with its mouth open"
-        className={classes.avatar}
-        layout="fixed"
-        width={100}
-        height={100}
-      />
+    <div className={classes.chatter}>
+      <button
+        type="button"
+        onClick={startNewLine}
+        title="Say something!"
+      >
+        <StaticImage
+          src="../assets/avatar.png"
+          alt="dotboris' avatar. A yellow anime duck with its mouth open"
+          className={classes.avatar}
+          layout="fixed"
+          width={100}
+          height={100}
+        />
+      </button>
       <div className={classes.bubblesWrapper}>
         <ul className={classes.bubbles}>
           {lines.map((line, index) => <li key={index}>{line}</li>)}

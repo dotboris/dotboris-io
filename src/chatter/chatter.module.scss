@@ -9,9 +9,28 @@
   // size of the parent.
   height: 100%;
 
-  .avatar {
-    border-radius: 100%;
+  button {
+    all: unset;
+
+    &,
+    .avatar {
+      border-radius: 100%;
+    }
+
+    .avatar {
+      border: transparent 3px solid;
+      outline: $white 3px solid;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .avatar {
+        outline-color: pink;
+      }
+    }
   }
+
 
   .bubbles-wrapper {
     $padding: 1rem;
