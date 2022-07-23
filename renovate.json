@@ -3,6 +3,7 @@
   "extends": [
     ":dependencyDashboard",
     ":ignoreModulesAndTests",
+    "workarounds:all",
     "group:monorepos",
     "group:recommended",
     "group:allNonMajor"
