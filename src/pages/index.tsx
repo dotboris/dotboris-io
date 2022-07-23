@@ -4,7 +4,8 @@ import { Layout } from '../layout'
 export default function IndexPage(): ReactElement {
   return (
     <Layout>
-      Hello world
+      <h1>Hello world</h1>
+      Content goes here
     </Layout>
   )
 }

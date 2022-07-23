@@ -5,7 +5,9 @@ import * as classes from './header.module.scss'
 export function Header(): ReactElement {
   return (
     <div className={classes.header}>
-      <Chatter />
+      <div className={classes.content}>
+        <Chatter />
+      </div>
     </div>
   )
 }
