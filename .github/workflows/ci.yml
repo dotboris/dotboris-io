@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          lfs: true
       - uses: ./.github/actions/setup-node
 
       # The build generates typescript types that are needed for the typecheck
@@ -18,4 +20,5 @@ jobs:
       # wasteful but it's better than having the typecheck as part of the build
       # and publish loop IMO.
       - run: yarn build
+
       - run: yarn typecheck
