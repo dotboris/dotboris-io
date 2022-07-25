@@ -1,10 +1,11 @@
 import React, { ReactElement } from 'react'
+import { Layout } from '../layout'
 
 export default function IndexPage(): ReactElement {
-
   return (
-    <main>
-      Hello world
-    </main>
+    <Layout>
+      <h1>Hello world</h1>
+      Content goes here
+    </Layout>
   )
 }

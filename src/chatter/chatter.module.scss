@@ -1,0 +1,182 @@
+@use "../values.scss" as *;
+
+.chatter {
+  display: grid;
+  grid: auto / auto 1fr;
+  align-items: end;
+
+  // Because of the scrolling nonsense for the bubbles we need to take up the
+  // size of the parent.
+  height: 100%;
+
+  button {
+    all: unset;
+
+    &,
+    .avatar {
+      border-radius: 100%;
+    }
+
+    .avatar {
+      border: transparent 3px solid;
+      outline: $highlight 3px solid;
+    }
+
+    // When a real hover device is available (ex: a mouse), we do the usual
+    // hover thing.
+    @media (hover: hover) {
+      cursor: pointer;
+
+      &:hover {
+        .avatar {
+          outline-color: $white;
+        }
+      }
+    }
+
+    // When we don't have a hover device (ex: on mobile), we avoid using :hover
+    // because it's "sticky" in the sense that clicking an element once leaves
+    // it in a :hover state until something else is clicked. We use :active
+    // instead to give feedback to the user that they're touch worked.
+    @media (hover: none) {
+      // We use transition here in a bit of a funny way. We want the :active
+      // effect to lag or stay around for a little bit. This is because of
+      // mobile the active state is gone in a flash and it's pretty jarring. We
+      // do this funny move because `transition` doesn't let you add a delay on
+      // the tail end of something. We have to manage that ourselves.
+      //
+      // There are two states:
+      // - not :active -> delay on outline-color
+      // - :active -> no delay on outline-color
+      //
+      // This makes it so that the delay only happens when we leave the :active
+      // state. Here's what the timeline looks like:
+      // - User touches
+      // - :active state is set (instant)
+      // - delay is removed (instant)
+      // - color is changed (instant)
+      // - User stops touching (usually instant since it's a tap)
+      // - :active state is removed (instant)
+      // - delay is set (instant)
+      // - color is changed back (after the delay)
+      .avatar {
+        transition: outline-color 0s 0.2s;
+      }
+
+      &:active {
+        .avatar {
+          outline-color: $white;
+          transition: outline-color 0s;
+        }
+      }
+    }
+  }
+
+
+  .bubbles-wrapper {
+    $padding: 1rem;
+
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+
+    // By default grid items have these set to `auto`. This lets them take up
+    // the space they need as they grow. In our case, we don't want them cell to
+    // grow. The inner element will do the growing with scrolling.
+    min-width: 0;
+    min-height: 0;
+
+    .fade {
+      content: "";
+      width: 100%;
+      height: $padding;
+      position: absolute;
+      left: 0;
+
+      &.fade-top {
+        background-image: linear-gradient($black, transparent);
+        top: 0;
+      }
+
+      &.fade-bottom {
+        background-image: linear-gradient(transparent, $black);
+        bottom: 0;
+      }
+    }
+
+    ul,
+    li {
+      // clean up all the <ul> an <li> default styles
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .bubbles {
+      // The direction is reversed so stuff like :first-child and :last-child are
+      // inversed as well.
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: start;
+
+      overflow-y: auto;
+      box-sizing: border-box;
+      height: 100%;
+      padding: $padding 0 $padding $padding;
+
+      // Spacing between flex elements
+      >* {
+        margin: 0.25rem 0 0 0;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+
+      >* {
+        // Individual bubble
+        $radius: 0.5rem;
+
+        position: relative;
+        border-radius: $radius;
+        padding: 0.25rem 0.5rem;
+        background: $white;
+        color: $black;
+
+        &:first-child {
+          // Only the last child has a swoosh
+          border-radius: $radius $radius $radius 0;
+
+          &::before {
+            // Swoosh or arrow that makes this a speech bubble.
+            // It's built with CSS and plenty of jank reader beware.
+            position: absolute;
+
+            $box-size: 1rem;
+            $arrow-width: 0.5rem;
+            $arrow-height: 1rem;
+
+            // Make this pseudo-element a box and put it to the left of the bubble
+            // aligned with the bottom of the bubble
+            content: "";
+            left: -$box-size;
+            bottom: 0;
+            width: $box-size;
+            height: $box-size;
+
+
+            // Give it a radius that's the inverse of the shape you want. We're
+            // using this to "cut" out the value of the box. (I did promise jank)
+            border-bottom-right-radius: $arrow-width $arrow-height;
+
+            // The box itself is transparent but it's box shadow is not giving us a
+            // sort of inverted rectangle shape where the actual box with the radius
+            // is cut out and the swoosh is left behind.
+            background-color: transparent;
+            box-shadow: $arrow-width 0 0 0 $white;
+          }
+        }
+      }
+    }
+  }
+}

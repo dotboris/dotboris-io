@@ -1,0 +1,10 @@
+@use "../values.scss";
+@use "../responsive.scss";
+
+.layout {
+  main {
+    max-width: responsive.get-breakpoint-width(desktop);
+    margin: auto;
+    padding: values.$content-padding;
+  }
+}
