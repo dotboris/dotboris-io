@@ -1,12 +1,12 @@
-import React, { ReactElement, ReactNode } from "react";
-import { Header } from "./header";
-import * as classes from "./layout.module.scss"
+import React, { ReactElement, ReactNode } from 'react'
+import { Header } from './header'
+import * as classes from './layout.module.scss'
 
 interface LayoutProps {
   children: ReactNode
 }
 
-export function Layout(props: LayoutProps): ReactElement {
+export function Layout (props: LayoutProps): ReactElement {
   const { children } = props
 
   return (

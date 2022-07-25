@@ -1,13 +1,13 @@
-import classNames from "classnames"
-import { StaticImage } from "gatsby-plugin-image"
-import React, { ReactElement } from "react"
-import * as classes from "./chatter.module.scss"
-import { useLinesDb } from "./lines-db"
-import { useRandomLines } from "./random-lines"
+import classNames from 'classnames'
+import { StaticImage } from 'gatsby-plugin-image'
+import React, { ReactElement } from 'react'
+import * as classes from './chatter.module.scss'
+import { useLinesDb } from './lines-db'
+import { useRandomLines } from './random-lines'
 
-export function Chatter(): ReactElement {
+export function Chatter (): ReactElement {
   const allLines = useLinesDb()
-  const { lines, startNewLine } = useRandomLines(`\u{1f44b} Hi! I'm Boris.`, allLines)
+  const { lines, startNewLine } = useRandomLines('\u{1f44b} Hi! I\'m Boris.', allLines)
 
   return (
     <div className={classes.chatter}>
@@ -41,4 +41,3 @@ export function Chatter(): ReactElement {
     </div>
   )
 }
-

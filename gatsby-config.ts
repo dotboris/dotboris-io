@@ -1,8 +1,9 @@
-import type { GatsbyConfig } from "gatsby"
+import type { GatsbyConfig } from 'gatsby'
+import path from 'path'
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    siteUrl: `https://dotboris.io`,
+    siteUrl: 'https://dotboris.io'
   },
 
   // This automatic type generation on happens during `gatsby develop` and
@@ -24,10 +25,10 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'data',
-        path: `${__dirname}/src/data/`
+        path: path.join(__dirname, 'src/data/')
       }
-    },
-  ],
+    }
+  ]
 }
 
 export default config
