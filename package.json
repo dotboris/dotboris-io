@@ -6,11 +6,16 @@
   "scripts": {
     "start": "gatsby develop",
     "build": "gatsby build",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint:ts": "eslint ."
   },
   "dependencies": {
     "@fontsource/atkinson-hyperlegible": "^4.5.7",
     "classnames": "^2.3.1",
+    "eslint-config-standard-jsx": "^11.0.0",
+    "eslint-config-standard-react": "^11.0.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-react": "^7.30.1",
     "gatsby": "^4.18.1",
     "gatsby-plugin-image": "^2.18.1",
     "react": "^18.2.0",
@@ -21,6 +26,13 @@
     "@types/node": "^18.0.3",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "gatsby-plugin-sass": "^5.18.1",
     "gatsby-plugin-sharp": "^4.18.1",
     "gatsby-source-filesystem": "^4.18.1",

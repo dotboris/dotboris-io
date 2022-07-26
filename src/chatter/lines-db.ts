@@ -1,14 +1,14 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from 'gatsby'
 
-type LinesDbQueryResult = {
+interface LinesDbQueryResult {
   allDataYaml: {
-    nodes: {
+    nodes: Array<{
       lines?: string[]
-    }[]
+    }>
   }
 }
 
-export function useLinesDb(): string[] {
+export function useLinesDb (): string[] {
   const data = useStaticQuery<LinesDbQueryResult>(
     graphql`{
       allDataYaml {
@@ -21,5 +21,5 @@ export function useLinesDb(): string[] {
 
   return data.allDataYaml.nodes
     .flatMap(node => node.lines)
-    .flatMap(line => line ? [line] : [])
+    .flatMap(line => line !== undefined ? [line] : [])
 }
