@@ -12,15 +12,15 @@ export function Chatter (): ReactElement {
   return (
     <div className={classes.chatter}>
       <button
-        type="button"
+        type='button'
         onClick={startNewLine}
-        title="Say something!"
+        title='Say something!'
       >
         <StaticImage
-          src="../assets/avatar.png"
+          src='../assets/avatar.png'
           alt="dotboris' avatar. A yellow anime duck with its mouth open"
           className={classes.avatar}
-          layout="fixed"
+          layout='fixed'
           width={100}
           height={100}
         />
