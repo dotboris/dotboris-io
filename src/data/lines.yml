@@ -23,16 +23,13 @@ lines:
 - Backup your data!
 - Test your backups!
 - 'Book recommendation: "Difficult Conversations: How to Discuss What Matters Most"'
-- The only reason I prefer spaces over tabs is because by default a tab renders
-  as 8 spaces wide on a bunch of software. This forces everyone to configure a
-  sane default.
-- Did you know that YAML has some special operators for referencing, reusing and
-  merging values which can save a ton of copy pasted configuration.
+- I prefer spaces over tabs is because by default a tab renders as 8 spaces wide
+  on a bunch of software.
+- The reference and merge operators in YAML are pretty useful
 - Rock and Stone!
 - Friends, MTG & wine is a recipe for a good time
-- If you have MFA or 2FA configured for something, make sure that you have a
-  backup so that when you phone decides to implode you won't get locked out of
-  everything.
+- Always have a backup for your MFA. You never know when your phone will implode
+  and you'll get locked out.
 - What could possibly go wrong?
 - This too shall pass
 - k
@@ -42,7 +39,7 @@ lines:
 - Nope
 - Maybe 🤷
 - Crypto is a scam
-- Earth is an oblate spheroid
+- The Earth is an oblate spheroid
 - Remember Neopets?
 - The previous sentence is false
 - The previous sentence is true
@@ -75,9 +72,8 @@ lines:
   behavior was unintended and is effectively a bug. Other programs just went
   with it. Now it's a feature.
 - ¯\_(ツ)_/¯
-- Many regular expression engines support having multi-line regular expressions
-  with comments. You can leverage this to make your incomprehensible monster
-  regular expressions easier to read and understand.
+- Did you know that you can write multi-line regular expressions and even add
+  comments to them? It makes them so much easier to read.
 - Is wombo an instrument?
 - I have a dumb idea
 - I pronounce Windows as Dindows or Dinders. Makes it sound sillier.
@@ -86,7 +82,16 @@ lines:
 - Trans rights!
 - Marketing is kinda gross
 - Did you know that the official french word for tweet is "gazouiller"?
-  No one uses it.
 - You probably need to update your BIOS
 - Check your UPS batteries!
 - Capitalism is bad but it's the only game in town.
+- '"Temporary" is one of the biggest lies in tech'
+- Getting these chat messages to scroll correctly was a real pain
+- SCSS modules are pretty cool
+- Typescript has a really cool type system
+- What do you do when you've slain all the dragons?
+- peepee poopoo
+- The POSIX shell was a mistake
+- How dare you?
+- Modern TVs are pretty gross. They spy on you and show you a bunch of ads.
+- Hold my beer
