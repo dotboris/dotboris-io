@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react'
 import { Layout } from '../layout'
+import { Meta } from '../meta'
 
 export default function IndexPage (): ReactElement {
   return (
@@ -8,4 +9,8 @@ export default function IndexPage (): ReactElement {
       Content goes here
     </Layout>
   )
+}
+
+export function Head (): ReactElement {
+  return <Meta title='👋' />
 }

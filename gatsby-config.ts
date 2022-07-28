@@ -3,7 +3,9 @@ import path from 'path'
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    siteUrl: 'https://dotboris.io'
+    siteUrl: 'https://dotboris.io',
+    title: '🤷',
+    titleSuffix: 'dotboris.io'
   },
 
   // This automatic type generation on happens during `gatsby develop` and
