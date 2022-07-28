@@ -18,6 +18,7 @@
     "./gatsby-browser.tsx",
     "./gatsby-node.ts",
     "./gatsby-config.ts",
+    "./gatsby-ssr.tsx",
     "./plugins/**/*"
   ]
 }
