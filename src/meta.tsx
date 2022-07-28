@@ -2,22 +2,26 @@ import { graphql, useStaticQuery } from 'gatsby'
 import React, { ReactElement } from 'react'
 import { useLocation } from '@reach/router'
 
-export function Meta (props: SiteMetadata): ReactElement {
+interface MetaProps {
+  title?: string
+  description?: string
+}
+
+export function Meta (props: MetaProps): ReactElement {
   const siteMetadata = useSiteMetadata()
   const location = useLocation()
 
   const titleParts = [
     props.title ?? siteMetadata.title,
-    props.titleSuffix ?? siteMetadata.titleSuffix
+    siteMetadata.titleSuffix
   ]
   const title = titleParts.filter(Boolean).join(' - ')
 
   const description = props.description ?? siteMetadata.description
 
-  const siteUrl = props.siteUrl ?? siteMetadata.siteUrl
   let pageUrl
-  if (siteUrl !== null) {
-    pageUrl = new URL(location.pathname, siteUrl)
+  if (siteMetadata.siteUrl !== null) {
+    pageUrl = new URL(location.pathname, siteMetadata.siteUrl)
   }
 
   return (
