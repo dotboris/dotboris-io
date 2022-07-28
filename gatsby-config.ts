@@ -5,7 +5,11 @@ const config: GatsbyConfig = {
   siteMetadata: {
     siteUrl: 'https://dotboris.io',
     title: '🤷',
-    titleSuffix: 'dotboris.io'
+    titleSuffix: 'dotboris.io',
+    description: (
+      'Your #1 stop for all your dotboris related need? ' +
+      'Whatever those may be 🤷.'
+    )
   },
 
   // This automatic type generation on happens during `gatsby develop` and
