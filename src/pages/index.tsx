@@ -4,7 +4,7 @@ import { Meta } from '../meta'
 
 export default function IndexPage (): ReactElement {
   return (
-    <Layout>
+    <Layout withChatter>
       <h1>Hello world</h1>
       Content goes here
     </Layout>

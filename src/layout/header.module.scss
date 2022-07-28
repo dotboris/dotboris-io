@@ -2,39 +2,48 @@
 @use "../responsive.scss";
 
 .header {
-  height: 100vh;
   background-color: $black;
   color: $white;
   box-sizing: border-box;
-  padding: 3rem $content-padding;
   border-bottom: $highlight 5px solid;
+
+  &:not(.with-chatter) {
+    // So we show a little bit of black. It gives the feeling that the header is
+    // both there and not
+    min-height: 1rem;
+  }
+
+  &.with-chatter {
+    height: 100vh;
+    padding: 3rem $content-padding;
+
+    @include responsive.mq($until: desktop) {
+      // The goal is to have the header as tall as the page height so that it looks
+      // fullscreen but can then be scrolled past. This falls apart on mobile where
+      // the address bar can show or hide depending on how the user is scrolling.
+      //
+      // By design, the `vh` unit always assumes that the address bar is not there.
+      // This is so that the page doesn't start rerendering and convulsing wildly
+      // as the user scrolls.
+      //
+      // One alternative is to use `100%` but that really only works on the `<html>`
+      // which in this case would not fly.
+      //
+      // The compromise here is to take `100vh` but leave some space for the bar.
+      // It's not perfect but it's close to the effect I wanted. Also, it's much
+      // better at indicating that the page continues and that you can scroll.
+      height: calc(100vh - 5rem);
+    }
+
+    @include responsive.mq($from: desktop) {
+      padding: 10rem $content-padding;
+    }
+  }
 
   .content {
     height: 100%;
     margin: auto;
     max-width: responsive.get-breakpoint-width(desktop)
-  }
-
-  @include responsive.mq($until: desktop) {
-    // The goal is to have the header as tall as the page height so that it looks
-    // fullscreen but can then be scrolled past. This falls apart on mobile where
-    // the address bar can show or hide depending on how the user is scrolling.
-    //
-    // By design, the `vh` unit always assumes that the address bar is not there.
-    // This is so that the page doesn't start rerendering and convulsing wildly
-    // as the user scrolls.
-    //
-    // One alternative is to use `100%` but that really only works on the `<html>`
-    // which in this case would not fly.
-    //
-    // The compromise here is to take `100vh` but leave some space for the bar.
-    // It's not perfect but it's close to the effect I wanted. Also, it's much
-    // better at indicating that the page continues and that you can scroll.
-    height: calc(100vh - 5rem);
-  }
-
-  @include responsive.mq($from: desktop) {
-    padding: 10rem $content-padding;
   }
 
   a[href] {

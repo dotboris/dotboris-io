@@ -3,16 +3,18 @@ import { Header } from './header'
 import * as classes from './layout.module.scss'
 
 interface LayoutProps {
+  withChatter?: boolean
+  mainClassName?: string
   children: ReactNode
 }
 
 export function Layout (props: LayoutProps): ReactElement {
-  const { children } = props
-
   return (
     <div className={classes.layout}>
-      <Header />
-      <main>{children}</main>
+      <Header withChatter={props.withChatter ?? false} />
+      <main className={props.mainClassName}>
+        {props.children}
+      </main>
     </div>
   )
 }
