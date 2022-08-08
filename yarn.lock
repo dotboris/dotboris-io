@@ -1180,9 +1180,9 @@
     strip-json-comments "^3.1.1"
 
 "@fontsource/atkinson-hyperlegible@^4.5.7":
-  version "4.5.7"
-  resolved "https://registry.yarnpkg.com/@fontsource/atkinson-hyperlegible/-/atkinson-hyperlegible-4.5.7.tgz#06dbc359362ed769a012a9202e35437a77e232f0"
-  integrity sha512-aceHefVY/tls5hcdOXfx81HWFAFD1VGqZRnKGBDc0cgdKAg6fx2qD0hd9eUSNGqtVmijmw1/KXFYxXS5Df6XxQ==
+  version "4.5.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/atkinson-hyperlegible/-/atkinson-hyperlegible-4.5.8.tgz#ab22180fb05b1be7b90ad7f58fd3fdfc2db80055"
+  integrity sha512-4V35Dcimfz//m6Xy7YmnDtJAKFC+8XwWr7D7fqtlPheOPJ7KiuwQMI0evbn/1dvtvenWoqfJ9U5JFyvMFGafoA==
 
 "@gatsbyjs/parcel-namer-relative-to-cwd@1.5.0":
   version "1.5.0"
@@ -3406,9 +3406,9 @@
     "@types/react" "*"
 
 "@types/react@*", "@types/react@^18.0.15":
-  version "18.0.15"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.15.tgz#d355644c26832dc27f3e6cbf0c4f4603fc4ab7fe"
-  integrity sha512-iz3BtLuIYH1uWdsv6wXYdhozhqj20oD4/Hk2DNXIn1kFsmp9x8d9QB6FnPhfkbhd2PgEONt9Q1x/ebkwjfFLow==
+  version "18.0.17"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.17.tgz#4583d9c322d67efe4b39a935d223edcc7050ccf4"
+  integrity sha512-38ETy4tL+rn4uQQi7mB81G7V1g0u2ryquNmsVIOKUAEIDK+3CUjZ6rSRpdvS99dNBnkLFL83qfmtLacGOTIhwQ==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
