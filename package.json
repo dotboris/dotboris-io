@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit",
     "lint:ts": "eslint ."
   },
+  "packageManager": "pnpm@7.9.3",
   "dependencies": {
     "@fontsource/atkinson-hyperlegible": "^4.5.7",
     "classnames": "^2.3.1",
