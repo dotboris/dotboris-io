@@ -12,11 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/setup-node
-      - run: yarn typecheck
+      - run: pnpm typecheck
 
   lint-ts:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/setup-node
-      - run: yarn lint:ts
+      - run: pnpm lint:ts
