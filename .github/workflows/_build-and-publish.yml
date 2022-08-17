@@ -20,7 +20,7 @@ jobs:
           lfs: true
       - uses: ./.github/actions/setup-node
 
-      - run: yarn build
+      - run: pnpm build
 
       - run: tar czvf public.tar.gz public/
       - uses: actions/upload-artifact@v3
@@ -46,7 +46,7 @@ jobs:
       - name: Publish to Netlify
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
-        run: yarn netlify deploy --site dotboris-io --dir public/ ${{ inputs.netlifyDeployArgs }} | tee deploy.log
+        run: pnpm netlify deploy --site dotboris-io --dir public/ ${{ inputs.netlifyDeployArgs }} | tee deploy.log
 
       - name: Parse deploy log
         uses: actions/github-script@v6
