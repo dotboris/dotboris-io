@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@babel/core': '>=7.12.3 <8.0.0'
   '@fontsource/atkinson-hyperlegible': ^4.5.7
+  '@gatsbyjs/reach-router': ^1.3.9
   '@reach/router': ^1.3.4
   '@types/node': ^18.0.3
   '@types/reach__router': ^1.3.10
@@ -12,6 +13,7 @@ specifiers:
   '@typescript-eslint/parser': '>=5.0.0 <6.0.0'
   babel-eslint: ^10.0.0
   classnames: ^2.3.1
+  deepmerge: ^4.2.2
   eslint: ^8.0.1
   eslint-config-standard-jsx: ^11.0.0
   eslint-config-standard-react: ^11.0.1
@@ -23,34 +25,51 @@ specifiers:
   eslint-plugin-react: ^7.30.1
   eslint-plugin-react-hooks: ^4.6.0
   gatsby: ^4.18.1
+  gatsby-legacy-polyfills: ^2.21.0
+  gatsby-link: ^4.21.0
   gatsby-plugin-image: ^2.18.1
   gatsby-plugin-sass: ^5.18.1
   gatsby-plugin-sharp: ^4.18.1
+  gatsby-react-router-scroll: ^5.21.0
+  gatsby-script: ^1.6.0
   gatsby-source-filesystem: ^4.18.1
   gatsby-transformer-sharp: ^4.18.1
   gatsby-transformer-yaml: ^4.18.0
   graphql: '>=15.0.0 <16.0.0'
+  mitt: ^3.0.0
   netlify-cli: ^10.9.0
+  node-html-parser: 5.4.2-0
+  prop-types: ^15.8.1
   react: ^18.2.0
   react-dom: ^18.2.0
   sass: ^1.53.0
   sass-mq: ^6.0.0
+  shallow-compare: ^1.2.2
   typescript: ^4.7.4
   webpack: ^4.36.0 || ^5.0.0
 
 dependencies:
   '@fontsource/atkinson-hyperlegible': 4.5.8
+  '@gatsbyjs/reach-router': 1.3.9_biqbaboplfbrettd7655fr4n2y
   '@reach/router': 1.3.4_biqbaboplfbrettd7655fr4n2y
   classnames: 2.3.1
+  deepmerge: 4.2.2
   eslint-config-standard-jsx: 11.0.0_3wow733677dxwz5dijvkdb255q
   eslint-config-standard-react: 11.0.1_3wow733677dxwz5dijvkdb255q
   eslint-plugin-node: 11.1.0_eslint@8.22.0
   eslint-plugin-react: 7.30.1_eslint@8.22.0
   gatsby: 4.21.0_xgwl3ufwispssl2tn6wv4uvmi4
+  gatsby-legacy-polyfills: 2.21.0
+  gatsby-link: 4.21.0_jrmehtgkntpgvrzvp7eiismjfa
   gatsby-plugin-image: 2.21.0_thmybvw3ouamivgnb6bnah6c3e
+  gatsby-react-router-scroll: 5.21.0_jrmehtgkntpgvrzvp7eiismjfa
+  gatsby-script: 1.6.0_jrmehtgkntpgvrzvp7eiismjfa
+  mitt: 3.0.0
+  prop-types: 15.8.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   sass-mq: 6.0.0
+  shallow-compare: 1.2.2
 
 devDependencies:
   '@babel/core': 7.18.10
@@ -74,6 +93,7 @@ devDependencies:
   gatsby-transformer-yaml: 4.21.0_gatsby@4.21.0
   graphql: 15.8.0
   netlify-cli: 10.17.8
+  node-html-parser: 5.4.2-0
   sass: 1.54.4
   typescript: 4.7.4
   webpack: 5.74.0
@@ -11493,6 +11513,10 @@ packages:
   /mitt/1.2.0:
     resolution: {integrity: sha512-r6lj77KlwqLhIUku9UWYes7KJtsczvolZkzp8hbaDPPaE24OmWl5s539Mytlj22siEQKosZ26qCBgda2PKwoJw==}
 
+  /mitt/3.0.0:
+    resolution: {integrity: sha512-7dX2/10ITVyqh4aOSVI9gdape+t9l2/8QxHrFmUXu4EEUpdlxl6RudZUPZoc+zuY2hk1j7XxVroIVIan/pD/SQ==}
+    dev: false
+
   /mixin-deep/1.3.2:
     resolution: {integrity: sha512-WRoDn//mXBiJ1H40rqa3vH0toePwSsGb45iInWlTySa+Uu4k3tYUSxa2v1KqAiLtvlrSzaExqS1gtk96A9zvEA==}
     engines: {node: '>=0.10.0'}
@@ -11917,6 +11941,13 @@ packages:
     dependencies:
       css-select: 4.3.0
       he: 1.2.0
+
+  /node-html-parser/5.4.2-0:
+    resolution: {integrity: sha512-+zkh6gnPZhEG6iFL37le8YqqjeVk604w85iKLPlbVqH/F+mgFlylHcm4pbo9Wbo9inOFGZMyM9oyHwBhrJYS4A==}
+    dependencies:
+      css-select: 4.3.0
+      he: 1.2.0
+    dev: true
 
   /node-int64/0.4.0:
     resolution: {integrity: sha512-O5lz91xSOeoXP6DulyHfllpq+Eg00MWitZIbtPfoSEvqIHdl5gfcY6hYzDWnj0qD5tz52PI08u9qUvSVeUBeHw==}
