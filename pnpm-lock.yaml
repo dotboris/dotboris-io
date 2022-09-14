@@ -16,7 +16,7 @@ specifiers:
   deepmerge: ^4.2.2
   eslint: ^8.0.1
   eslint-config-standard-jsx: ^11.0.0
-  eslint-config-standard-with-typescript: ^22.0.0
+  eslint-config-standard-with-typescript: ^23.0.0
   eslint-plugin-import: ^2.26.0
   eslint-plugin-n: ^15.0.0
   eslint-plugin-node: ^11.1.0
@@ -79,7 +79,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.33.1_4rv7y5c6xz3vfxwhbrcxxi73bq
   babel-eslint: 10.1.0_eslint@8.22.0
   eslint: 8.22.0
-  eslint-config-standard-with-typescript: 22.0.0_3h5ldndkk65qnwn3f43n6efjze
+  eslint-config-standard-with-typescript: 23.0.0_3h5ldndkk65qnwn3f43n6efjze
   eslint-plugin-import: 2.26.0_3bh5nkk7utn7e74vrwtv6rxmt4
   eslint-plugin-n: 15.2.4_eslint@8.22.0
   eslint-plugin-promise: 6.0.0_eslint@8.22.0
@@ -7222,8 +7222,8 @@ packages:
       eslint-plugin-react: 7.30.1_eslint@8.22.0
     dev: false
 
-  /eslint-config-standard-with-typescript/22.0.0_3h5ldndkk65qnwn3f43n6efjze:
-    resolution: {integrity: sha512-VA36U7UlFpwULvkdnh6MQj5GAV2Q+tT68ALLAwJP0ZuNXU2m0wX07uxX4qyLRdHgSzH4QJ73CveKBuSOYvh7vQ==}
+  /eslint-config-standard-with-typescript/23.0.0_3h5ldndkk65qnwn3f43n6efjze:
+    resolution: {integrity: sha512-iaaWifImn37Z1OXbNW1es7KI+S7D408F9ys0bpaQf2temeBWlvb0Nc5qHkOgYaRb5QxTZT32GGeN1gtswASOXA==}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': ^5.0.0
       eslint: ^8.0.1
