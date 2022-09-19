@@ -37,7 +37,7 @@ specifiers:
   graphql: '>=15.0.0 <16.0.0'
   mitt: ^3.0.0
   netlify-cli: ^11.0.0
-  node-html-parser: 6.0.0
+  node-html-parser: 6.1.0
   prop-types: ^15.8.1
   react: ^18.2.0
   react-dom: ^18.2.0
@@ -91,7 +91,7 @@ devDependencies:
   gatsby-transformer-yaml: 4.21.0_gatsby@4.21.0
   graphql: 15.8.0
   netlify-cli: 11.5.1
-  node-html-parser: 6.0.0
+  node-html-parser: 6.1.0
   sass: 1.54.4
   typescript: 4.7.4
   webpack: 5.74.0
@@ -11912,8 +11912,8 @@ packages:
       css-select: 4.3.0
       he: 1.2.0
 
-  /node-html-parser/6.0.0:
-    resolution: {integrity: sha512-o4vS5Jm7ZdV5WN4/jHmCEVJOpm4exLCeXOcZnNzXi0BGv0AS8FsGwyQ4k0Ujmui1NMQs6qsTy+amjjpr9rmz4Q==}
+  /node-html-parser/6.1.0:
+    resolution: {integrity: sha512-lL3NirV1ihtYPfjTljB5Vu6gxMfxzWNkM1cz3VzYLxm8tuDgZhOKuHwx1JjaT+ceStTjV43H71a+SUq9Jq3BJQ==}
     dependencies:
       css-select: 4.3.0
       he: 1.2.0
