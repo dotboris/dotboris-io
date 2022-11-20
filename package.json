@@ -9,7 +9,7 @@
     "typecheck": "tsc --noEmit",
     "lint:ts": "eslint ."
   },
-  "packageManager": "pnpm@7.15.0",
+  "packageManager": "pnpm@7.17.0",
   "dependencies": {
     "@fontsource/atkinson-hyperlegible": "^4.5.7",
     "@gatsbyjs/reach-router": "^1.3.9",
@@ -54,7 +54,7 @@
     "gatsby-transformer-yaml": "^4.18.0",
     "graphql": ">=15.0.0 <16.0.0",
     "netlify-cli": "^12.0.0",
-    "node-html-parser": "6.1.1",
+    "node-html-parser": "6.1.4",
     "sass": "^1.53.0",
     "typescript": "^4.7.4",
     "webpack": "^4.36.0 || ^5.0.0"
