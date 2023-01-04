@@ -9,7 +9,7 @@
     "typecheck": "tsc --noEmit",
     "lint:ts": "eslint ."
   },
-  "packageManager": "pnpm@7.21.0",
+  "packageManager": "pnpm@7.22.0",
   "dependencies": {
     "@fontsource/atkinson-hyperlegible": "^4.5.10",
     "@gatsbyjs/reach-router": "^2.0.0",
