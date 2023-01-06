@@ -9,15 +9,15 @@ export function useRandomLines (initialFirstLine: string, allLines: string[]): R
   const [state, dispatch] = useReducer(reducer, getInitialState(initialFirstLine, allLines))
   useEffect(
     () => {
-      const timer = setInterval(() => dispatch({ type: 'tickTimer' }), 50)
-      return () => clearInterval(timer)
+      const timer = setInterval(() => { dispatch({ type: 'tickTimer' }) }, 50)
+      return () => { clearInterval(timer) }
     },
     []
   )
 
   return {
     lines: normalizeLines(state.lines, state.typedLettersCount),
-    startNewLine: () => dispatch({ type: 'startNewLine' })
+    startNewLine: () => { dispatch({ type: 'startNewLine' }) }
   }
 }
 
