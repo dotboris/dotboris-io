@@ -26,6 +26,15 @@ const config: GatsbyConfig = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
 
+    'gatsby-plugin-mdx',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: path.join(__dirname, 'src/pages')
+      }
+    },
+
     'gatsby-transformer-yaml',
     {
       resolve: 'gatsby-source-filesystem',
