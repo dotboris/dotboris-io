@@ -7,8 +7,8 @@ const config: GatsbyConfig = {
     title: '🤷',
     titleSuffix: 'dotboris.io',
     description: (
-      'Your #1 stop for all your dotboris related need? ' +
-      'Whatever those may be 🤷.'
+      'Your one stop shop for all your dotboris related needs. ' +
+      'Whatever that means 🤷.'
     )
   },
 
