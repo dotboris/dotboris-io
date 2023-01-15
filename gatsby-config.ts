@@ -1,5 +1,6 @@
 import type { GatsbyConfig } from 'gatsby'
 import path from 'path'
+import rehypePrism from '@mapbox/rehype-prism'
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -26,7 +27,21 @@ const config: GatsbyConfig = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
 
-    'gatsby-plugin-mdx',
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        mdxOptions: {
+          rehypePlugins: [
+            [rehypePrism, {
+              ignoreMissing: true,
+              alias: {
+                bash: ['sh', 'shell']
+              }
+            }]
+          ]
+        }
+      }
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
