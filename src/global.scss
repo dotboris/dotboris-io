@@ -12,3 +12,23 @@ body {
   // In case we have very little content, we don't want a stubby page
   min-height: 100vh;
 }
+
+code {
+  font-family: 'Fire Code', monospace;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  code {
+    font-size: 0.875em;
+    padding: 0 0.2em;
+    background-color: $off-white;
+    border-radius: 4px;
+  }
+}

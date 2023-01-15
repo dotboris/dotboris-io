@@ -2,7 +2,7 @@ import React, { ReactElement, ReactNode } from 'react'
 import { Header } from './header'
 import * as classes from './layout.module.scss'
 
-interface LayoutProps {
+export interface LayoutProps {
   withChatter?: boolean
   mainClassName?: string
   children: ReactNode
