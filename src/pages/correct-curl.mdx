@@ -1,10 +1,14 @@
-import { Meta } from '../meta'
+---
+title: Correct cURL
+description: >
+  Using cURL in a shell script should be easy right? Just call cURL with an URL
+  and redirect the output to a file. Sadly, it's not that easy. You can't realy
+  on cURL's default behaviour because it will come haunt you later on. This
+  article describes the correct way to call cURL in a shell script or CI
+  process to ensure that it behaves properly even in case of failure.
+---
 
-export { default } from '../mdx'
-
-export function Head () {
-  return <Meta title='Correct cURL' />
-}
+export { default, Head } from '../mdx'
 
 # Correct cURL
 

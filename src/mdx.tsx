@@ -3,8 +3,18 @@ import { Layout, LayoutProps } from './layout'
 import { MDXProvider } from '@mdx-js/react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { tomorrowNightBright as syntaxStyle } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import { Meta, MetaProps } from './meta'
 
-export default function MdxLayout (props: LayoutProps): ReactElement {
+interface FrontMatter {
+  title?: string
+  description?: string
+}
+
+type PropsWithPageContext<T> = T & {
+  pageContext: { frontmatter: FrontMatter }
+}
+
+export default function MdxLayout (props: PropsWithPageContext<LayoutProps>): ReactElement {
   return (
     <Layout
       withChatter={props.withChatter}
@@ -18,6 +28,17 @@ export default function MdxLayout (props: LayoutProps): ReactElement {
         {props.children}
       </MDXProvider>
     </Layout>
+  )
+}
+
+export function Head (props: PropsWithPageContext<MetaProps>): ReactElement {
+  const frontMatter = getFrontMatter(props)
+
+  return (
+    <Meta
+      title={frontMatter.title ?? props.title}
+      description={frontMatter.description ?? props.description}
+    />
   )
 }
 
@@ -44,4 +65,8 @@ function Code (props: JSX.IntrinsicElements['code']): ReactElement {
       <code {...props} />
     )
   }
+}
+
+function getFrontMatter<T> (props: PropsWithPageContext<T>): FrontMatter {
+  return props.pageContext.frontmatter
 }
