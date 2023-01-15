@@ -14,21 +14,12 @@ body {
 }
 
 code {
-  font-family: 'Fire Code', monospace;
+  font-family: 'Fira Code', monospace;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a {
-  code {
-    font-size: 0.875em;
-    padding: 0 0.2em;
-    background-color: $off-white;
-    border-radius: 4px;
-  }
+:not(pre) > code {
+  font-size: 0.875em;
+  padding: 0.1em 0.2em;
+  background-color: $off-white;
+  border-radius: 4px;
 }
