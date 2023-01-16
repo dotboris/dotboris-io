@@ -2,10 +2,11 @@ name: PR
 
 on:
   pull_request:
-    
+
 jobs:
   publish-draft:
     uses: ./.github/workflows/_build-and-publish.yml
     secrets: inherit
     with:
+      env: developmene
       netlifyDeployArgs: --alias 'pr-${{ github.event.number }}'

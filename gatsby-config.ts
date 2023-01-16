@@ -22,7 +22,22 @@ const config: GatsbyConfig = {
 
   plugins: [
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-robots-txt',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv () {
+          return process.env.GATSBY_ENV ?? 'development'
+        },
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: '/' }]
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }]
+          }
+        }
+      }
+    },
 
     'gatsby-plugin-sass',
 
