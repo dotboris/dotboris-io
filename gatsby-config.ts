@@ -21,6 +21,9 @@ const config: GatsbyConfig = {
   graphqlTypegen: false,
 
   plugins: [
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-robots-txt',
+
     'gatsby-plugin-sass',
 
     'gatsby-plugin-image',
