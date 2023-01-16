@@ -21,6 +21,24 @@ const config: GatsbyConfig = {
   graphqlTypegen: false,
 
   plugins: [
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv () {
+          return process.env.GATSBY_ENV ?? 'development'
+        },
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: '/' }]
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }]
+          }
+        }
+      }
+    },
+
     'gatsby-plugin-sass',
 
     'gatsby-plugin-image',
