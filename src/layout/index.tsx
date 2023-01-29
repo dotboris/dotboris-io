@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from 'react'
+import React, { type ReactElement, type ReactNode } from 'react'
 import { Header } from './header'
 import * as classes from './layout.module.scss'
 

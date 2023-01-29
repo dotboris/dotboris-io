@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import React, { ReactElement } from 'react'
+import React, { type ReactElement } from 'react'
 import { useLocation } from '@gatsbyjs/reach-router'
 
 export interface MetaProps {
