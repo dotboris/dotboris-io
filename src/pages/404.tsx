@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React, { type ReactElement } from 'react'
 import { Layout } from '../layout'
 import { Meta } from '../meta'
 import { Link } from 'gatsby'

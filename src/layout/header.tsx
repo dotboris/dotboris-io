@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import React, { ReactElement } from 'react'
+import React, { type ReactElement } from 'react'
 import { Chatter } from '../chatter'
 import * as classes from './header.module.scss'
 

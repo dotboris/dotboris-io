@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import { StaticImage } from 'gatsby-plugin-image'
-import React, { ReactElement } from 'react'
+import React, { type ReactElement } from 'react'
 import * as classes from './chatter.module.scss'
 import { useLinesDb } from './lines-db'
 import { useRandomLines } from './random-lines'

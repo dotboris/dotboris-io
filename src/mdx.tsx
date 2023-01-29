@@ -1,5 +1,5 @@
-import React, { ReactElement } from 'react'
-import { Meta, MetaProps } from './meta'
+import React, { type ReactElement } from 'react'
+import { Meta, type MetaProps } from './meta'
 
 interface FrontMatter {
   title?: string
