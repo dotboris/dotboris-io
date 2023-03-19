@@ -7,10 +7,9 @@ const config: GatsbyConfig = {
     siteUrl: 'https://dotboris.io',
     title: '🤷',
     titleSuffix: 'dotboris.io',
-    description: (
+    description:
       'Your one stop shop for all your dotboris related needs. ' +
-      'Whatever that means 🤷.'
-    )
+      'Whatever that means 🤷.',
   },
 
   // This automatic type generation on happens during `gatsby develop` and
@@ -25,18 +24,18 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        resolveEnv () {
+        resolveEnv() {
           return process.env.GATSBY_ENV ?? 'development'
         },
         env: {
           development: {
-            policy: [{ userAgent: '*', disallow: '/' }]
+            policy: [{ userAgent: '*', disallow: '/' }],
           },
           production: {
-            policy: [{ userAgent: '*', allow: '/' }]
-          }
-        }
-      }
+            policy: [{ userAgent: '*', allow: '/' }],
+          },
+        },
+      },
     },
 
     'gatsby-plugin-sass',
@@ -50,22 +49,25 @@ const config: GatsbyConfig = {
       options: {
         mdxOptions: {
           rehypePlugins: [
-            [rehypePrism, {
-              ignoreMissing: true,
-              alias: {
-                bash: ['sh', 'shell']
-              }
-            }]
-          ]
-        }
-      }
+            [
+              rehypePrism,
+              {
+                ignoreMissing: true,
+                alias: {
+                  bash: ['sh', 'shell'],
+                },
+              },
+            ],
+          ],
+        },
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: path.join(__dirname, 'src/pages')
-      }
+        path: path.join(__dirname, 'src/pages'),
+      },
     },
 
     'gatsby-transformer-yaml',
@@ -73,10 +75,10 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'data',
-        path: path.join(__dirname, 'src/data/')
-      }
-    }
-  ]
+        path: path.join(__dirname, 'src/data/'),
+      },
+    },
+  ],
 }
 
 export default config

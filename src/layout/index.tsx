@@ -8,13 +8,11 @@ export interface LayoutProps {
   children: ReactNode
 }
 
-export function Layout (props: LayoutProps): ReactElement {
+export function Layout(props: LayoutProps): ReactElement {
   return (
     <div className={classes.layout}>
       <Header withChatter={props.withChatter ?? false} />
-      <main className={props.mainClassName}>
-        {props.children}
-      </main>
+      <main className={props.mainClassName}>{props.children}</main>
     </div>
   )
 }

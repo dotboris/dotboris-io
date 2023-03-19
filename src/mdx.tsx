@@ -10,7 +10,7 @@ type PropsWithPageContext<T> = T & {
   pageContext: { frontmatter: FrontMatter }
 }
 
-export function Head (props: PropsWithPageContext<MetaProps>): ReactElement {
+export function Head(props: PropsWithPageContext<MetaProps>): ReactElement {
   const frontMatter = getFrontMatter(props)
 
   return (
@@ -21,6 +21,6 @@ export function Head (props: PropsWithPageContext<MetaProps>): ReactElement {
   )
 }
 
-function getFrontMatter<T> (props: PropsWithPageContext<T>): FrontMatter {
+function getFrontMatter<T>(props: PropsWithPageContext<T>): FrontMatter {
   return props.pageContext.frontmatter
 }

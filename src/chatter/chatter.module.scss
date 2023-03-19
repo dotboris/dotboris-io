@@ -1,4 +1,4 @@
-@use "../values.scss" as *;
+@use '../values.scss' as *;
 
 .chatter {
   display: grid;
@@ -72,7 +72,6 @@
     }
   }
 
-
   .bubbles-wrapper {
     $padding: 1rem;
 
@@ -87,7 +86,7 @@
     min-height: 0;
 
     .fade {
-      content: "";
+      content: '';
       width: 100%;
       height: $padding;
       position: absolute;
@@ -125,7 +124,7 @@
       padding: $padding 0 $padding $padding;
 
       // Spacing between flex elements
-      >* {
+      > * {
         margin: 0.25rem 0 0 0;
 
         &:last-child {
@@ -133,7 +132,7 @@
         }
       }
 
-      >* {
+      > * {
         // Individual bubble
         $radius: 0.5rem;
 
@@ -158,12 +157,11 @@
 
             // Make this pseudo-element a box and put it to the left of the bubble
             // aligned with the bottom of the bubble
-            content: "";
+            content: '';
             left: -$box-size;
             bottom: 0;
             width: $box-size;
             height: $box-size;
-
 
             // Give it a radius that's the inverse of the shape you want. We're
             // using this to "cut" out the value of the box. (I did promise jank)
