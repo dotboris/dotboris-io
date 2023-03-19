@@ -7,13 +7,13 @@ export interface MetaProps {
   description?: string
 }
 
-export function Meta (props: MetaProps): ReactElement {
+export function Meta(props: MetaProps): ReactElement {
   const siteMetadata = useSiteMetadata()
   const location = useLocation()
 
   const titleParts = [
     props.title ?? siteMetadata.title,
-    siteMetadata.titleSuffix
+    siteMetadata.titleSuffix,
   ]
   const title = titleParts.filter(Boolean).join(' - ')
 
@@ -26,17 +26,15 @@ export function Meta (props: MetaProps): ReactElement {
 
   return (
     <>
-      {title !== ''
-        ? <title>{title}</title>
-        : null}
+      {title !== '' ? <title>{title}</title> : null}
 
-      {description !== null
-        ? <meta name='description' content={description} />
-        : null}
+      {description !== null ? (
+        <meta name='description' content={description} />
+      ) : null}
 
-      {pageUrl !== undefined
-        ? <link rel='canonical' href={pageUrl.toString()} />
-        : null}
+      {pageUrl !== undefined ? (
+        <link rel='canonical' href={pageUrl.toString()} />
+      ) : null}
     </>
   )
 }
@@ -54,7 +52,7 @@ interface SiteMetadataQuery {
   }
 }
 
-function useSiteMetadata (): SiteMetadata {
+function useSiteMetadata(): SiteMetadata {
   const res = useStaticQuery<SiteMetadataQuery>(graphql`
     query {
       site {

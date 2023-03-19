@@ -7,19 +7,17 @@ interface HeaderProps {
   withChatter: boolean
 }
 
-export function Header (props: HeaderProps): ReactElement {
+export function Header(props: HeaderProps): ReactElement {
   const { withChatter } = props
 
   return (
     <div
       className={classNames({
         [classes.header]: true,
-        [classes.withChatter]: withChatter
+        [classes.withChatter]: withChatter,
       })}
     >
-      <div className={classes.content}>
-        {withChatter ? <Chatter /> : null}
-      </div>
+      <div className={classes.content}>{withChatter ? <Chatter /> : null}</div>
     </div>
   )
 }

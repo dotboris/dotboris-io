@@ -5,17 +5,16 @@ import * as classes from './chatter.module.scss'
 import { useLinesDb } from './lines-db'
 import { useRandomLines } from './random-lines'
 
-export function Chatter (): ReactElement {
+export function Chatter(): ReactElement {
   const allLines = useLinesDb()
-  const { lines, startNewLine } = useRandomLines('\u{1f44b} Hi! I\'m Boris.', allLines)
+  const { lines, startNewLine } = useRandomLines(
+    "\u{1f44b} Hi! I'm Boris.",
+    allLines
+  )
 
   return (
     <div className={classes.chatter}>
-      <button
-        type='button'
-        onClick={startNewLine}
-        title='Say something!'
-      >
+      <button type='button' onClick={startNewLine} title='Say something!'>
         <StaticImage
           src='../assets/avatar.png'
           alt="dotboris' avatar. A yellow anime duck with its mouth open"
@@ -27,7 +26,9 @@ export function Chatter (): ReactElement {
       </button>
       <div className={classes.bubblesWrapper}>
         <ul className={classes.bubbles}>
-          {lines.map((line, index) => <li key={index}>{line}</li>)}
+          {lines.map((line, index) => (
+            <li key={index}>{line}</li>
+          ))}
         </ul>
 
         {/*

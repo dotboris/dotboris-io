@@ -2,9 +2,10 @@ module.exports = {
   extends: [
     'standard-with-typescript',
     'standard-jsx',
-    'plugin:react-hooks/recommended'
+    'plugin:react-hooks/recommended',
+    'prettier',
   ],
   parserOptions: {
-    project: './tsconfig.json'
-  }
+    project: './tsconfig.json',
+  },
 }

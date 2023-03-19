@@ -1,5 +1,5 @@
 @use '../values.scss' as *;
-@use "../responsive.scss";
+@use '../responsive.scss';
 
 .header {
   background-color: $black;
@@ -43,7 +43,7 @@
   .content {
     height: 100%;
     margin: auto;
-    max-width: responsive.get-breakpoint-width(desktop)
+    max-width: responsive.get-breakpoint-width(desktop);
   }
 
   a[href] {
