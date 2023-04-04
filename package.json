@@ -12,7 +12,7 @@
     "format": "prettier --write '**/*.{ts,tsx,js,jsx,json,scss}'",
     "prepare": "husky install"
   },
-  "packageManager": "pnpm@8.1.0",
+  "packageManager": "pnpm@8.1.1",
   "dependencies": {
     "@fontsource/atkinson-hyperlegible": "^4.5.10",
     "@fontsource/fira-code": "^4.5.12",
