@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@fontsource/atkinson-hyperlegible':
-    specifier: ^4.5.10
-    version: 4.5.10
+    specifier: ^5.0.0
+    version: 5.0.0
   '@fontsource/fira-code':
     specifier: ^4.5.12
     version: 4.5.12
@@ -1609,8 +1609,8 @@ packages:
       readable-stream: 4.3.0
     dev: true
 
-  /@fontsource/atkinson-hyperlegible@4.5.10:
-    resolution: {integrity: sha512-UyKTkEGQnF5lbAYRIPCeAikkVgBPQ8n3ve/cdJX1tp0Kma3pe7cZOVESEK2oyTZqn7Jt3ZS51hbY7hR8u4dLXA==}
+  /@fontsource/atkinson-hyperlegible@5.0.0:
+    resolution: {integrity: sha512-c5iD8/ngdP99YBO/VbvvJqqC37rRYiKeHzm1kt8s+pCjQ3NRF3bQWvB/o2Ewze5CBJ2lmi1aFAMb1S5mqovsrw==}
     dev: false
 
   /@fontsource/fira-code@4.5.12:
