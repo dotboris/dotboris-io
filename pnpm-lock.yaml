@@ -5,8 +5,8 @@ dependencies:
     specifier: ^5.0.0
     version: 5.0.0
   '@fontsource/fira-code':
-    specifier: ^4.5.12
-    version: 4.5.12
+    specifier: ^5.0.0
+    version: 5.0.0
   '@gatsbyjs/reach-router':
     specifier: ^2.0.0
     version: 2.0.0(react-dom@18.2.0)(react@18.2.0)
@@ -1613,8 +1613,8 @@ packages:
     resolution: {integrity: sha512-c5iD8/ngdP99YBO/VbvvJqqC37rRYiKeHzm1kt8s+pCjQ3NRF3bQWvB/o2Ewze5CBJ2lmi1aFAMb1S5mqovsrw==}
     dev: false
 
-  /@fontsource/fira-code@4.5.12:
-    resolution: {integrity: sha512-dAVGsgiVR6jslpuXosHH4/Jf8bsAIKL1RWqjVq4WpmxL7CFHfg9hT5bAv/Y3xsEj8kDTibEgpuC3eMfr9kb02g==}
+  /@fontsource/fira-code@5.0.0:
+    resolution: {integrity: sha512-Fq0VOyHfbZI04aeBF9wHAo7xd2bajrnCbxr8P2Ah3r3RSWOZIk58qqMrUpybjtCsJTT9HYj5PgyZJ6wgSypfnA==}
     dev: false
 
   /@gatsbyjs/parcel-namer-relative-to-cwd@2.3.1(@parcel/core@2.8.1):
