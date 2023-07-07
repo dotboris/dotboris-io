@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -119,8 +119,8 @@ devDependencies:
     specifier: ^8.7.0
     version: 8.7.0(eslint@8.30.0)
   eslint-config-standard-with-typescript:
-    specifier: ^35.0.0
-    version: 35.0.0(@typescript-eslint/eslint-plugin@5.50.0)(eslint-plugin-import@2.26.0)(eslint-plugin-n@16.0.0)(eslint-plugin-promise@6.1.1)(eslint@8.30.0)(typescript@5.0.2)
+    specifier: ^36.0.0
+    version: 36.0.0(@typescript-eslint/eslint-plugin@5.50.0)(eslint-plugin-import@2.26.0)(eslint-plugin-n@16.0.0)(eslint-plugin-promise@6.1.1)(eslint@8.30.0)(typescript@5.0.2)
   eslint-plugin-import:
     specifier: ^2.26.0
     version: 2.26.0(@typescript-eslint/parser@5.50.0)(eslint@8.30.0)
@@ -7296,8 +7296,8 @@ packages:
       eslint-plugin-react: 7.31.11(eslint@8.30.0)
     dev: false
 
-  /eslint-config-standard-with-typescript@35.0.0(@typescript-eslint/eslint-plugin@5.50.0)(eslint-plugin-import@2.26.0)(eslint-plugin-n@16.0.0)(eslint-plugin-promise@6.1.1)(eslint@8.30.0)(typescript@5.0.2):
-    resolution: {integrity: sha512-Xa7DY9GgduZyp0qmXxBF0/dB+Vm4/DgWu1lGpNLJV2d46aCaUxTKDEnkzjUWX/1O9S0a+Dhnw7A4oI0JpYzwtw==}
+  /eslint-config-standard-with-typescript@36.0.0(@typescript-eslint/eslint-plugin@5.50.0)(eslint-plugin-import@2.26.0)(eslint-plugin-n@16.0.0)(eslint-plugin-promise@6.1.1)(eslint@8.30.0)(typescript@5.0.2):
+    resolution: {integrity: sha512-8ZSEskfrDAkUF2lTQLMT0CBzgRNlx1uIM7l2I7L683dKAXUdHuEL2x+GxuGAsdsoWbx7W7Zv0xF67VCEZXIk0Q==}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': ^5.50.0
       eslint: ^8.0.1
