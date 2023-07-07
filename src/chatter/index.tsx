@@ -9,7 +9,7 @@ export function Chatter(): ReactElement {
   const allLines = useLinesDb()
   const { lines, startNewLine } = useRandomLines(
     "\u{1f44b} Hi! I'm Boris.",
-    allLines
+    allLines,
   )
 
   return (

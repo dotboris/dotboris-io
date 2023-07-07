@@ -9,17 +9,15 @@ interface LinesDbQueryResult {
 }
 
 export function useLinesDb(): string[] {
-  const data = useStaticQuery<LinesDbQueryResult>(
-    graphql`
-      {
-        allDataYaml {
-          nodes {
-            lines
-          }
+  const data = useStaticQuery<LinesDbQueryResult>(graphql`
+    {
+      allDataYaml {
+        nodes {
+          lines
         }
       }
-    `
-  )
+    }
+  `)
 
   return data.allDataYaml.nodes
     .flatMap((node) => node.lines)

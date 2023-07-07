@@ -7,11 +7,11 @@ interface RandomLines {
 
 export function useRandomLines(
   initialFirstLine: string,
-  allLines: string[]
+  allLines: string[],
 ): RandomLines {
   const [state, dispatch] = useReducer(
     reducer,
-    getInitialState(initialFirstLine, allLines)
+    getInitialState(initialFirstLine, allLines),
   )
   useEffect(() => {
     const timer = setInterval(() => {
@@ -54,7 +54,7 @@ function reducer(state: State, action: Action): State {
       const recentlySeenIndexes = new Set(state.recentlySeenIndexes)
       const nextIndex = pickRandomNumberExcept(
         state.allLines.length,
-        recentlySeenIndexes
+        recentlySeenIndexes,
       )
 
       const maxLineMemory = Math.floor(state.allLines.length * 0.5)
@@ -76,7 +76,7 @@ function reducer(state: State, action: Action): State {
         ...state,
         typedLettersCount: Math.min(
           state.typedLettersCount + 1,
-          state.lines[0].length
+          state.lines[0].length,
         ),
       }
 
@@ -87,7 +87,7 @@ function reducer(state: State, action: Action): State {
 
 function pickRandomNumberExcept(
   exclusiveMax: number,
-  except: Set<number>
+  except: Set<number>,
 ): number {
   let count = 0
   let res
