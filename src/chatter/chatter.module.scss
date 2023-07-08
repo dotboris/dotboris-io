@@ -27,7 +27,9 @@
     @media (hover: hover) {
       cursor: pointer;
 
-      &:hover {
+      &:hover,
+      &:focus,
+      &:active {
         .avatar {
           outline-color: $white;
         }
