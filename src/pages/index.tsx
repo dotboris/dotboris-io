@@ -4,6 +4,7 @@ import { Meta } from '../meta'
 import { Link, graphql } from 'gatsby'
 import { ProjectCard } from '../components/project-card'
 import { css } from '@emotion/react'
+import { ArrowRight, FastArrowRight } from 'iconoir-react'
 
 interface PageQuery {
   allArticle: {
@@ -57,9 +58,20 @@ export default function IndexPage({ data }: Props): ReactElement {
       {data.allArticle.nodes.map((article) => (
         <article key={article.name}>
           <h3>{article.parent.frontmatter.title}</h3>
+          <p>{article.parent.frontmatter.description}</p>
           <p>
-            {article.parent.frontmatter.description}
-            <Link to={`/articles/${article.name}`}>Read More</Link>
+            <Link to={`/articles/${article.name}`}>
+              Continue reading
+              <FastArrowRight
+                aria-hidden
+                css={css({
+                  display: 'inline-block',
+                  width: '1rem',
+                  height: '1rem',
+                  verticalAlign: 'bottom',
+                })}
+              />
+            </Link>
           </p>
         </article>
       ))}
