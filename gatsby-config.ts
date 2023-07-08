@@ -59,7 +59,19 @@ const config: GatsbyConfig = {
     },
     {
       resolve: 'gatsby-transformer-remark',
-      options: {},
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              noInlineHighlight: true,
+              aliases: {
+                bash: ['sh', 'shell'],
+              },
+            },
+          },
+        ],
+      },
     },
 
     'gatsby-transformer-yaml',
