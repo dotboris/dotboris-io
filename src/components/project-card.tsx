@@ -8,6 +8,7 @@ export interface ProjectCardProps {
   githubOwner: string
   githubSlug: string
 }
+
 export function ProjectCard({
   title,
   description,
@@ -15,7 +16,7 @@ export function ProjectCard({
   githubSlug,
 }: ProjectCardProps): ReactElement {
   return (
-    <div
+    <article
       css={css({
         display: 'flex',
         flexDirection: 'column',
@@ -71,6 +72,6 @@ export function ProjectCard({
           <GitHub aria-label='GitHub logo' /> Project Page
         </a>
       </div>
-    </div>
+    </article>
   )
 }
