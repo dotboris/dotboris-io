@@ -2,6 +2,8 @@ import React, { type ReactElement } from 'react'
 import { Layout } from '../layout'
 import { Meta } from '../meta'
 import { Link, graphql } from 'gatsby'
+import { ProjectCard } from '../components/project-card'
+import { css } from '@emotion/react'
 
 interface PageQuery {
   allArticle: {
@@ -48,6 +50,9 @@ export default function IndexPage({ data }: Props): ReactElement {
         fancy.
       </p>
 
+      <h2>Projects</h2>
+      <ProjectsGrid />
+
       <h2>Articles</h2>
       {data.allArticle.nodes.map((article) => (
         <article key={article.name}>
@@ -64,4 +69,35 @@ export default function IndexPage({ data }: Props): ReactElement {
 
 export function Head(): ReactElement {
   return <Meta title='👋' />
+}
+
+function ProjectsGrid(): ReactElement {
+  return (
+    <div
+      css={css({
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+        gap: '1rem',
+      })}
+    >
+      <ProjectCard
+        title='Prod Guard'
+        description="Browser extension that lets you know when you're connected to production by giving you a clear visual warning."
+        githubOwner='dotboris'
+        githubSlug='prod-guard'
+      />
+      <ProjectCard
+        title='cdo'
+        description='Small command to run other commands in a given directory.'
+        githubOwner='dotboris'
+        githubSlug='cdo'
+      />
+      <ProjectCard
+        title='Alt'
+        description='Simple version manager tool for switching between different versions of commands.'
+        githubOwner='dotboris'
+        githubSlug='alt'
+      />
+    </div>
+  )
 }

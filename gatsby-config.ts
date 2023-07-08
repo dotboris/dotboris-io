@@ -40,6 +40,7 @@ const config: GatsbyConfig = {
     },
 
     'gatsby-plugin-sass',
+    'gatsby-plugin-emotion',
 
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
