@@ -4,7 +4,7 @@ import { Meta } from '../meta'
 import { Link, graphql } from 'gatsby'
 import { ProjectCard } from '../components/project-card'
 import { css } from '@emotion/react'
-import { ArrowRight, FastArrowRight } from 'iconoir-react'
+import { FastArrowRight } from 'iconoir-react'
 
 interface PageQuery {
   allArticle: {
