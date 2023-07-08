@@ -19,6 +19,9 @@ const config: GatsbyConfig = {
   graphqlTypegen: false,
 
   plugins: [
+    'gatsby-plugin-netlify',
+    'gatsby-plugin-meta-redirect',
+
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-robots-txt',

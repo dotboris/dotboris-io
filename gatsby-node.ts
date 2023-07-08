@@ -63,3 +63,15 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = async ({
 function isFileSystemNode(node: Node): node is FileSystemNode {
   return node.internal.type === 'File'
 }
+
+export const createPages: GatsbyNode['createPages'] = ({ actions }) => {
+  const { createRedirect } = actions
+
+  // This used to be the only article for a long time and there was no
+  // `/articles/*` back then.
+  createRedirect({
+    fromPath: '/correct-curl/',
+    toPath: '/articles/correct-curl/',
+    isPermanent: true,
+  })
+}
