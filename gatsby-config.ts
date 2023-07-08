@@ -1,6 +1,5 @@
 import type { GatsbyConfig } from 'gatsby'
 import path from 'path'
-import rehypePrism from '@mapbox/rehype-prism'
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -20,6 +19,8 @@ const config: GatsbyConfig = {
   graphqlTypegen: false,
 
   plugins: [
+    'gatsby-plugin-netlify',
+
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-robots-txt',
@@ -45,28 +46,33 @@ const config: GatsbyConfig = {
     'gatsby-transformer-sharp',
 
     {
-      resolve: 'gatsby-plugin-mdx',
+      resolve: 'gatsby-source-filesystem',
       options: {
-        mdxOptions: {
-          rehypePlugins: [
-            [
-              rehypePrism,
-              {
-                ignoreMissing: true,
-                alias: {
-                  bash: ['sh', 'shell'],
-                },
-              },
-            ],
-          ],
-        },
+        name: 'articles',
+        path: path.join(__dirname, 'src/content/articles'),
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'pages',
-        path: path.join(__dirname, 'src/pages'),
+        name: 'notes',
+        path: path.join(__dirname, 'src/content/notes'),
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              noInlineHighlight: true,
+              aliases: {
+                bash: ['sh', 'shell'],
+              },
+            },
+          },
+        ],
       },
     },
 
