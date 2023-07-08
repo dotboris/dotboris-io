@@ -68,7 +68,7 @@ export function ProjectCard({
             },
           })}
         >
-          <GitHub /> Project Page
+          <GitHub aria-label='GitHub logo' /> Project Page
         </a>
       </div>
     </div>
