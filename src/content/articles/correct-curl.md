@@ -8,9 +8,6 @@ description: >
   ensure that it behaves properly even in case of failure.
 ---
 
-export { Layout as default } from '../layout'
-export { Head } from '../mdx'
-
 # Correct cURL
 
 Let's say that you're writing a shell script or that you're working on some CI
