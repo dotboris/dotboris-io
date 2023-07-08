@@ -8,8 +8,8 @@ interface PageQuery {
     parent: {
       html: string
       frontmatter: {
-        title?: string
-        description?: string
+        title: string
+        description: string
       }
     }
   }
@@ -33,7 +33,6 @@ export const pageQuery = graphql`
 interface Props {
   data: PageQuery
 }
-
 export default function ArticlePage({ data }: Props): ReactElement {
   return (
     <Layout>
