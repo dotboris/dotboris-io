@@ -68,7 +68,7 @@ export default function IndexPage({ data }: Props): ReactElement {
                   display: 'inline-block',
                   width: '1rem',
                   height: '1rem',
-                  verticalAlign: 'bottom',
+                  verticalAlign: 'middle',
                 })}
               />
             </Link>
