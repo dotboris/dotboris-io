@@ -56,7 +56,6 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "gatsby-plugin-image": "^3.3.2",
-    "gatsby-plugin-meta-redirect": "^1.1.1",
     "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sass": "^6.3.1",

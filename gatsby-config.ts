@@ -20,7 +20,6 @@ const config: GatsbyConfig = {
 
   plugins: [
     'gatsby-plugin-netlify',
-    'gatsby-plugin-meta-redirect',
 
     'gatsby-plugin-sitemap',
     {

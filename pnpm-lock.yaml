@@ -127,9 +127,6 @@ devDependencies:
   gatsby-plugin-image:
     specifier: ^3.3.2
     version: 3.3.2(@babel/core@7.20.7)(gatsby-plugin-sharp@5.3.2)(gatsby-source-filesystem@5.3.1)(gatsby@5.3.3)(graphql@16.6.0)(react-dom@18.2.0)(react@18.2.0)
-  gatsby-plugin-meta-redirect:
-    specifier: ^1.1.1
-    version: 1.1.1
   gatsby-plugin-netlify:
     specifier: ^5.1.0
     version: 5.1.0(gatsby@5.3.3)(webpack@5.75.0)
@@ -8273,15 +8270,6 @@ packages:
       jsonfile: 6.1.0
       universalify: 2.0.0
 
-  /fs-extra@7.0.1:
-    resolution: {integrity: sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==}
-    engines: {node: '>=6 <7 || >=8'}
-    dependencies:
-      graceful-fs: 4.2.10
-      jsonfile: 4.0.0
-      universalify: 0.1.2
-    dev: true
-
   /fs-extra@9.1.0:
     resolution: {integrity: sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==}
     engines: {node: '>=10'}
@@ -8523,13 +8511,6 @@ packages:
     transitivePeerDependencies:
       - graphql
       - supports-color
-    dev: true
-
-  /gatsby-plugin-meta-redirect@1.1.1:
-    resolution: {integrity: sha512-Oc4qgU3SlDUM9qoxIMKO+re2bdMs3/a2KXrfL65gb8XMLsHylBbveWtXZRhgjd2QDL/49RX4S9SEykuadRju2w==}
-    engines: {node: '>=8'}
-    dependencies:
-      fs-extra: 7.0.1
     dev: true
 
   /gatsby-plugin-netlify@5.1.0(gatsby@5.3.3)(webpack@5.75.0):
@@ -10587,12 +10568,6 @@ packages:
 
   /jsonc-parser@3.2.0:
     resolution: {integrity: sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==}
-    dev: true
-
-  /jsonfile@4.0.0:
-    resolution: {integrity: sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==}
-    optionalDependencies:
-      graceful-fs: 4.2.10
     dev: true
 
   /jsonfile@6.1.0:
@@ -15846,11 +15821,6 @@ packages:
 
   /universal-user-agent@6.0.0:
     resolution: {integrity: sha512-isyNax3wXoKaulPDZWHQqbmIx1k2tb9fb3GGDBRxCscfYV2Ch7WxPArBsFEG8s/safwXTT7H4QGhaIkTp9447w==}
-    dev: true
-
-  /universalify@0.1.2:
-    resolution: {integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==}
-    engines: {node: '>= 4.0.0'}
     dev: true
 
   /universalify@2.0.0:
