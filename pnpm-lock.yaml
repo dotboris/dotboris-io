@@ -68,9 +68,6 @@ dependencies:
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
-  sass-mq:
-    specifier: ^6.0.0
-    version: 6.0.0
   shallow-compare:
     specifier: ^1.2.2
     version: 1.2.2
@@ -14438,10 +14435,6 @@ packages:
       semver: 7.5.1
       webpack: 5.75.0
     dev: true
-
-  /sass-mq@6.0.0:
-    resolution: {integrity: sha512-h4VicIy8lszFlqqggqLIFGt/9wS5fHLPoTXHRjC8Vw6UsA4s4JtDvEeypXbbECfgY336mXyc/cdpbRacH0UzGA==}
-    dev: false
 
   /sass@1.57.1:
     resolution: {integrity: sha512-O2+LwLS79op7GI0xZ8fqzF7X2m/m8WFfI02dHOdsK5R2ECeS5F62zrwg/relM1rjSLy7Vd/DiMNIvPrQGsA0jw==}
