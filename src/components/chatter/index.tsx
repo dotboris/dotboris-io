@@ -3,7 +3,7 @@ import React, { type ReactElement } from 'react'
 import { useLinesDb } from './lines-db'
 import { useRandomLines } from './random-lines'
 import { css } from '@emotion/react'
-import { palette } from '../theme'
+import { palette } from '../../theme'
 
 const BUBBLES_CONTAINER_PADDING = '1rem'
 const BUBBLE_RADIUS = '0.5rem'
@@ -188,7 +188,7 @@ export function Chatter(): ReactElement {
         title='Say something!'
       >
         <StaticImage
-          src='../assets/avatar.png'
+          src='../../assets/avatar.png'
           alt="dotboris' avatar. A yellow anime duck with its mouth open"
           className='avatar-image'
           layout='fixed'

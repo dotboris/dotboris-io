@@ -1,5 +1,5 @@
 import React, { type ReactElement } from 'react'
-import { Chatter } from '../chatter'
+import { Chatter } from '../components/chatter'
 import { css } from '@emotion/react'
 import { breakpoints, mediaQueries, palette, sizing } from '../theme'
 
