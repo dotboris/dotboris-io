@@ -1,6 +1,7 @@
 import { css } from '@emotion/react'
 import { GitHub } from 'iconoir-react'
 import React, { type ReactElement } from 'react'
+import { palette } from '../theme'
 
 const styles = {
   root: css({
@@ -33,11 +34,11 @@ const styles = {
     // Button styles
     display: 'block',
     padding: '0.5rem 0.75rem',
-    backgroundColor: '#eee', // TODO: reuse values.scss
+    backgroundColor: palette.offWhite.css,
     textAlign: 'center',
 
     '&:hover, &:focus, &:active': {
-      backgroundColor: '#e0e0e0', // TODO: reuse values.scss
+      backgroundColor: palette.offWhite.darken(4).css,
     },
 
     '& svg': {
