@@ -40,7 +40,7 @@ jobs:
       - run: nix flake check --all-systems --keep-going
 
   nix-format-check:
-    name: check .nix files format
+    name: nix fmt check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
