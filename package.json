@@ -35,7 +35,8 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "shallow-compare": "^1.2.2"
+    "shallow-compare": "^1.2.2",
+    "style-to-object": "^0.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.22.11",

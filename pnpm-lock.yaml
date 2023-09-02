@@ -71,6 +71,9 @@ dependencies:
   shallow-compare:
     specifier: ^1.2.2
     version: 1.2.2
+  style-to-object:
+    specifier: ^0.4.2
+    version: 0.4.2
 
 devDependencies:
   '@babel/core':
@@ -8629,6 +8632,7 @@ packages:
 
   /file-uri-to-path@1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
+    requiresBuild: true
     dev: true
 
   /filename-reserved-regex@2.0.0:
