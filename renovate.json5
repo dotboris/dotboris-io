@@ -8,11 +8,11 @@
     'group:recommended',
     'group:allNonMajor',
   ],
-  rangeStrategy: 'update-lockfile',
 
   timezone: 'America/Toronto',
   schedule: ['after 2pm on friday'],
 
+  rangeStrategy: 'bump',
   lockFileMaintenance: {
     enabled: true,
     schedule: ["after 2pm on friday"],
