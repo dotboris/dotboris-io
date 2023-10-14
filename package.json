@@ -77,7 +77,7 @@
     "prismjs": "^1.29.0",
     "query-string": "^8.1.0",
     "typescript": "^5.2.2",
-    "webpack": "^5.88.2"
+    "webpack": "^5.89.0"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json}": [
