@@ -45,8 +45,8 @@ dependencies:
     specifier: ^2.12.0
     version: 2.12.0(@gatsbyjs/reach-router@2.0.1)(react-dom@18.2.0)(react@18.2.0)
   iconoir-react:
-    specifier: ^6.11.0
-    version: 6.11.0(react@18.2.0)
+    specifier: ^7.0.0
+    version: 7.0.0(react@18.2.0)
   mitt:
     specifier: ^3.0.1
     version: 3.0.1
@@ -10585,8 +10585,8 @@ packages:
     hasBin: true
     dev: true
 
-  /iconoir-react@6.11.0(react@18.2.0):
-    resolution: {integrity: sha512-+1RgmEWh/9H0aYR2e8sDL5elDUYnkyOXO0E+RnwhkjhJY36Lge6r/9nv1n1FvDXoeFY48omkPUl8s/ciA0XOAg==}
+  /iconoir-react@7.0.0(react@18.2.0):
+    resolution: {integrity: sha512-qw/PfSxAOQ3YbtMPjU4jrivWXPBHrL0OIOyzIK79axLnEWUx6ck5dGSkuoyPTFVeXioR0oklLmA/swRKLH92mg==}
     peerDependencies:
       react: ^16.8.6 || ^17 || ^18
     dependencies:
