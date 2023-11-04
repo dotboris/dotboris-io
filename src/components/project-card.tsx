@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-import { GitHub } from 'iconoir-react'
+import { Github } from 'iconoir-react'
 import React, { type ReactElement } from 'react'
 import { palette } from '../theme'
 
@@ -72,7 +72,7 @@ export function ProjectCard({
           href={`https://github.com/${githubOwner}/${githubSlug}`}
           css={styles.button}
         >
-          <GitHub aria-label='GitHub logo' /> Project Page
+          <Github aria-label='GitHub logo' /> Project Page
         </a>
       </div>
     </article>
