@@ -10,12 +10,9 @@
     flake-utils,
   }:
     flake-utils.lib.eachDefaultSystem (system: let
-      nodejs = pkgs.nodejs_18;
       overlays = [
         (final: prev: {
-          nodePackages = prev.nodePackages.override {
-            nodejs = nodejs;
-          };
+          nodejs = prev.nodejs_18;
         })
       ];
       pkgs = import nixpkgs {inherit system overlays;};
@@ -23,8 +20,11 @@
       formatter = pkgs.alejandra;
       devShells.default = pkgs.mkShell {
         packages = [
-          nodejs
+          pkgs.nodejs
           pkgs.nodePackages.pnpm
+
+          # Needed to build the `sharp` dependency
+          pkgs.vips
         ];
       };
     });
