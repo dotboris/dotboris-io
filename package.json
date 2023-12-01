@@ -41,7 +41,7 @@
     "@babel/core": "^7.23.5",
     "@gatsbyjs/webpack-hot-middleware": "^2.25.3",
     "@types/gatsbyjs__reach-router": "^2.0.3",
-    "@types/node": "^20.10.1",
+    "@types/node": "^20.10.2",
     "@types/react": "^18.2.39",
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^6.13.1",
