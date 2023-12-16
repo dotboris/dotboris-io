@@ -29,7 +29,7 @@ jobs:
           GATSBY_ENV: ${{ inputs.env }}
 
       - run: tar czvf public.tar.gz public/
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: build
           path: public.tar.gz
