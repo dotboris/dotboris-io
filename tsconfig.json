@@ -11,7 +11,7 @@
 
     // Support the `css` attribute for emotion styles
     "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react"
+    "jsxImportSource": "@emotion/react",
   },
   "include": [
     "./src/**/*",
@@ -19,6 +19,6 @@
     "./gatsby-node.ts",
     "./gatsby-config.ts",
     "./gatsby-ssr.tsx",
-    "./plugins/**/*"
-  ]
+    "./plugins/**/*",
+  ],
 }
