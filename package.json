@@ -10,7 +10,7 @@
     "lint:ts": "eslint .",
     "format:check": "prettier --check '**/*.{ts,tsx,js,jsx,json}'",
     "format": "prettier --write '**/*.{ts,tsx,js,jsx,json}'",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "packageManager": "pnpm@8.14.3",
   "dependencies": {
@@ -68,7 +68,7 @@
     "gatsby-transformer-sharp": "^5.13.1",
     "gatsby-transformer-yaml": "^5.13.1",
     "graphql": "^16.8.1",
-    "husky": "^8.0.3",
+    "husky": "^9.0.6",
     "lint-staged": "^15.2.0",
     "lodash": "^4.17.21",
     "netlify-cli": "^17.15.3",
