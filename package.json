@@ -68,7 +68,7 @@
     "gatsby-transformer-sharp": "^5.13.0",
     "gatsby-transformer-yaml": "^5.13.0",
     "graphql": "^16.8.1",
-    "husky": "^8.0.3",
+    "husky": "^9.0.6",
     "lint-staged": "^15.2.0",
     "lodash": "^4.17.21",
     "netlify-cli": "^17.15.1",
