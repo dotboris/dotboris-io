@@ -76,9 +76,6 @@ devDependencies:
   '@babel/core':
     specifier: ^7.24.0
     version: 7.24.0
-  '@gatsbyjs/webpack-hot-middleware':
-    specifier: ^2.25.3
-    version: 2.25.3
   '@types/gatsbyjs__reach-router':
     specifier: ^2.0.4
     version: 2.0.4
