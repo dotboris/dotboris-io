@@ -73,9 +73,6 @@ dependencies:
     version: 1.0.5
 
 devDependencies:
-  '@babel/core':
-    specifier: ^7.24.0
-    version: 7.24.0
   '@types/gatsbyjs__reach-router':
     specifier: ^2.0.4
     version: 2.0.4
