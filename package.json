@@ -29,13 +29,9 @@
     "gatsby-script": "^2.13.0",
     "iconoir-react": "^7.5.0",
     "mitt": "^3.0.1",
-    "node-html-parser": "^6.1.12",
     "prism-themes": "^1.9.0",
-    "prop-types": "^15.8.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "shallow-compare": "^1.2.2",
-    "style-to-object": "^1.0.5"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/gatsbyjs__reach-router": "^2.0.4",
