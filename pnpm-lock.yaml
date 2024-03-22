@@ -122,8 +122,8 @@ devDependencies:
     specifier: ^15.2.2
     version: 15.2.2
   netlify-cli:
-    specifier: ^17.20.0
-    version: 17.20.0(@types/node@20.11.30)
+    specifier: ^17.20.1
+    version: 17.20.1(@types/node@20.11.30)
   prettier:
     specifier: ^3.2.5
     version: 3.2.5
@@ -12607,8 +12607,8 @@ packages:
     resolution: {integrity: sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==}
     dev: true
 
-  /netlify-cli@17.20.0(@types/node@20.11.30):
-    resolution: {integrity: sha512-SABN+Rmjy+rX1Yi9sLZGxcaJ8gDQO+axcZINU79ETb84p5uBAP3ILJaMyFgn/ZgXRFyFDadSqDpzaP/pvbgHbg==}
+  /netlify-cli@17.20.1(@types/node@20.11.30):
+    resolution: {integrity: sha512-Hj71m61PGteCk27t8y3O0y8JqFmMuPCitbVfDK1V/Ro+U6zUDsVQUFO3v4sEeoB8s/QOLhXZn/2NHu/sBUlDNQ==}
     engines: {node: '>=18.14.0'}
     hasBin: true
     requiresBuild: true
