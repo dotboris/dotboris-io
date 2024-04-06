@@ -19,14 +19,14 @@
     "@fontsource/fira-code": "^5.0.17",
     "@gatsbyjs/reach-router": "^2.0.1",
     "gatsby": "^5.13.3",
-    "iconoir-react": "^7.5.0",
+    "iconoir-react": "^7.6.0",
     "prism-themes": "^1.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/gatsbyjs__reach-router": "^2.0.4",
-    "@types/node": "^20.12.4",
+    "@types/node": "^20.12.5",
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.24",
     "@typescript-eslint/eslint-plugin": "^7.5.0",
