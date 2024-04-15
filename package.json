@@ -9,13 +9,16 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format:check": "prettier --check '**/*.{ts,tsx,js,jsx,json,astro}'",
+    "format": "prettier --write '**/*.{ts,tsx,js,jsx,json,astro}'"
   },
   "packageManager": "pnpm@8.15.6",
   "devDependencies": {
     "@astrojs/check": "^0.5.10",
     "astro": "^4.6.1",
     "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
     "typescript": "^5.4.5"
   }
 }
