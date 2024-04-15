@@ -22,9 +22,6 @@
         packages = [
           pkgs.nodejs
           pkgs.nodePackages.pnpm
-
-          # Needed to build the `sharp` dependency
-          pkgs.vips
         ];
       };
     });
