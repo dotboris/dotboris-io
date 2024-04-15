@@ -1,0 +1,18 @@
+---
+import "./base.css";
+const { title } = Astro.props;
+---
+
+<html lang="en" class="bg-white font-sans text-base text-black">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} - dotboris.io</title>
+  </head>
+  <body>
+    <main class="container mx-auto px-4">
+      <slot />
+    </main>
+  </body>
+</html>
