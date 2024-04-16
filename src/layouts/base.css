@@ -1,4 +1,6 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   p {
@@ -7,6 +9,11 @@
 
   a {
     @apply text-blue-600 underline;
+  }
+
+  pre,
+  code {
+    @apply font-mono;
   }
 
   h1,
@@ -32,9 +39,6 @@
     @apply mb-1 mt-3 text-lg;
   }
 }
-
-@tailwind components;
-@tailwind utilities;
 
 pre.astro-code {
   @apply rounded-md p-4;

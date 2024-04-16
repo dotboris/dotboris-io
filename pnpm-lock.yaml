@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource/atkinson-hyperlegible':
+    specifier: ^5.0.19
+    version: 5.0.19
+  '@fontsource/fira-code':
+    specifier: ^5.0.17
+    version: 5.0.17
   '@radix-ui/react-icons':
     specifier: ^1.3.0
     version: 1.3.0(react@18.2.0)
@@ -959,6 +965,14 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@fontsource/atkinson-hyperlegible@5.0.19:
+    resolution: {integrity: sha512-dnhQiFATy7n12Nq1fq8yhuzbae4WJSFKaKesJLTNKyiz6w+DI7RbcB3D1hwU+tBax4Dxlhg0tkY1LS4AzRRqxw==}
+    dev: false
+
+  /@fontsource/fira-code@5.0.17:
+    resolution: {integrity: sha512-Ai0qE5PWvm6ETny7ToAitwdhYtO3YrNIHoa0arPquXxpnlRSB+OsJfhKnfgDKm6WMmCnxKOfsIslbVw5PqQvvQ==}
+    dev: false
 
   /@isaacs/cliui@8.0.2:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
