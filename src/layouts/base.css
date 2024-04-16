@@ -1,6 +1,14 @@
 @tailwind base;
 
 @layer base {
+  p {
+    @apply my-4;
+  }
+
+  a {
+    @apply text-blue-600 underline;
+  }
+
   h1,
   h2,
   h3,
@@ -8,11 +16,6 @@
   h5 {
     @apply font-bold;
   }
-
-  p {
-    @apply my-4;
-  }
-
   h1 {
     @apply mb-4 mt-7 text-4xl;
   }
@@ -27,9 +30,6 @@
   }
   h5 {
     @apply mb-1 mt-3 text-lg;
-  }
-  a {
-    @apply text-blue-600 underline;
   }
 }
 
