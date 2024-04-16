@@ -1,6 +1,9 @@
 ---
-import { ProjectCard } from "../components/ProjectCard";
 import Layout from "../layouts/Layout.astro";
+import { ProjectCard } from "../components/ProjectCard";
+import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
+
+const articles = await Astro.glob("./articles/*.md");
 ---
 
 <Layout title="👋">
@@ -36,5 +39,18 @@ import Layout from "../layouts/Layout.astro";
   </div>
 
   <h2>Articles</h2>
-  TODO articles...
+  {
+    articles.map((article) => (
+      <article>
+        <h3>{article.frontmatter.title}</h3>
+        <p>{article.frontmatter.description}</p>
+        <p>
+          <a class="no-underline" href={article.url}>
+            <span class="underline">Continue reading</span>
+            <DoubleArrowRightIcon className="inline-block" />
+          </a>
+        </p>
+      </article>
+    ))
+  }
 </Layout>
