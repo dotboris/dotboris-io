@@ -1,6 +1,8 @@
 ---
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import "./base.css";
+import { Image } from "astro:assets";
+import avatarImage from "../assets/avatar.png";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 const { title, frontmatter } = Astro.props;
 ---
 
@@ -13,23 +15,32 @@ const { title, frontmatter } = Astro.props;
   </head>
   <body>
     <div class="border-b-4 border-b-rose-300 bg-neutral-800 font-semibold">
-      <nav class="container mx-auto flex items-center justify-between p-4">
-        <div>
-          <a class="text-white hover:text-rose-300" href="/">Home</a>
+      <nav
+        class="container mx-auto flex justify-between px-4 pb-4 pt-8"
+      >
+        <div class="flex items-center gap-6">
+          <Image
+            class="rounded-full"
+            width={50}
+            height={50}
+            src={avatarImage}
+            alt="dotboris' avatar. A yellow anime duck with its mouth open"
+          />
+          <a class="text-lg text-white hover:text-rose-300" href="/">Home</a>
         </div>
-        <div>
+        <div class="flex items-center">
           <a
             class="text-white hover:text-rose-300"
             href="https://github.com/dotboris"
             aria-label="dotboris on GitHub"
             title="dotboris on GitHub"
           >
-            <GitHubLogoIcon className="size-6" />
+            <GitHubLogoIcon className="size-8" />
           </a>
         </div>
       </nav>
     </div>
-    <div class="container mx-auto px-4 pt-8">
+    <div class="container mx-auto px-4 pt-14">
       <main class="prose prose-a:text-blue-600 max-w-none">
         <slot />
       </main>
