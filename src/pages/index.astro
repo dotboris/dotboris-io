@@ -1,4 +1,5 @@
 ---
+import { ProjectCard } from "../components/ProjectCard";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -11,7 +12,28 @@ import Layout from "../layouts/Layout.astro";
   </p>
 
   <h2>Projects</h2>
-  TODO projects...
+  <div
+    class="auto my-4 grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4"
+  >
+    <ProjectCard
+      title="Prod Guard"
+      description="Browser extension that lets you know when you're connected to production by giving you a clear visual warning."
+      githubOwner="dotboris"
+      githubSlug="prod-guard"
+    />
+    <ProjectCard
+      title="cdo"
+      description="Small command to run other commands in a given directory."
+      githubOwner="dotboris"
+      githubSlug="cdo"
+    />
+    <ProjectCard
+      title="Alt"
+      description="Simple version manager tool for switching between different versions of commands."
+      githubOwner="dotboris"
+      githubSlug="alt"
+    />
+  </div>
 
   <h2>Articles</h2>
   TODO articles...
