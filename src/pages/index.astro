@@ -14,7 +14,7 @@ const articles = await Astro.glob("./articles/*.md");
     I share thoughts, ideas, projects and anything that might suite my fancy.
   </p>
 
-  <h2>Projects</h2>
+  <h2 id="projects">Projects</h2>
   <div
     class="auto my-4 grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4"
   >
@@ -38,7 +38,7 @@ const articles = await Astro.glob("./articles/*.md");
     />
   </div>
 
-  <h2>Articles</h2>
+  <h2 id="articles">Articles</h2>
   {
     articles.map((article) => (
       <article>

@@ -1,4 +1,5 @@
 ---
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import "./base.css";
 const { title, frontmatter } = Astro.props;
 ---
@@ -11,10 +12,27 @@ const { title, frontmatter } = Astro.props;
     <title>{title ?? frontmatter.title} - dotboris.io</title>
   </head>
   <body>
-    <div class="min-h-8 border-b-4 border-b-rose-300 bg-neutral-800 text-white">
+    <div class="border-b-4 border-b-rose-300 bg-neutral-800 font-semibold">
+      <nav class="container mx-auto flex items-center justify-between p-4">
+        <div>
+          <a class="text-white hover:text-rose-300" href="/">Home</a>
+        </div>
+        <div>
+          <a
+            class="text-white hover:text-rose-300"
+            href="https://github.com/dotboris"
+            aria-label="dotboris on GitHub"
+            title="dotboris on GitHub"
+          >
+            <GitHubLogoIcon className="size-6" />
+          </a>
+        </div>
+      </nav>
     </div>
-    <main class="container mx-auto px-4">
-      <slot />
-    </main>
+    <div class="container mx-auto px-4 pt-8">
+      <main class="prose prose-a:text-blue-600 max-w-none">
+        <slot />
+      </main>
+    </div>
   </body>
 </html>

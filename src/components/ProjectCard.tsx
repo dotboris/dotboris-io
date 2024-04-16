@@ -3,7 +3,6 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
