@@ -13,37 +13,46 @@ const { title, frontmatter } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title ?? frontmatter.title} - dotboris.io</title>
   </head>
-  <body>
-    <div class="border-b-4 border-b-rose-300 bg-neutral-800 font-semibold">
-      <nav
-        class="container mx-auto flex justify-between px-4 pb-4 pt-8"
+  <body class="flex min-h-screen flex-col">
+    <header class="border-b-4 border-b-rose-300 bg-neutral-800 font-semibold">
+      <div
+        class="container mx-auto grid grid-cols-[auto_1fr_auto] items-center gap-4 p-4"
       >
-        <div class="flex items-center gap-6">
-          <Image
-            class="rounded-full"
-            width={50}
-            height={50}
-            src={avatarImage}
-            alt="dotboris' avatar. A yellow anime duck with its mouth open"
-          />
-          <a class="text-lg text-white hover:text-rose-300" href="/">Home</a>
-        </div>
-        <div class="flex items-center">
-          <a
-            class="text-white hover:text-rose-300"
-            href="https://github.com/dotboris"
-            aria-label="dotboris on GitHub"
-            title="dotboris on GitHub"
-          >
-            <GitHubLogoIcon className="size-8" />
-          </a>
-        </div>
-      </nav>
-    </div>
-    <div class="container mx-auto px-4 pt-14">
-      <main class="prose prose-a:text-blue-600 max-w-none">
+        <Image
+          class="rounded-full"
+          width={50}
+          height={50}
+          src={avatarImage}
+          alt="dotboris' avatar. A yellow anime duck with its mouth open"
+        />
+        <nav>
+          <ul>
+            <li>
+              <a class="py-4 text-lg text-white hover:text-rose-300" href="/">
+                Home
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <a
+          class="text-white hover:text-rose-300"
+          href="https://github.com/dotboris"
+          aria-label="dotboris on GitHub"
+          title="dotboris on GitHub"
+        >
+          <GitHubLogoIcon className="size-8" />
+        </a>
+      </div>
+    </header>
+    <div class="container mx-auto">
+      <main class="prose max-w-none px-4 py-8 prose-a:text-blue-600">
         <slot />
       </main>
     </div>
+    <footer
+      class="mt-auto border-t-4 border-t-rose-300 bg-neutral-800 p-4 text-center text-neutral-400"
+    >
+      &copy; {new Date().getFullYear()} Boris Bera
+    </footer>
   </body>
 </html>
