@@ -11,6 +11,7 @@ const { title, frontmatter } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title ?? frontmatter.title} - dotboris.io</title>
   </head>
   <body class="flex min-h-screen flex-col">
