@@ -18,6 +18,15 @@
       pkgs = import nixpkgs {inherit system overlays;};
     in {
       formatter = pkgs.alejandra;
+      checks = {
+        alejandra =
+          pkgs.runCommand "alejandra" {
+            buildInputs = [pkgs.alejandra];
+          } ''
+            alejandra -c ${./.}
+            mkdir $out
+          '';
+      };
       devShells.default = pkgs.mkShell {
         packages = [
           pkgs.nodejs
