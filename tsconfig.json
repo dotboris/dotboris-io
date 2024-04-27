@@ -4,5 +4,14 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   },
-  "include": ["./*.ts", "./*.js", "./*.mjs", "./*.cjs", "./src/**/*"]
+  "include": [
+    "./.prettierrc.mjs",
+    "./*.ts",
+    "./*.js",
+    "./*.mjs",
+    "./*.cjs",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./src/**/*.astro"
+  ]
 }
