@@ -1,4 +1,5 @@
 ---
+pubDate: 2023-01-10
 title: Correct cURL
 description: >
   Using cURL in a shell script should be easy right? Just call cURL with an URL
@@ -6,10 +7,7 @@ description: >
   on cURL's default behaviour. It comes with many edge cases. This article
   describes the correct way to call cURL in a shell script or CI process to
   ensure that it behaves properly even in case of failure.
-layout: ../../layouts/Layout.astro
 ---
-
-# Correct cURL
 
 Let's say that you're writing a shell script or that you're working on some CI
 process and you need to download a file from the internet. Should be easy right?

@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const articles = await getCollection("articles");
+  return articles.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { title, description, pubDate } = entry.data;
+const { Content } = await entry.render();
+---
+
+<Layout title={title} description={description}>
+  <header class="mb-8">
+    <h1 class="m-0">{title}</h1>
+    <p class="m-0 text-sm italic">
+      Published on
+      <time datetime={pubDate.toISOString()}>
+        {
+          new Intl.DateTimeFormat("en-CA", {
+            dateStyle: "full",
+          }).format(pubDate)
+        }
+      </time>
+    </p>
+  </header>
+  <Content />
+</Layout>

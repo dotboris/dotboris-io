@@ -2,8 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import { ProjectCard } from "../components/ProjectCard";
 import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
+import { getCollection } from "astro:content";
 
-const articles = await Astro.glob("./articles/*.md");
+const articles = await getCollection("articles");
+articles.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 ---
 
 <Layout
@@ -46,10 +48,20 @@ const articles = await Astro.glob("./articles/*.md");
   {
     articles.map((article) => (
       <article>
-        <h3>{article.frontmatter.title}</h3>
-        <p>{article.frontmatter.description}</p>
+        <header>
+          <h3 class="mb-0">{article.data.title}</h3>
+          <p class="m-0 text-sm italic">
+            Published on
+            <time datetime={article.data.pubDate.toISOString()}>
+              {new Intl.DateTimeFormat("en-CA", {
+                dateStyle: "full",
+              }).format(article.data.pubDate)}
+            </time>
+          </p>
+        </header>
+        <p>{article.data.description}</p>
         <p>
-          <a class="no-underline" href={article.url}>
+          <a class="no-underline" href={`/articles/${article.slug}`}>
             <span class="underline">Continue reading</span>
             <DoubleArrowRightIcon className="inline-block" />
           </a>
