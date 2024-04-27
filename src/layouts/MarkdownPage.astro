@@ -1,0 +1,14 @@
+---
+import Page from "./Page.astro";
+import { z } from "astro:content";
+
+const schema = z.object({
+  title: z.string(),
+  description: z.string(),
+});
+const { title, description } = schema.parse(Astro.props.frontmatter);
+---
+
+<Page title={title} description={description}>
+  <slot />
+</Page>

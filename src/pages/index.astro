@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Page from "../layouts/Page.astro";
 import { ProjectCard } from "../components/ProjectCard";
 import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import { getCollection } from "astro:content";
@@ -8,7 +8,7 @@ const articles = await getCollection("articles");
 articles.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 ---
 
-<Layout
+<Page
   title="👋"
   description={"Your one stop shop for all your dotboris related needs. " +
     "Whatever that means 🤷."}
