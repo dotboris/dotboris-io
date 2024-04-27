@@ -3,7 +3,22 @@ import "./base.css";
 import { Image } from "astro:assets";
 import avatarImage from "../assets/avatar.png";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-const { title, frontmatter } = Astro.props;
+
+interface Props {
+  title?: string;
+  description?: string;
+  frontmatter?: Record<string, any>;
+  children: any;
+}
+const { frontmatter = {}, ...props } = Astro.props;
+const title = props.title ?? frontmatter.title;
+if (title == null) {
+  throw TypeError(`Expected title in the props or frontmatter. Got none.`);
+}
+const description = props.description ?? frontmatter.description;
+if (description == null) {
+  throw TypeError(`Expected description in the props or frontmatter. Got none.`);
+}
 ---
 
 <html lang="en" class="bg-white font-sans text-base text-black">
@@ -12,7 +27,8 @@ const { title, frontmatter } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <title>{title ?? frontmatter.title} - dotboris.io</title>
+    <title>{title} - dotboris.io</title>
+    <meta name="description" content={description} />
   </head>
   <body class="flex min-h-screen flex-col">
     <header class="border-b-4 border-b-rose-300 bg-neutral-800 font-semibold">

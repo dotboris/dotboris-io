@@ -6,7 +6,11 @@ import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
 const articles = await Astro.glob("./articles/*.md");
 ---
 
-<Layout title="👋">
+<Layout
+  title="👋"
+  description={"Your one stop shop for all your dotboris related needs. " +
+    "Whatever that means 🤷."}
+>
   <h1>Hello World!</h1>
   <p>
     👋 Hello there! My name is Boris and it looks like you've found yourself on
