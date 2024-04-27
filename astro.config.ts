@@ -14,4 +14,8 @@ export default defineConfig({
     }),
     sitemap(),
   ],
+
+  redirects: {
+    "/correct-curl": "/articles/correct-curl",
+  },
 });
