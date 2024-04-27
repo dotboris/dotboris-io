@@ -25,7 +25,7 @@ export function ProjectCard({
       <CardFooter>
         <Button size="lg" asChild>
           <a
-            className="w-full no-underline visited:text-current"
+            className="w-full"
             href={`https://github.com/${githubOwner}/${githubSlug}`}
           >
             <GitHubLogoIcon className="mr-2 size-6" aria-label="GitHub logo" />
