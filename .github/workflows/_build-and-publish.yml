@@ -5,10 +5,6 @@ on:
         description: Extra args to pass to `netlify deploy ...`
         required: false
         type: string
-      env:
-        description: What kind of environment are we building, development or production?
-        required: true
-        type: string
 
     secrets:
       NETLIFY_TOKEN:
@@ -25,8 +21,6 @@ jobs:
       - uses: ./.github/actions/setup-node
 
       - run: pnpm build
-        env:
-          GATSBY_ENV: ${{ inputs.env }}
 
       - run: tar czvf dist.tar.gz dist/
       - uses: actions/upload-artifact@v4

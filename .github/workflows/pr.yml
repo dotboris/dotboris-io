@@ -8,5 +8,4 @@ jobs:
     uses: ./.github/workflows/_build-and-publish.yml
     secrets: inherit
     with:
-      env: development
       netlifyDeployArgs: --alias 'pr-${{ github.event.number }}'
