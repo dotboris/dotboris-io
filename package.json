@@ -13,7 +13,7 @@
     "astro": "astro",
     "format": "prettier --write '**/*.{ts,tsx,mjs,cjs,js,jsx,json,astro,css,md}'",
     "check:format": "prettier --check '**/*.{ts,tsx,mjs,cjs,js,jsx,json,astro,css,md}'",
-    "check:lint": "eslint .",
+    "check:lint": "astro sync && eslint .",
     "check:astro": "astro check"
   },
   "packageManager": "pnpm@8.15.6",
