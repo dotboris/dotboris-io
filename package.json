@@ -7,11 +7,13 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format:check": "prettier --check '**/*.{ts,tsx,mjs,cjs,js,jsx,json,astro,css}'",
-    "format": "prettier --write '**/*.{ts,tsx,mjs,cjs,js,jsx,json,astro,css}'"
+    "format": "prettier --write '**/*.{ts,tsx,mjs,cjs,js,jsx,json,astro,css}'",
+    "check:format": "prettier --check '**/*.{ts,tsx,mjs,cjs,js,jsx,json,astro,css}'",
+    "check:lint": "eslint .",
+    "check:astro": "astro check"
   },
   "packageManager": "pnpm@8.15.6",
   "dependencies": {
