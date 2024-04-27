@@ -9,10 +9,10 @@ dependencies:
     specifier: ^3.1.4
     version: 3.1.4
   '@fontsource/atkinson-hyperlegible':
-    specifier: ^5.0.19
+    specifier: ^5.0.20
     version: 5.0.20
   '@fontsource/fira-code':
-    specifier: ^5.0.17
+    specifier: ^5.0.18
     version: 5.0.18
   '@radix-ui/react-icons':
     specifier: ^1.3.0
@@ -24,16 +24,16 @@ dependencies:
     specifier: ^0.7.0
     version: 0.7.0
   clsx:
-    specifier: ^2.1.0
+    specifier: ^2.1.1
     version: 2.1.1
   react:
-    specifier: ^18.2.0
+    specifier: ^18.3.1
     version: 18.3.1
   react-dom:
-    specifier: ^18.2.0
+    specifier: ^18.3.1
     version: 18.3.1(react@18.3.1)
   tailwind-merge:
-    specifier: ^2.2.2
+    specifier: ^2.3.0
     version: 2.3.0
 
 devDependencies:
@@ -41,7 +41,7 @@ devDependencies:
     specifier: ^0.5.10
     version: 0.5.10(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(typescript@5.4.5)
   '@astrojs/react':
-    specifier: ^3.3.0
+    specifier: ^3.3.1
     version: 3.3.1(@types/react-dom@18.3.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)(vite@5.2.10)
   '@astrojs/tailwind':
     specifier: ^5.1.0
@@ -50,7 +50,7 @@ devDependencies:
     specifier: ^9.1.1
     version: 9.1.1
   '@tailwindcss/typography':
-    specifier: ^0.5.12
+    specifier: ^0.5.13
     version: 0.5.13(tailwindcss@3.4.3)
   '@types/eslint-config-prettier':
     specifier: ^6.11.3
@@ -59,13 +59,13 @@ devDependencies:
     specifier: ^8.42.3
     version: 8.42.3
   '@types/react':
-    specifier: ^18.2.79
+    specifier: ^18.3.1
     version: 18.3.1
   '@types/react-dom':
-    specifier: ^18.2.25
+    specifier: ^18.3.0
     version: 18.3.0
   astro:
-    specifier: ^4.6.1
+    specifier: ^4.7.0
     version: 4.7.0(@types/node@20.12.7)(typescript@5.4.5)
   eslint:
     specifier: ^9.1.1
@@ -1514,7 +1514,7 @@ packages:
       '@opentelemetry/api': 1.8.0
       '@sindresorhus/slugify': 2.2.1
       ansi-escapes: 6.2.1
-      chalk: 5.2.0
+      chalk: 5.3.0
       clean-stack: 4.2.0
       execa: 6.1.0
       fdir: 6.1.1
@@ -1586,7 +1586,7 @@ packages:
     hasBin: true
     dependencies:
       '@iarna/toml': 2.2.5
-      chalk: 5.2.0
+      chalk: 5.3.0
       cron-parser: 4.8.1
       deepmerge: 4.3.1
       dot-prop: 7.2.0
@@ -4324,7 +4324,7 @@ packages:
     resolution: {integrity: sha512-DP3FpjsiDDvnQC1OJBsdOJZPuy7r0o6sepY2T5M3L/d2nrE23O/ErFkEqyY3ngVL1ZhTj/H0pCMNObZGkEOaaQ==}
     engines: {node: '>=12.20.0'}
     dependencies:
-      chalk: 5.2.0
+      chalk: 5.3.0
       filter-obj: 3.0.0
       is-plain-obj: 4.1.0
       jest-validate: 27.5.1
@@ -4334,7 +4334,7 @@ packages:
     resolution: {integrity: sha512-Soe5lerRg3erMRgYC0EC696/8dMCGpBzcQchFfi55Yrkja8F+P7cUt0LVTIg7u5ob5BexLZ/F1kO+ejmv+nq8w==}
     engines: {node: '>=14.18.0'}
     dependencies:
-      chalk: 5.2.0
+      chalk: 5.3.0
       is-plain-obj: 4.1.0
     dev: true
 
@@ -7517,7 +7517,7 @@ packages:
     resolution: {integrity: sha512-l0x2DvrW294C9uDCoQe1VSU4gf529FkSZ6leBl4TiqZH/e+0R7hSfHQBNut2mNygDgHwvYHfFLn6Oxb3VWj2rA==}
     engines: {node: '>=12'}
     dependencies:
-      chalk: 5.2.0
+      chalk: 5.3.0
       is-unicode-supported: 1.3.0
     dev: true
 
@@ -8886,7 +8886,7 @@ packages:
     resolution: {integrity: sha512-ERAyNnZOfqM+Ao3RAvIXkYh5joP220yf59gVe2X/cI6SiCxIdi4c9HZKZD8R6q/RDXEje1THBju6iExiSsgJaQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
-      chalk: 5.2.0
+      chalk: 5.3.0
       cli-cursor: 4.0.0
       cli-spinners: 2.9.2
       is-interactive: 2.0.0
@@ -11660,7 +11660,7 @@ packages:
     engines: {node: '>=14.16'}
     dependencies:
       boxen: 7.1.1
-      chalk: 5.2.0
+      chalk: 5.3.0
       configstore: 6.0.0
       has-yarn: 3.0.0
       import-lazy: 4.0.0
