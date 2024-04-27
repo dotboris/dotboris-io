@@ -7,6 +7,13 @@ on:
       - main
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-node
+      - run: pnpm build
+
   check-format:
     runs-on: ubuntu-latest
     steps:
