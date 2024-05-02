@@ -3,6 +3,7 @@ import "./base.css";
 import { Image } from "astro:assets";
 import avatarImage from "../assets/avatar.png";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { Chatter } from "../components/Chatter";
 
 interface Props {
   title: string;
@@ -27,14 +28,16 @@ const { title, description } = Astro.props;
       <div
         class="container mx-auto grid grid-cols-[auto_1fr_auto] items-center gap-4 p-4"
       >
-        <Image
-          class="rounded-full"
-          width={50}
-          height={50}
-          densities={[1.5, 2]}
-          src={avatarImage}
-          alt="dotboris' avatar. A yellow anime duck with its mouth open"
-        />
+        <Chatter client:idle>
+          <Image
+            class="rounded-full"
+            width={50}
+            height={50}
+            densities={[1.5, 2]}
+            src={avatarImage}
+            alt="dotboris' avatar. A yellow anime duck with its mouth open"
+          />
+        </Chatter>
         <nav>
           <ul>
             <li>
