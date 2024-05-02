@@ -11,7 +11,7 @@ export function Chatter(props: React.PropsWithChildren) {
     <div>
       <button
         type="button"
-        className="rounded-full hover:ring hover:ring-rose-300"
+        className="duration-50 block rounded-full ring-rose-300 transition hover:ring"
         onClick={showMessage}
       >
         {children}
@@ -47,7 +47,7 @@ function MessageItem(props: {
   const { message, isLatest, removeMessage } = props;
 
   return (
-    <div className={cn("relative", isLatest && "mt-3")}>
+    <div className={cn("relative", isLatest && "mt-3.5")}>
       {isLatest && (
         <svg
           width={16}
