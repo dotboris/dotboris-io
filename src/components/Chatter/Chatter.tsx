@@ -1,6 +1,6 @@
 import React from "react";
 import { cn } from "../../classnames";
-import { useChat } from "./useChat";
+import { useChat, type Message } from "./useChat";
 
 export function Chatter(props: React.PropsWithChildren) {
   const { children } = props;
@@ -17,14 +17,12 @@ export function Chatter(props: React.PropsWithChildren) {
         {children}
       </button>
       <MessageList>
-        {messages.map(({ key, message }, index) => (
-          <Message
-            key={key}
+        {messages.map((message, index) => (
+          <MessageItem
+            key={message.key}
             message={message}
             isLatest={index === messages.length - 1}
-            onClick={() => {
-              removeMessage(key);
-            }}
+            removeMessage={removeMessage}
           />
         ))}
       </MessageList>
@@ -41,12 +39,13 @@ function MessageList(props: React.PropsWithChildren) {
   );
 }
 
-function Message(props: {
-  message: string;
+function MessageItem(props: {
+  message: Message;
   isLatest: boolean;
-  onClick: () => void;
+  removeMessage: (key: string) => void;
 }) {
-  const { message, isLatest, onClick } = props;
+  const { message, isLatest, removeMessage } = props;
+
   return (
     <div className={cn("relative", isLatest && "mt-3")}>
       {isLatest && (
@@ -68,9 +67,9 @@ function Message(props: {
         <button
           type="button"
           className="w-full px-4 py-2 text-left font-normal text-black"
-          onClick={onClick}
+          onClick={() => removeMessage(message.key)}
         >
-          {message}
+          {message.text}
         </button>
       </li>
     </div>

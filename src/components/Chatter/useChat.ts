@@ -3,7 +3,7 @@ import { MESSAGES } from "./messages";
 
 export interface Message {
   key: string;
-  message: string;
+  text: string;
 }
 
 export function useChat() {
@@ -16,7 +16,7 @@ export function useChat() {
   if (state.state === "ready") {
     messages = Object.entries(state.messages).map(([key, value]) => ({
       key,
-      message: value,
+      text: value,
     }));
   }
 
@@ -62,18 +62,30 @@ function reducer(state: State, action: Action): State {
         return state;
       }
 
-      const key = String(state.nextKey);
+      // Pick the next message
       const messageIndex = Math.floor(
         Math.random() * (state.messagePool.length - 1),
       );
       const message = state.messagePool[messageIndex];
 
+      // Add it to the list
+      const messages = {
+        ...state.messages,
+        [String(state.nextKey)]: message,
+      };
+
+      // Remove keys that overflow
+      const keys = Object.keys(messages);
+      while (keys.length > 5) {
+        const toRemove = keys.shift();
+        if (toRemove) {
+          delete messages[toRemove];
+        }
+      }
+
       return {
         ...state,
-        messages: {
-          ...state.messages,
-          [key]: message,
-        },
+        messages,
         nextKey: state.nextKey + 1,
       };
     }
