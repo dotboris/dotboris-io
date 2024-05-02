@@ -1,20 +1,31 @@
 import React from "react";
 import { cn } from "../../classnames";
-
-const MESSAGES = [
-  "Hi! I'm Boris!",
-  "Testing testing testing testing",
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-];
+import { useChat } from "./useChat";
 
 export function Chatter(props: React.PropsWithChildren) {
   const { children } = props;
+
+  const { messages, showMessage, removeMessage } = useChat();
+
   return (
-    <div className="font-normal">
-      {children}
+    <div>
+      <button
+        type="button"
+        className="rounded-full hover:ring hover:ring-rose-300"
+        onClick={showMessage}
+      >
+        {children}
+      </button>
       <MessageList>
-        {MESSAGES.map((message, index) => (
-          <Message key={message} message={message} isLatest={index === 0} />
+        {messages.map(({ key, message }, index) => (
+          <Message
+            key={key}
+            message={message}
+            isLatest={index === messages.length - 1}
+            onClick={() => {
+              removeMessage(key);
+            }}
+          />
         ))}
       </MessageList>
     </div>
@@ -24,12 +35,18 @@ export function Chatter(props: React.PropsWithChildren) {
 function MessageList(props: React.PropsWithChildren) {
   const { children } = props;
   return (
-    <ul className="absolute flex max-w-sm flex-col gap-2 pr-4">{children}</ul>
+    <ul className="absolute flex max-w-sm flex-col-reverse gap-2 pb-4 pr-4">
+      {children}
+    </ul>
   );
 }
 
-function Message(props: { message: string; isLatest: boolean }) {
-  const { message, isLatest } = props;
+function Message(props: {
+  message: string;
+  isLatest: boolean;
+  onClick: () => void;
+}) {
+  const { message, isLatest, onClick } = props;
   return (
     <div className={cn("relative", isLatest && "mt-3")}>
       {isLatest && (
@@ -47,8 +64,14 @@ function Message(props: { message: string; isLatest: boolean }) {
           ></path>
         </svg>
       )}
-      <li className="inline-block rounded-xl border border-neutral-200 bg-white px-4 py-2 text-black shadow-lg">
-        {message}
+      <li className="inline-block min-w-20 rounded-xl border border-neutral-200 bg-white shadow-lg">
+        <button
+          type="button"
+          className="w-full px-4 py-2 text-left font-normal text-black"
+          onClick={onClick}
+        >
+          {message}
+        </button>
       </li>
     </div>
   );
