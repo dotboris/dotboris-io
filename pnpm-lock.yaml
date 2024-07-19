@@ -2615,8 +2615,8 @@ packages:
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  electron-to-chromium@1.4.830:
-    resolution: {integrity: sha512-TrPKKH20HeN0J1LHzsYLs2qwXrp8TF4nHdu4sq61ozGbzMpWhI7iIOPYPPkxeq1azMT9PZ8enPFcftbs/Npcjg==}
+  electron-to-chromium@1.4.831:
+    resolution: {integrity: sha512-6cKy9msoQGWhBF30n6y5ck80BdunKdwMRugM1lr74DMMXhjDRxSwMvrD1ncPP+n1PjF+KKmZZydvEF29skNZ1Q==}
 
   emmet@2.4.7:
     resolution: {integrity: sha512-O5O5QNqtdlnQM2bmKHtJgyChcrFMgQuulI+WdiOw2NArzprUqqxUW6bgYtKvzKgrsYpuLWalOkdhNP+1jluhCA==}
@@ -4696,8 +4696,8 @@ packages:
       ts-node:
         optional: true
 
-  postcss-nested@6.0.1:
-    resolution: {integrity: sha512-mEp4xPMi5bSWiMbsgoPfcP74lsWLHkQbZc3sY+jWYd65CUwXrUaTp0fmNpa01ZcETKlIgUdFN/MpS2xZtqL9dQ==}
+  postcss-nested@6.2.0:
+    resolution: {integrity: sha512-HQbt28KulC5AJzG+cZtj9kvKB93CFCdLvog1WFLf1D+xmMvPGlBstkpTEZfK5+AN9hfJocyBFCNiqyS48bpgzQ==}
     engines: {node: '>=12.0'}
     peerDependencies:
       postcss: ^8.2.14
@@ -8270,7 +8270,7 @@ snapshots:
   browserslist@4.23.2:
     dependencies:
       caniuse-lite: 1.0.30001642
-      electron-to-chromium: 1.4.830
+      electron-to-chromium: 1.4.831
       node-releases: 2.0.17
       update-browserslist-db: 1.1.0(browserslist@4.23.2)
 
@@ -8818,7 +8818,7 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  electron-to-chromium@1.4.830: {}
+  electron-to-chromium@1.4.831: {}
 
   emmet@2.4.7:
     dependencies:
@@ -11375,7 +11375,7 @@ snapshots:
       postcss: 8.4.39
       ts-node: 10.9.2(@types/node@20.14.11)(typescript@5.5.3)
 
-  postcss-nested@6.0.1(postcss@8.4.39):
+  postcss-nested@6.2.0(postcss@8.4.39):
     dependencies:
       postcss: 8.4.39
       postcss-selector-parser: 6.1.1
@@ -12241,7 +12241,7 @@ snapshots:
       postcss-import: 15.1.0(postcss@8.4.39)
       postcss-js: 4.0.1(postcss@8.4.39)
       postcss-load-config: 4.0.2(postcss@8.4.39)(ts-node@10.9.2(@types/node@20.14.11)(typescript@5.5.3))
-      postcss-nested: 6.0.1(postcss@8.4.39)
+      postcss-nested: 6.2.0(postcss@8.4.39)
       postcss-selector-parser: 6.1.1
       resolve: 1.22.8
       sucrase: 3.35.0
