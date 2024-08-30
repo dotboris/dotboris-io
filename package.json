@@ -16,7 +16,7 @@
     "check:lint": "astro sync && eslint .",
     "check:astro": "astro check"
   },
-  "packageManager": "pnpm@9.8.0",
+  "packageManager": "pnpm@9.9.0",
   "dependencies": {
     "@astrojs/sitemap": "^3.1.6",
     "@fontsource/atkinson-hyperlegible": "^5.0.21",
@@ -34,25 +34,25 @@
     "@astrojs/react": "^3.6.2",
     "@astrojs/tailwind": "^5.1.0",
     "@eslint/js": "^9.9.1",
-    "@tailwindcss/typography": "^0.5.14",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint__js": "^8.42.3",
-    "@types/react": "^18.3.4",
+    "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
-    "astro": "^4.14.5",
+    "astro": "^4.15.1",
     "eslint": "^9.9.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^1.2.3",
     "husky": "^9.1.5",
     "lint-staged": "^15.2.9",
-    "netlify-cli": "^17.34.2",
+    "netlify-cli": "^17.34.3",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.6",
     "sharp": "^0.33.5",
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.2.0"
+    "typescript-eslint": "^8.3.0"
   },
   "lint-staged": {
     "*.{ts,tsx,mjs,cjs,js,jsx,json,astro,css,md}": [
