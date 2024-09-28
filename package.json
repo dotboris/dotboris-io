@@ -33,14 +33,14 @@
     "@astrojs/check": "^0.9.3",
     "@astrojs/react": "^3.6.2",
     "@astrojs/tailwind": "^5.1.1",
-    "@eslint/js": "^9.11.0",
+    "@eslint/js": "^9.11.1",
     "@tailwindcss/typography": "^0.5.15",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint__js": "^8.42.3",
-    "@types/react": "^18.3.8",
+    "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
-    "astro": "^4.15.8",
-    "eslint": "^9.11.0",
+    "astro": "^4.15.9",
+    "eslint": "^9.11.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^1.2.4",
     "husky": "^9.1.6",
@@ -48,11 +48,11 @@
     "netlify-cli": "^17.36.2",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.6",
+    "prettier-plugin-tailwindcss": "^0.6.8",
     "sharp": "^0.33.5",
-    "tailwindcss": "^3.4.12",
+    "tailwindcss": "^3.4.13",
     "typescript": "^5.6.2",
-    "typescript-eslint": "^8.6.0"
+    "typescript-eslint": "^8.7.0"
   },
   "lint-staged": {
     "*.{ts,tsx,mjs,cjs,js,jsx,json,astro,css,md}": [
