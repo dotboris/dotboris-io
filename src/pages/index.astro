@@ -3,6 +3,7 @@ import Page from "../layouts/Page.astro";
 import { ProjectCard } from "../components/ProjectCard";
 import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import { getCollection } from "astro:content";
+import { PublishDate } from "../components/PublishDate";
 
 const articles = await getCollection("articles");
 articles.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
@@ -50,14 +51,7 @@ articles.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
       <article>
         <header>
           <h3 class="mb-0">{article.data.title}</h3>
-          <p class="m-0 text-sm italic">
-            Published on
-            <time datetime={article.data.pubDate.toISOString()}>
-              {new Intl.DateTimeFormat("en-CA", {
-                dateStyle: "full",
-              }).format(article.data.pubDate)}
-            </time>
-          </p>
+          <PublishDate className="m-0" date={article.data.pubDate} />
         </header>
         <p>{article.data.description}</p>
         <p>

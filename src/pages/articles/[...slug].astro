@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Page.astro";
 import type { CollectionEntry } from "astro:content";
+import { PublishDate } from "../../components/PublishDate";
 
 interface Props {
   entry: CollectionEntry<"articles">;
@@ -23,16 +24,7 @@ const { Content } = await entry.render();
 <Layout title={title} description={description}>
   <header class="mb-8">
     <h1 class="m-0">{title}</h1>
-    <p class="m-0 text-sm italic">
-      Published on
-      <time datetime={pubDate.toISOString()}>
-        {
-          new Intl.DateTimeFormat("en-CA", {
-            dateStyle: "full",
-          }).format(pubDate)
-        }
-      </time>
-    </p>
+    <PublishDate className="m-0" date={pubDate} />
   </header>
   <Content />
 </Layout>
