@@ -47,7 +47,7 @@ importers:
         version: 4.1.2(@types/node@22.10.2)(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(jiti@2.4.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(yaml@2.6.1)
       '@astrojs/tailwind':
         specifier: ^5.1.4
-        version: 5.1.4(astro@5.1.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(jiti@2.4.2)(rollup@4.29.1)(typescript@5.7.2)(yaml@2.6.1))(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2)))(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2))
+        version: 5.1.4(astro@5.1.2(@netlify/blobs@8.1.0)(@types/node@22.10.2)(jiti@2.4.2)(rollup@4.29.1)(typescript@5.7.2)(yaml@2.6.1))(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2)))(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2))
       '@eslint/js':
         specifier: ^9.17.0
         version: 9.17.0
@@ -67,8 +67,8 @@ importers:
         specifier: ^19.0.2
         version: 19.0.2(@types/react@19.0.2)
       astro:
-        specifier: ^5.1.1
-        version: 5.1.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(jiti@2.4.2)(rollup@4.29.1)(typescript@5.7.2)(yaml@2.6.1)
+        specifier: ^5.1.2
+        version: 5.1.2(@netlify/blobs@8.1.0)(@types/node@22.10.2)(jiti@2.4.2)(rollup@4.29.1)(typescript@5.7.2)(yaml@2.6.1)
       eslint:
         specifier: ^9.17.0
         version: 9.17.0(jiti@2.4.2)
@@ -106,7 +106,7 @@ importers:
         specifier: ^5.7.2
         version: 5.7.2
       typescript-eslint:
-        specifier: ^8.18.2
+        specifier: ^8.19.0
         version: 8.19.0(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)
 
 packages:
@@ -2072,8 +2072,8 @@ packages:
     resolution: {integrity: sha512-F6NW1RJo5pp2kPnnM97M5Ohw8zAGjv83MpxHqfAochH68n/kiXN57+hYaNUCA7XkScoVNr6yzvly3hsY34TGfQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro@5.1.1:
-    resolution: {integrity: sha512-prpWC2PRs4P3FKQg6gZaU+VNMqbZi5pDvORGB2nrjfRjkrvF6/l4BqhvkJ6YQ0Ohm5rIMVz8ljgaRI77mLHbwg==}
+  astro@5.1.2:
+    resolution: {integrity: sha512-+U5lXPEJZ6cQx0botGbPhzN6XGWRgDtXgy/RUkpTmUj18LW6pbzYo0O0k3hFWOazlI039bZ+4P2e/oSNlKzm0Q==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -6552,9 +6552,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.24.1
 
-  '@astrojs/tailwind@5.1.4(astro@5.1.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(jiti@2.4.2)(rollup@4.29.1)(typescript@5.7.2)(yaml@2.6.1))(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2)))(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2))':
+  '@astrojs/tailwind@5.1.4(astro@5.1.2(@netlify/blobs@8.1.0)(@types/node@22.10.2)(jiti@2.4.2)(rollup@4.29.1)(typescript@5.7.2)(yaml@2.6.1))(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2)))(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2))':
     dependencies:
-      astro: 5.1.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(jiti@2.4.2)(rollup@4.29.1)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.1.2(@netlify/blobs@8.1.0)(@types/node@22.10.2)(jiti@2.4.2)(rollup@4.29.1)(typescript@5.7.2)(yaml@2.6.1)
       autoprefixer: 10.4.20(postcss@8.4.49)
       postcss: 8.4.49
       postcss-load-config: 4.0.2(postcss@8.4.49)(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2))
@@ -6565,7 +6565,7 @@ snapshots:
   '@astrojs/telemetry@3.2.0':
     dependencies:
       ci-info: 4.1.0
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       dlv: 1.1.3
       dset: 3.1.4
       is-docker: 3.0.0
@@ -6599,7 +6599,7 @@ snapshots:
       '@babel/traverse': 7.26.4
       '@babel/types': 7.26.3
       convert-source-map: 2.0.0
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -6678,7 +6678,7 @@ snapshots:
       '@babel/parser': 7.26.3
       '@babel/template': 7.25.9
       '@babel/types': 7.26.3
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -7055,7 +7055,7 @@ snapshots:
   '@eslint/config-array@0.19.1':
     dependencies:
       '@eslint/object-schema': 2.1.5
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -7067,7 +7067,7 @@ snapshots:
   '@eslint/eslintrc@3.2.0':
     dependencies:
       ajv: 6.12.6
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       espree: 10.3.0
       globals: 14.0.0
       ignore: 5.3.2
@@ -7585,7 +7585,7 @@ snapshots:
       unixify: 1.0.0
       urlpattern-polyfill: 8.0.2
       yargs: 17.7.2
-      zod: 3.23.8
+      zod: 3.24.1
     transitivePeerDependencies:
       - encoding
       - rollup
@@ -8028,7 +8028,7 @@ snapshots:
       '@typescript-eslint/types': 8.19.0
       '@typescript-eslint/typescript-estree': 8.19.0(typescript@5.7.2)
       '@typescript-eslint/visitor-keys': 8.19.0
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       eslint: 9.17.0(jiti@2.4.2)
       typescript: 5.7.2
     transitivePeerDependencies:
@@ -8043,7 +8043,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/typescript-estree': 8.19.0(typescript@5.7.2)
       '@typescript-eslint/utils': 8.19.0(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       eslint: 9.17.0(jiti@2.4.2)
       ts-api-utils: 1.4.3(typescript@5.7.2)
       typescript: 5.7.2
@@ -8058,7 +8058,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 5.62.0
       '@typescript-eslint/visitor-keys': 5.62.0
-      debug: 4.3.7(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@9.4.0)
       globby: 11.1.0
       is-glob: 4.0.3
       semver: 7.6.3
@@ -8072,7 +8072,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.19.0
       '@typescript-eslint/visitor-keys': 8.19.0
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       fast-glob: 3.3.2
       is-glob: 4.0.3
       minimatch: 9.0.5
@@ -8267,7 +8267,7 @@ snapshots:
 
   agent-base@6.0.2(supports-color@9.4.0):
     dependencies:
-      debug: 4.3.7(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -8426,7 +8426,7 @@ snapshots:
       '@typescript-eslint/types': 8.19.0
       '@typescript-eslint/typescript-estree': 8.19.0(typescript@5.7.2)
       astrojs-compiler-sync: 1.0.1(@astrojs/compiler@2.10.3)
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       entities: 4.5.0
       eslint-scope: 8.2.0
       eslint-visitor-keys: 4.2.0
@@ -8438,7 +8438,7 @@ snapshots:
       - supports-color
       - typescript
 
-  astro@5.1.1(@netlify/blobs@8.1.0)(@types/node@22.10.2)(jiti@2.4.2)(rollup@4.29.1)(typescript@5.7.2)(yaml@2.6.1):
+  astro@5.1.2(@netlify/blobs@8.1.0)(@types/node@22.10.2)(jiti@2.4.2)(rollup@4.29.1)(typescript@5.7.2)(yaml@2.6.1):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.2
@@ -8456,7 +8456,7 @@ snapshots:
       common-ancestor-path: 1.0.1
       cookie: 0.7.2
       cssesc: 3.0.0
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       deterministic-object-hash: 2.0.2
       devalue: 5.1.1
       diff: 5.2.0
@@ -8898,14 +8898,14 @@ snapshots:
 
   colors-option@3.0.0:
     dependencies:
-      chalk: 5.3.0
+      chalk: 5.4.1
       filter-obj: 3.0.0
       is-plain-obj: 4.1.0
       jest-validate: 27.5.1
 
   colors-option@4.5.0:
     dependencies:
-      chalk: 5.3.0
+      chalk: 5.4.1
       is-plain-obj: 4.1.0
 
   colors@1.4.0: {}
@@ -9099,15 +9099,15 @@ snapshots:
     dependencies:
       ms: 2.0.0
 
-  debug@4.3.7(supports-color@9.4.0):
+  debug@4.3.7:
+    dependencies:
+      ms: 2.1.3
+
+  debug@4.4.0(supports-color@9.4.0):
     dependencies:
       ms: 2.1.3
     optionalDependencies:
       supports-color: 9.4.0
-
-  debug@4.4.0:
-    dependencies:
-      ms: 2.1.3
 
   decache@4.6.2:
     dependencies:
@@ -9495,7 +9495,7 @@ snapshots:
       ajv: 6.12.6
       chalk: 4.1.2
       cross-spawn: 7.0.6
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       escape-string-regexp: 4.0.0
       eslint-scope: 8.2.0
       eslint-visitor-keys: 4.2.0
@@ -9652,7 +9652,7 @@ snapshots:
 
   extract-zip@2.0.1:
     dependencies:
-      debug: 4.3.7(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@9.4.0)
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -9870,7 +9870,7 @@ snapshots:
 
   follow-redirects@1.15.9(debug@4.3.7):
     optionalDependencies:
-      debug: 4.3.7(supports-color@9.4.0)
+      debug: 4.3.7
 
   foreground-child@3.3.0:
     dependencies:
@@ -10258,14 +10258,14 @@ snapshots:
   https-proxy-agent@5.0.1(supports-color@9.4.0):
     dependencies:
       agent-base: 6.0.2(supports-color@9.4.0)
-      debug: 4.3.7(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
   https-proxy-agent@7.0.5:
     dependencies:
       agent-base: 7.1.3
-      debug: 4.3.7(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -10622,7 +10622,7 @@ snapshots:
     dependencies:
       chalk: 5.4.1
       commander: 12.1.0
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       execa: 8.0.1
       lilconfig: 3.1.3
       listr2: 8.2.5
@@ -11113,7 +11113,7 @@ snapshots:
   micromark@4.0.1:
     dependencies:
       '@types/debug': 4.1.12
-      debug: 4.4.0
+      debug: 4.4.0(supports-color@9.4.0)
       decode-named-character-reference: 1.0.2
       devlop: 1.1.0
       micromark-core-commonmark: 2.0.2
@@ -11288,7 +11288,7 @@ snapshots:
       content-type: 1.0.5
       cookie: 0.7.2
       cron-parser: 4.9.0
-      debug: 4.3.7(supports-color@9.4.0)
+      debug: 4.3.7
       decache: 4.6.2
       dot-prop: 9.0.0
       dotenv: 16.4.7
@@ -12699,7 +12699,7 @@ snapshots:
 
   tabtab@3.0.2:
     dependencies:
-      debug: 4.3.7(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@9.4.0)
       es6-promisify: 6.1.1
       inquirer: 6.5.2
       minimist: 1.2.8
@@ -13261,7 +13261,7 @@ snapshots:
     dependencies:
       chalk: 4.1.2
       commander: 9.5.0
-      debug: 4.3.7(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
