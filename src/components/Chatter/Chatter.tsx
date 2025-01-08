@@ -1,28 +1,32 @@
 import React from "react";
 import { cn } from "../../classnames";
-import { useChat, type Message } from "./useChat";
+import { chatStore } from "./chatStore";
+import { useSelector } from "@xstate/store/react";
 
 export function Chatter(props: React.PropsWithChildren) {
   const { children } = props;
 
-  const { messages, showMessage, removeMessage } = useChat();
+  const messages = useSelector(chatStore, ({ context }) => context.messages);
 
   return (
     <div>
       <button
         type="button"
         className="duration-50 block rounded-full ring-rose-300 transition hover:ring"
-        onClick={showMessage}
+        onClick={() => chatStore.send({ type: "newMessage" })}
       >
         {children}
       </button>
       <MessageList>
         {messages.map((message, index) => (
           <MessageItem
-            key={message.key}
-            message={message}
+            key={message.id}
+            messageId={message.id}
+            messageText={message.text}
             isLatest={index === messages.length - 1}
-            removeMessage={removeMessage}
+            removeMessage={() =>
+              chatStore.send({ type: "removeMessage", id: message.id })
+            }
           />
         ))}
       </MessageList>
@@ -40,11 +44,12 @@ function MessageList(props: React.PropsWithChildren) {
 }
 
 function MessageItem(props: {
-  message: Message;
+  messageId: number;
+  messageText: string;
   isLatest: boolean;
   removeMessage: (key: string) => void;
 }) {
-  const { message, isLatest, removeMessage } = props;
+  const { messageId, messageText, isLatest } = props;
 
   return (
     <div className={cn("relative", isLatest && "mt-3.5")}>
@@ -67,9 +72,11 @@ function MessageItem(props: {
         <button
           type="button"
           className="w-full px-4 py-2 text-left font-normal text-black"
-          onClick={() => removeMessage(message.key)}
+          onClick={() =>
+            chatStore.send({ type: "removeMessage", id: messageId })
+          }
         >
-          {message.text}
+          {messageText}
         </button>
       </li>
     </div>
