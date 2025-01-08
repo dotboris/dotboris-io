@@ -6,7 +6,7 @@ import { useSelector } from "@xstate/store/react";
 export function Chatter(props: React.PropsWithChildren) {
   const { children } = props;
 
-  const messages = useSelector(chatStore, ({ context }) => context.messages);
+  const history = useSelector(chatStore, ({ context }) => context.history);
 
   return (
     <div>
@@ -18,12 +18,12 @@ export function Chatter(props: React.PropsWithChildren) {
         {children}
       </button>
       <MessageList>
-        {messages.map((message, index) => (
+        {history.map((message, index) => (
           <MessageItem
             key={message.id}
             messageId={message.id}
             messageText={message.text}
-            isLatest={index === messages.length - 1}
+            isLatest={index === history.length - 1}
             removeMessage={() =>
               chatStore.send({ type: "removeMessage", id: message.id })
             }
