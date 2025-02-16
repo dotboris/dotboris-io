@@ -12,7 +12,7 @@
     flake-utils.lib.eachDefaultSystem (system: let
       overlays = [
         (final: prev: {
-          nodejs = prev.nodejs_20;
+          nodejs = prev.nodejs_22;
         })
       ];
       pkgs = import nixpkgs {inherit system overlays;};
@@ -32,7 +32,7 @@
           pkgs.nodejs
 
           # Provides packages managers (pnpm / yarn based on `package.json`)
-          pkgs.corepack
+          pkgs.corepack_latest
 
           # Needed to build the `sharp` dependency
           pkgs.vips
