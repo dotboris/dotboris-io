@@ -12,7 +12,7 @@ export function Chatter(props: React.PropsWithChildren) {
     <div>
       <button
         type="button"
-        className="duration-50 block rounded-full ring-rose-300 transition hover:ring"
+        className="block rounded-full ring-rose-300 transition duration-50 hover:ring-3"
         onClick={() => chatStore.send({ type: "newMessage" })}
       >
         {children}
@@ -37,7 +37,7 @@ export function Chatter(props: React.PropsWithChildren) {
 function MessageList(props: React.PropsWithChildren) {
   const { children } = props;
   return (
-    <ul className="absolute flex max-w-sm flex-col-reverse gap-2 pb-4 pr-4">
+    <ul className="absolute flex max-w-sm flex-col-reverse gap-2 pr-4 pb-4">
       {children}
     </ul>
   );
