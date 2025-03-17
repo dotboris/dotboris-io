@@ -40,11 +40,15 @@ export const chatStore = createStore({
         messagePool = MESSAGES;
       }
 
-      return { history, messagePool };
+      return {
+        ...context,
+        history,
+        messagePool,
+      };
     },
-    removeMessage: {
-      history: (context, event: { id: number }) =>
-        context.history.filter(({ id }) => id !== event.id),
-    },
+    removeMessage: (context, event: { id: number }) => ({
+      ...context,
+      history: context.history.filter(({ id }) => id !== event.id),
+    }),
   },
 });
