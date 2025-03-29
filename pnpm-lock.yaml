@@ -36,10 +36,10 @@ importers:
         specifier: ^4.17.21
         version: 4.17.21
       react:
-        specifier: ^19.0.0
+        specifier: ^19.1.0
         version: 19.1.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
       tailwind-merge:
         specifier: ^3.0.2
@@ -49,7 +49,7 @@ importers:
         specifier: ^0.9.4
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.2)
       '@astrojs/react':
-        specifier: ^4.2.1
+        specifier: ^4.2.2
         version: 4.2.2(@types/node@22.13.14)(@types/react-dom@19.0.4(@types/react@19.0.12))(@types/react@19.0.12)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(yaml@2.7.0)
       '@eslint/js':
         specifier: ^9.23.0
@@ -58,7 +58,7 @@ importers:
         specifier: ^0.5.16
         version: 0.5.16(tailwindcss@4.0.17)
       '@tailwindcss/vite':
-        specifier: ^4.0.15
+        specifier: ^4.0.17
         version: 4.0.17(vite@6.2.3(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))
       '@types/eslint-config-prettier':
         specifier: ^6.11.3
@@ -73,7 +73,7 @@ importers:
         specifier: ^19.0.4
         version: 19.0.4(@types/react@19.0.12)
       astro:
-        specifier: ^5.5.4
+        specifier: ^5.5.5
         version: 5.5.5(@netlify/blobs@8.1.2)(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.37.0)(typescript@5.8.2)(yaml@2.7.0)
       eslint:
         specifier: ^9.23.0
@@ -91,7 +91,7 @@ importers:
         specifier: ^15.5.0
         version: 15.5.0
       netlify-cli:
-        specifier: ^19.0.3
+        specifier: ^19.1.4
         version: 19.1.4(@types/node@22.13.14)(picomatch@4.0.2)(rollup@4.37.0)
       prettier:
         specifier: ^3.5.3
@@ -106,13 +106,13 @@ importers:
         specifier: ^0.33.5
         version: 0.33.5
       tailwindcss:
-        specifier: ^4.0.15
+        specifier: ^4.0.17
         version: 4.0.17
       typescript:
         specifier: ^5.8.2
         version: 5.8.2
       typescript-eslint:
-        specifier: ^8.27.0
+        specifier: ^8.28.0
         version: 8.28.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2)
       vitest:
         specifier: ^3.0.9
