@@ -10,7 +10,7 @@ In this article, I'll be showing off the end result of all my work. I won't go i
 There's a a lot of pieces to this. We'll be looking at:
 
 - [Hardware](#hardware)
-- [Core Application and Features](#core-applications-and-features)
+- [Application and Features](#applications-and-features)
 - [Plumbing](#plumbing)
 - [Remote Access](#remote-access)
 
@@ -50,7 +50,13 @@ There are alternatives to rescuing an old computer:
 
 When it comes to hardware, what's important is finding something that matches your use-case and needs. I have very simple needs so my hardware requirements are low. If you want to do stuff like media streaming or running an AI assistant, you'll need more performant and maybe specialized hardware.
 
-## Core Applications and Features
+## Applications and Features
+
+Now that we've got some hardware, it's time to run some applications. This is where we turn this old clunker into something useful. Here, I'll cover the applications that I personally use on my home server. I'll talk about why they're useful to me and how they can be useful to you. Of course, I'll also include some important lessons I've learned from using those applications.
+
+If you're looking for more applications, I recommend that you check out the excellent [awesome-selfhosted](https://awesome-selfhosted.net/) project. It compiles a huge list of applications and services that you can host yourself. They're organized into helpful categories and include some useful stats: GitHub stars, latest release date, technology stack and license.
+
+Some of you might have noticed that I skipped a step here. What about the operating system? Don't you need to install on operating system before you can install applications? Yes you do, but I'm leaving that for later. My goal is to show you the high level pieces that make a home server. I believe that the specific operating system you choose and how you install it is not that important. On a similar note, we'll need to pick a way to deploy and install these applications. All of this will be covered in the [Operating System and Deployment](#operating-system-and-deployment) section.
 
 ### Files, Photos, Calendars, Todos, etc.
 
@@ -76,6 +82,6 @@ When it comes to hardware, what's important is finding something that matches yo
 
 ### Reverse Proxy
 
-### Operating System
+### Operating System and Deployment
 
 ## Remote Access
