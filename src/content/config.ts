@@ -7,6 +7,7 @@ export const collections = {
       pubDate: z.date(),
       title: z.string(),
       description: z.string(),
+      descriptionAsFirstParagraph: z.boolean().default(false),
     }),
   }),
 };
