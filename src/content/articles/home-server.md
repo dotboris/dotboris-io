@@ -5,7 +5,7 @@ description: For a while now, I've been tired of having the likes of Google, Mic
 descriptionAsFirstParagraph: true
 ---
 
-In this article, I'll be showing off the end result of all my work. I won't go into the details of how I implemented this. Instead, I'll focus on the high level pieces and how they fit together. Truth be told, I took the turbo-nerd / very niche approach to building this home server and I don't think that it's appropriate for most folks include the tech savvy ones.
+In this article, I'll be showing off the end result of all my work. I won't go into the details of how I implemented this. Instead, I'll focus on the high level pieces and how they fit together. Truth be told, I took the turbo-nerd / niche approach to building this home server and I don't think that it's appropriate for most folks including the tech savvy ones.
 
 There's a a lot of pieces to this. We'll be looking at:
 
