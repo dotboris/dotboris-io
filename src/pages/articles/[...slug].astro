@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { title, description, pubDate } = entry.data;
+const { title, description, pubDate, descriptionAsFirstParagraph } = entry.data;
 const { Content } = await entry.render();
 ---
 
@@ -26,5 +26,6 @@ const { Content } = await entry.render();
     <h1 class="m-0">{title}</h1>
     <PublishDate className="m-0" date={pubDate} />
   </header>
+  {descriptionAsFirstParagraph && <p>{description}</p>}
   <Content />
 </Layout>
