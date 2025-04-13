@@ -108,6 +108,16 @@ On a similar note, you don't need an app on your home server for everything. I f
 
 ### Office Suite
 
+This one's going to be a little strange because I only kind-of use my home server for this. I just use [LibreOffice](https://www.libreoffice.org/) on my desktop. For those who are unfamiliar, LibreOffice is an open source office suite that runs on desktop computers. It primarily handles [OpenDocument](https://en.wikipedia.org/wiki/OpenDocument) files (`.odt`, `.ods`, `.odp`, etc.) and is compatible with the Microsoft family of office files (`.docx`, `.xlsx`, `.pptx`, etc.)
+
+You might be wondering: If this is a desktop app, where does the home server part? Isn't that what this article is about? Yes, but also no. So yes, I do use my home server to store those files. I access them on my desktop through my Nextcloud files mount. But also no, this isn't just about having a home server. When it comes to disconnecting yourself from the tech giants of today, there's perfectly good high quality desktop applications that you can use. They don't need to run on a server. That's how we used to do things back in the day and it worked pretty good. You have files on a computer and you used applications to view and edit those files. You can then share or sync those files. You can even have those files live on another computer and access them through a share or mount which is what I'm doing here.
+
+It's worth noting that on mobile, there's a [LibreOffice Viewer](https://play.google.com/store/apps/details?id=org.documentfoundation.libreoffice) app that lets you view your documents. There's also the [Collabora Office](https://play.google.com/store/apps/details?id=com.collabora.libreoffice) app which lets you edit your documents. I've played around a bit with both but I've had the need for them. I don't really need to access office documents on my mobile devices.
+
+I don't have a great need for an office suite. I primarily takes use spreadsheets and take notes. For the spreadsheets, I use LibreOffice but for the notes, I found that the [Nextcloud Notes](https://apps.nextcloud.com/apps/notes) app does the job for me. I also don't need to share these documents with people or work with multiple people on the same document, spreadsheet or presentation.
+
+If you need better collaboration features, there are solutions that you can host yourself for that purpose. The two big players I found are [Collabora](https://www.collaboraonline.com/) and [ONLYOFFICE](https://www.onlyoffice.com/) (their branding is in all uppercase, hopefully you don't feel like I'm shouting at you). You can run those on your home server and they both have apps that let you integrate them directly into Nextcloud. I personally tried ONLYOFFICE which I gave up on after getting it to work. It's a pretty neat idea and it feels sleek but the complexity of running it didn't match my simple needs.
+
 ### Password Manager
 
 ### Feed Aggregator
