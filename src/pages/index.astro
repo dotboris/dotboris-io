@@ -55,7 +55,7 @@ articles.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
         </header>
         <p>{article.data.description}</p>
         <p>
-          <a class="no-underline" href={`/articles/${article.slug}`}>
+          <a class="no-underline" href={`/articles/${article.slug}/`}>
             <span class="underline">Continue reading</span>
             <DoubleArrowRightIcon className="inline-block" />
           </a>

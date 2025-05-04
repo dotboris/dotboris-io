@@ -13,4 +13,8 @@ export default defineConfig({
   redirects: {
     "/correct-curl": "/articles/correct-curl",
   },
+  trailingSlash: "always",
+  build: {
+    format: "directory",
+  },
 });
