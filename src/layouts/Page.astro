@@ -8,9 +8,18 @@ import { Chatter } from "../components/Chatter";
 interface Props {
   title: string;
   description: string;
+  /**
+   * Value to include in the `og:type` meta tag. Defaults to `website`.
+   */
+  ogType?: string;
+  /**
+   * Additional meta tags to include in the `<head>`
+   */
+  meta?: Record<string, string>;
   children: unknown;
 }
-const { title, description } = Astro.props;
+const { title, description, ogType, meta = {} } = Astro.props;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <html lang="en" class="bg-white font-sans text-base text-black">
@@ -19,15 +28,24 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
     <link
       rel="alternate"
       type="application/rss+xml"
       title="dotboris.io"
       href={new URL("rss.xml", Astro.site)}
     />
+    <link rel="canonical" href={canonicalUrl} />
     <title>{title} - dotboris.io</title>
     <meta name="description" content={description} />
+    <meta property="og:type" content={ogType ?? "website"} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {
+      Object.entries(meta).map(([key, value]) => (
+        <meta property={key} content={value} />
+      ))
+    }
   </head>
   <body class="flex min-h-screen flex-col">
     <header class="border-b-4 border-b-rose-300 bg-neutral-800 font-semibold">
