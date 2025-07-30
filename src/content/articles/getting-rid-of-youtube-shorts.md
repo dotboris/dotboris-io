@@ -13,7 +13,7 @@ description: >
 descriptionAsFirstParagraph: true
 ---
 
-I could go on a long rant on why YouTube short is bad but I won't. If you're reading this, then you already know why. It sucks. You have your reasons and I have time. They may be similar, or not. That doesn't matter much.
+I could go on a long rant on why YouTube short is bad but I won't. If you're reading this, then you already know why. It sucks. You have your reasons and I have mine. They may be similar, or not. That doesn't matter much.
 
 All that I'll say on the subject is that for me, it felt like YouTube shorts had won. I tried fighting it but I kept coming back to it and kept on scrolling. It had somehow hacked its way into my brain and I was no longer in charge. It was calling the shots and I didn't like that. I got fed up and started looking for ways to put up some barriers and gain back some control.
 
