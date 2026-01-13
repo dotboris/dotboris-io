@@ -14,10 +14,10 @@ For the curious, here's the hardware, software, and gear that I use for work and
 
 The coolest thing I can say about this, is that I've been carrying over the same installation of Arch Linux for years now (I forget how many). It even survived a few disk migrations through the power of [LVM](https://wiki.archlinux.org/title/LVM).
 
-- CPU:
-- Memory:
-- Storage:
-- GPU:
+- CPU: AMD Ryzen 7 3800X (8 cores, 16 threads, 3.9GHz)
+- Memory: 32GB (DDR4 @ 3600MHz)
+- Storage: 500GB NVMe SSD
+- GPU: AMD Radeon RX 6700 XT 12GB
 - OS: Arch Linux
 - Desktop: KDE Plasma
 
