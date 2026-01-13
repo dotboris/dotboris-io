@@ -22,7 +22,7 @@ const { title, description, ogType, meta = {} } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 ---
 
-<html lang="en" class="bg-white font-sans text-base text-black">
+<html lang="en" class="bg-neutral-800 font-sans text-base text-black">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -47,7 +47,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
       ))
     }
   </head>
-  <body class="flex min-h-screen flex-col">
+  <body class="flex min-h-screen flex-col bg-white">
     <header class="border-b-4 border-b-rose-300 bg-neutral-800">
       <div
         class="container mx-auto grid grid-cols-[auto_1fr_auto] items-center gap-4 p-4"
