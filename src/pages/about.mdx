@@ -15,7 +15,13 @@ import youngMe from "../assets/young-me.jpg";
       src={youngMe}
       alt="A picture of me at a young age holding a drill while disassembling part of a CRT television"
       layout="constrained"
-      width={384}
+      widths={[192, 256, 384]}
+      sizes={`
+        (width >= 1024px) 384px,
+        (width >= 768px) 256px,
+        (width >= 640px) 192px,
+        384px
+      `}
       class="mt-0 mb-0"
     />
   </a>
