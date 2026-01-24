@@ -1,0 +1,75 @@
+---
+layout: ../layouts/MarkdownPage.astro
+title: About me
+description: Learn more about me (Boris) and what I'm all about.
+---
+
+import { Image } from "astro:assets";
+import youngMe from "../assets/young-me.jpg";
+
+# About me
+
+<figure class="mx-auto mt-0 max-w-96 sm:float-end sm:mx-0 sm:ml-2 sm:w-48 md:w-64 md:max-w-none lg:w-96">
+  <a href={youngMe.src}>
+    <Image
+      src={youngMe}
+      alt="A picture of me at a young age holding a drill while disassembling part of a CRT television"
+      layout="constrained"
+      width={384}
+      class="mt-0 mb-0"
+    />
+  </a>
+  <figcaption class="text-center [&_p]:my-0">
+    Young me looking really cool while disassembling an old CRT
+  </figcaption>
+</figure>
+
+Hi there, I'm Boris. I'm just a guy going through life doing his own thing.
+
+I'm a big nerd when it comes to technology, especially programming, Linux, and
+things like that. I love learning new things, solving problems, building things,
+and teaching people. I'm always tinkering with a few projects. You can find out
+about what doing these days in my [Now](/now/) page. You can also learn about
+all the nerdy stuff I use in my [Uses](/uses/) page.
+
+I value curiosity, kindness, people, and community. Life is a better experience
+when you focus on the people around and you make each other happy. To me, the
+journey is much better than the destination. It's the friends, experiences, and
+memories you've made along the way that matter most. I want to help make the
+world a better place. I'm not always sure how I'll go about doing that, but I
+want to use my skills as a nerd to help out.
+
+If you'd like to reach out to me, you can contact me via email at
+[beraboris@gmail.com](mailto:beraboris+sitecontact@gmail.com). I'd like to ask
+you to refrain from any kind of solicitation. I'm not interested in promotions,
+jobs, advertisements, or anything like that. I want to hear from real people.
+
+Professionally, I'm a software developer. I've been doing this for quite a few
+years now and I think that I can say that I'm quite good at it. These days, I'm
+in the dev ops / platform engineering space but I've done all kinds of stuff
+like tax / compliance software, CI/CD, websites, and e-commerce. I also like to
+dabble in security from time to time. Breaking things is always fun.
+
+I like to give talks from time to time. It's a good way for me to share my ideas
+and to teach. Here's the list of talks that I've given in reverse chronological
+order:
+
+- January 2026: "Renovate à l'échelle : 400+ dépôts à jour" at Techno Drinks
+  Sherbrooke -- Given in French, translates to "Renovate at scale: 400+
+  repositories up to date". Based on [Keeping 400+ Repositories up-to-date with
+  Renovate](https://source.coveo.com/2025/07/29/keeping-400-plus-repositories-up-to-date-with-renovate/)
+  which I wrote for Coveo's technical blog.
+- December 2025: "Semantic Reviews: a simple technique for better code reviews."
+  at Techno Drinks Sherbrooke -- Given in French. Based on [Semantic Code
+  Reviews](https://www.m31coding.com/blog/semantic-reviews.html) by Dr. Kevin
+  Schaal. ([english slides](/2025-12-semantic-reviews-slides.pdf))
+
+You can also find some of my stuff elsewhere on the internet:
+
+- July 2025: [Keeping 400+ Repositories up-to-date with
+  Renovate](https://source.coveo.com/2025/07/29/keeping-400-plus-repositories-up-to-date-with-renovate/)
+  -- An article that I wrote for Coveo's technical blog.
+
+Finally, you can find my technical work on my [GitHub
+profile](https://github.com/dotboris). This is mostly personal projects and some
+open source contributions.
