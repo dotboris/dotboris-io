@@ -53,11 +53,12 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
   <body class="flex min-h-screen flex-col bg-white">
     <header class="border-b-4 border-b-rose-300 bg-neutral-800">
       <div
-        class="container mx-auto grid grid-cols-[auto_1fr_auto] items-center gap-4 p-4"
+        class="container mx-auto grid grid-cols-[50px_1fr] items-center gap-2 p-4"
       >
         <Chatter client:idle>
           <Image
             class="rounded-full"
+            layout="fixed"
             width={50}
             height={50}
             densities={[1.5, 2]}
@@ -65,7 +66,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
             alt="dotboris' avatar. A yellow anime duck with its mouth open"
           />
         </Chatter>
-        <nav>
+        <nav class="overflow-x-auto">
           <ul class="flex text-lg text-white">
             <li>
               <a
