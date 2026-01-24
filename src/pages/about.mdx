@@ -15,7 +15,7 @@ import youngMe from "../assets/young-me.jpg";
       src={youngMe}
       priority
       alt="A picture of me at a young age holding a drill while disassembling part of a CRT television"
-      widths={[192, 256, 384]}
+      widths={[192, 256, 384].flatMap((w) => [w, w * 1.5, w * 2])}
       sizes={`
         (width >= 1024px) 384px,
         (width >= 768px) 256px,
