@@ -3,16 +3,18 @@ import { cn } from "../../classnames";
 import { chatStore } from "./chatStore";
 import { useSelector } from "@xstate/store/react";
 
-export function Chatter(props: React.PropsWithChildren) {
+export function Chatter(
+  props: React.PropsWithChildren<{ className?: string }>,
+) {
   const { children } = props;
 
   const history = useSelector(chatStore, ({ context }) => context.history);
 
   return (
-    <div>
+    <div className={cn(props.className)}>
       <button
         type="button"
-        className="block rounded-full ring-rose-300 transition duration-50 hover:ring-3"
+        className="block cursor-pointer rounded-full ring-rose-300 transition duration-50 hover:ring-3"
         onClick={() => chatStore.send({ type: "newMessage" })}
       >
         {children}

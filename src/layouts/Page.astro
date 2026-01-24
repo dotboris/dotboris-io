@@ -5,7 +5,6 @@ import avatarImage from "../assets/avatar.png";
 import {
   DoubleArrowLeftIcon,
   DoubleArrowRightIcon,
-  GitHubLogoIcon,
 } from "@radix-ui/react-icons";
 import { Chatter } from "../components/Chatter";
 
@@ -54,7 +53,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
   <body class="flex min-h-screen flex-col bg-white">
     <header class="border-b-4 border-b-rose-300 bg-neutral-800">
       <div
-        class="container mx-auto grid grid-cols-[auto_1fr_auto] items-center gap-4 p-4"
+        class="container mx-auto grid grid-cols-[50px_1fr] items-center gap-2 p-4"
       >
         <Chatter client:idle>
           <Image
@@ -66,7 +65,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
             alt="dotboris' avatar. A yellow anime duck with its mouth open"
           />
         </Chatter>
-        <nav>
+        <nav class="overflow-x-auto">
           <ul class="flex text-lg text-white">
             <li>
               <a
@@ -74,6 +73,15 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
                 href="/"
               >
                 Home
+              </a>
+            </li>
+            <li aria-hidden><div class="py-2 text-neutral-500">|</div></li>
+            <li>
+              <a
+                class="block px-3 py-2 font-semibold hover:text-rose-300"
+                href="/about/"
+              >
+                About
               </a>
             </li>
             <li aria-hidden><div class="py-2 text-neutral-500">|</div></li>
@@ -96,14 +104,6 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
             </li>
           </ul>
         </nav>
-        <a
-          class="text-white hover:text-rose-300"
-          href="https://github.com/dotboris"
-          aria-label="dotboris on GitHub"
-          title="dotboris on GitHub"
-        >
-          <GitHubLogoIcon className="size-8" />
-        </a>
       </div>
     </header>
     <div class="container mx-auto">
