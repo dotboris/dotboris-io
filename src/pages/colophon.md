@@ -14,7 +14,7 @@ talks about the website itself. How it's made? What tools are being used? Things
 like that. It's sometimes also referred to as a "meta" page.
 
 The code for this website is fully available on
-[GitHub](https://github.com/dotboris/dotboris-io). If you want to deep give and
+[GitHub](https://github.com/dotboris/dotboris-io). If you want to deep dive and
 look at the details, feel free to jump into that.
 
 This website is built with [astro](https://astro.build/), a web framework /
@@ -24,32 +24,32 @@ great because you get the blazing fast performance of static HTML without
 sacrificing dynamic components. For example, I use this feature for my little
 avatar at the top left of the header. Try it for yourself. Give it a click.
 
-Astro let's you choose a lot of stuff about the stack / tools you use. So here's
+Astro lets you choose a lot of stuff about the stack / tools you use. So here's
 a rapid-fire list of what I use:
 
-- Code and logic is in Typescript.
+- Code and logic is in [TypeScript](https://www.typescriptlang.org/).
 - Most components are made in [React](https://react.dev/) (`.tsx`) with a few
   made with [astro
   components](https://docs.astro.build/en/basics/astro-components/) (`.astro`).
   - I use [shadcn/ui](https://ui.shadcn.com/) as a starter for most components.
 - Styling is done through [Tailwind](https://tailwindcss.com/).
-  - Base styles for text content is done through the [Tailwind
+  - Base styles for text content are done through the [Tailwind
     typography](https://github.com/tailwindlabs/tailwindcss-typography) plugin.
-- Most pages and articles are written in markdown (`.md`). There's a few
+- Most pages and articles are written in markdown (`.md`). There are a few
   exceptions to that rule:
   - I use MDX (`.mdx`) for pages that are mostly text content but need a bit of
-    fancy logic or fancy components.
+    fancy logic or components.
   - I use astro components (`.astro`) for pages with a more complex structure.
   - I use [astro endpoints](https://docs.astro.build/en/guides/endpoints/) to
     generate pages or files that aren't HTML (RSS feed, robots.txt, etc.)
 
-I use [Netlify](https://www.netlify.com/) for hosting. They're a CDN that's
-pretty great for hosting static content. So far, it hasn't cost me anything. It
-seems like their free tier is pretty generous. We'll see how long that lasts.
+I use [Netlify](https://www.netlify.com/) for hosting. It's a CDN that's pretty
+great for hosting static content. So far, it hasn't cost me anything. It seems
+like their free tier is pretty generous. We'll see how long that lasts.
 
 My domain (`dotboris.io`) is registered through
 [Cloudflare](https://www.cloudflare.com/products/registrar/). They sell domain
-names at cost so it's probably one of the cheapest way to get a domain. I also
+names at cost so it's probably one of the cheapest ways to get a domain. I also
 use them as my [DNS
 server](https://www.cloudflare.com/application-services/products/dns/). This
 doesn't cost me anything since I fit in their free tier. What's nice with
