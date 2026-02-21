@@ -32,7 +32,7 @@
           pkgs.nodejs
 
           # Provides packages managers (pnpm / yarn based on `package.json`)
-          pkgs.corepack_latest
+          pkgs.corepack
 
           # Needed to build the `sharp` dependency
           pkgs.vips
