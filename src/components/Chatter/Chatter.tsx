@@ -1,7 +1,6 @@
-import React from "react";
 import { cn } from "../../classnames";
 import { chatStore } from "./chatStore";
-import { useSelector } from "@xstate/store/react";
+import { useSelector } from "@xstate/store-react";
 
 export function Chatter(
   props: React.PropsWithChildren<{ className?: string }>,

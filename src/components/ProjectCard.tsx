@@ -1,4 +1,3 @@
-import React from "react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./Card";
 import { Button } from "./Button";
