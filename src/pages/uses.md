@@ -34,14 +34,16 @@ My laptop's configuration is managed through NixOS and Home Manager. If you want
 - OS: NixOS
 - Desktop: KDE Plasma
 
-**Home Server**: This is an old computer that I use to host services that I find useful. See the [self-hosted services](#self-hosted-services) section below to get an idea of which services I run. This is an ancient media center PC that my buddy gave me. I bought a new power supply and gave it a new life. Despite its ancient and underpowered hardware, it does the job quite well.
+**Home Server**: This is an old computer that I use to host services that I find useful. See the [self-hosted services](#self-hosted-services) section below to get an idea of which services I run. It's an old Dell OptiPlex 3050 micro computer I got for cheap at a thrift store.
 
 The server's full configuration is managed through NixOS and configuration as code. See the [repo on GitHub](https://github.com/dotboris/homelab/) for the gory details.
 
-- CPU: Intel Core 2 Quad Q6600 (4 cores, 2.4GHz)
-- Memory: 8GB (DDR2 @ 800MHz)
+- CPU: Intel i5-7500 (4 cores, 2.7GHz)
+- Memory: 8GB (DDR4 @ 2400MHz)
 - Storage: 250GB SSD
 - OS: NixOS
+
+Previously, I ran my home server on an old media PC with an Intel Q6600 CPU and 8GB of DDR2 RAM that my buddy gave me. This was truly an ancient computer but it served me well for a few years.
 
 ## Software
 
