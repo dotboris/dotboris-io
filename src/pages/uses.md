@@ -66,7 +66,7 @@ Previously, I ran my home server on an old media PC with an Intel Q6600 CPU and 
 - Password manager: KeePass files synced through [Nextcloud]. ([KeePassXC](https://keepassxc.org/) on desktop, [Keepass2Android](https://github.com/PhilippC/keepass2android) on mobile)
 - Feed Reader: [FreshRSS](https://freshrss.org/) in my browser.
 - Gaming: [Steam](https://steampowered.com/) and [Lutris](https://lutris.net/). I try to buy most games from [GOG](https://www.gog.com/).
-- Music: YouTube Music.
+- Music: Streaming through [Navidrome](https://www.navidrome.org/) (browser on desktop, [Tempo](https://github.com/CappielloAntonio/tempo) on mobile). [MusicBrainz Picard](https://picard.musicbrainz.org/) for organizing.
 
 ## Self-hosted services
 
@@ -80,6 +80,7 @@ This server's configuration is all managed as code through NixOS. You can see th
 - [SearXNG](https://searxng.org/): Search engine that searches across other search engines and prevents them from tracking me. ([config](https://github.com/dotboris/homelab/blob/main/modules/search/default.nix))
 - [FreshRSS](https://freshrss.org/): Feed reader. ([config](https://github.com/dotboris/homelab/blob/main/modules/feeds/default.nix))
 - Backups: [Standard Backups](https://github.com/dotboris/standard-backups) with [Restic](https://restic.net/). ([config](https://github.com/dotboris/homelab/blob/main/modules/backups/default.nix))
+- [Navidrome](https://www.navidrome.org/): Music streaming. ([config](https://github.com/dotboris/homelab/blob/main/modules/music/default.nix))
 
 For those curious about the inner workings, here are some of the behind-the-scenes pieces:
 
@@ -88,3 +89,4 @@ For those curious about the inner workings, here are some of the behind-the-scen
 - Monitoring: [Netdata](https://www.netdata.cloud/open-source/) ([config](https://github.com/dotboris/homelab/blob/main/modules/monitoring/netdata.nix))
 - Alerting: [ntfy.sh](https://ntfy.sh/) ([config](https://github.com/dotboris/homelab/blob/main/modules/monitoring/ntfy.nix))
 - Landing page / dashboard: [Homepage](https://gethomepage.dev/) ([config](https://github.com/dotboris/homelab/blob/main/modules/home-page/config.nix))
+- File server: [Copyparty](https://copyparty.eu/) ([config](https://github.com/dotboris/homelab/blob/main/modules/files/default.nix))
