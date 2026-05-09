@@ -16,7 +16,7 @@ global excludes file. Here's how:
 ## Choose a directory
 
 First, we'll need to pick a directory for our scratch space. You can pick
-whatever you want but I usually go with `__scratch`. The double underscore
+whatever you want, but I usually go with `__scratch`. The double underscore
 (`__`) is nice for a few reasons:
 
 1. It's a fairly common pattern in programming indicating that something is
@@ -56,7 +56,7 @@ Note that you may need to create this file and its parent directories.
 ## Test it out
 
 With this in place, you should now be able to test this out in any of your
-checked out git repos:
+checked-out git repos:
 
 1. Open an existing git repo on your system.
 1. Create the scratch directory: `mkdir -p __scratch`
