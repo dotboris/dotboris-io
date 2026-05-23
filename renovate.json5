@@ -5,6 +5,7 @@
   schedule: ["before 5am on saturday"],
   minimumReleaseAge: "7 days",
   rangeStrategy: "bump",
+  postUpdateOptions: ["pnpmDedupe"],
   lockFileMaintenance: {
     enabled: true,
     schedule: ["before 5am on saturday"],
