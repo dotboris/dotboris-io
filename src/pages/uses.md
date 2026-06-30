@@ -66,7 +66,7 @@ Previously, I ran my home server on an old media PC with an Intel Q6600 CPU and 
 - Password manager: KeePass files synced through [Nextcloud]. ([KeePassXC](https://keepassxc.org/) on desktop, [Keepass2Android](https://github.com/PhilippC/keepass2android) on mobile)
 - Feed Reader: [FreshRSS](https://freshrss.org/) in my browser.
 - Gaming: [Steam](https://steampowered.com/) and [Lutris](https://lutris.net/). I try to buy most games from [GOG](https://www.gog.com/).
-- Music: Streaming through [Navidrome](https://www.navidrome.org/) (browser on desktop, [Tempo](https://github.com/CappielloAntonio/tempo) on mobile). [MusicBrainz Picard](https://picard.musicbrainz.org/) for organizing.
+- Music: Streaming through [Navidrome](https://www.navidrome.org/) (browser on desktop, [Tempus](https://eddyizm.github.io/tempus/) on mobile). [MusicBrainz Picard](https://picard.musicbrainz.org/) for organizing.
 
 ## Self-hosted services
 
