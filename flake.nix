@@ -8,8 +8,14 @@
     self,
     nixpkgs,
     flake-utils,
-  }:
-    flake-utils.lib.eachDefaultSystem (system: let
+  }: let
+    systems = [
+      "aarch64-darwin"
+      "aarch64-linux"
+      "x86_64-linux"
+    ];
+  in
+    flake-utils.lib.eachSystem systems (system: let
       overlays = [
         (final: prev: {
           nodejs = prev.nodejs_24;
