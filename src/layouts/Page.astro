@@ -121,7 +121,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
               RSS feed
             </a>
           </li>
-          <li class="inline text-neutral-400" aria-hidden>|</li>
+          <li class="inline text-neutral-400" aria-hidden>{" | "}</li>
           <li class="inline">
             <a
               class="underline hover:text-rose-300"
@@ -130,7 +130,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
               Source code
             </a>
           </li>
-          <li class="inline text-neutral-400" aria-hidden>|</li>
+          <li class="inline text-neutral-400" aria-hidden>{" | "}</li>
           <li class="inline">
             <a class="underline hover:text-rose-300" href="/colophon/">
               Colophon
@@ -143,9 +143,11 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
               className="inline-block size-4 hover:text-rose-300"
               aria-label="Previous website in the hotline webring"
             />
+            {" "}
           </a>
           <span>Hotline webring</span>
           <a href="https://hotlinewebring.club/dotboris/next">
+            {" "}
             <DoubleArrowRightIcon
               className="inline-block size-4 hover:text-rose-300"
               aria-label="Next website in the hotline webring"
