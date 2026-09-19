@@ -44,17 +44,13 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    {
-      Object.entries(meta).map(([key, value]) => (
-        <meta property={key} content={value} />
-      ))
-    }
+    {Object.entries(meta).map(([key, value]) => (
+      <meta property={key} content={value} />
+    ))}
   </head>
   <body class="flex min-h-screen flex-col bg-white">
     <header class="border-b-4 border-b-rose-300 bg-neutral-800">
-      <div
-        class="container mx-auto grid grid-cols-[50px_1fr] items-center gap-2 p-4"
-      >
+      <div class="container mx-auto grid grid-cols-[50px_1fr] items-center gap-2 p-4">
         <Chatter client:idle>
           <Image
             class="rounded-full"
@@ -75,7 +71,9 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
                 Home
               </a>
             </li>
-            <li aria-hidden><div class="py-2 text-neutral-500">|</div></li>
+            <li aria-hidden>
+              <div class="py-2 text-neutral-500">|</div>
+            </li>
             <li>
               <a
                 class="block px-3 py-2 font-semibold hover:text-rose-300"
@@ -84,7 +82,9 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
                 About
               </a>
             </li>
-            <li aria-hidden><div class="py-2 text-neutral-500">|</div></li>
+            <li aria-hidden>
+              <div class="py-2 text-neutral-500">|</div>
+            </li>
             <li>
               <a
                 class="block px-3 py-2 font-semibold hover:text-rose-300"
@@ -93,7 +93,9 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
                 Now
               </a>
             </li>
-            <li aria-hidden><div class="py-2 text-neutral-500">|</div></li>
+            <li aria-hidden>
+              <div class="py-2 text-neutral-500">|</div>
+            </li>
             <li>
               <a
                 class="block px-3 py-2 font-semibold hover:text-rose-300"
@@ -111,9 +113,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
         <slot />
       </main>
     </div>
-    <footer
-      class="mt-auto border-t-4 border-t-rose-300 bg-neutral-800 py-8 text-center text-white"
-    >
+    <footer class="mt-auto border-t-4 border-t-rose-300 bg-neutral-800 py-8 text-center text-white">
       <nav class="mx-auto w-full max-w-xl px-8">
         <ul>
           <li class="inline">
@@ -121,7 +121,9 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
               RSS feed
             </a>
           </li>
-          <li class="inline text-neutral-400" aria-hidden>{" | "}</li>
+          <li class="inline text-neutral-400" aria-hidden>
+            {" | "}
+          </li>
           <li class="inline">
             <a
               class="underline hover:text-rose-300"
@@ -130,7 +132,9 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
               Source code
             </a>
           </li>
-          <li class="inline text-neutral-400" aria-hidden>{" | "}</li>
+          <li class="inline text-neutral-400" aria-hidden>
+            {" | "}
+          </li>
           <li class="inline">
             <a class="underline hover:text-rose-300" href="/colophon/">
               Colophon
@@ -142,8 +146,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
             <DoubleArrowLeftIcon
               className="inline-block size-4 hover:text-rose-300"
               aria-label="Previous website in the hotline webring"
-            />
-            {" "}
+            />{" "}
           </a>
           <span>Hotline webring</span>
           <a href="https://hotlinewebring.club/dotboris/next">
@@ -157,9 +160,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
       </nav>
       <div class="px-2 text-neutral-400">
         <hr class="mx-auto my-4 w-24 text-neutral-600" />
-        <p>
-          &copy; 2024 - {new Date().getFullYear()} Boris Bera
-        </p>
+        <p>&copy; 2024 - {new Date().getFullYear()} Boris Bera</p>
         <p>A little mischief goes a long way.</p>
       </div>
     </footer>
