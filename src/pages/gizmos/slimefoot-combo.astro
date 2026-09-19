@@ -1,0 +1,57 @@
+---
+import Page from "../../layouts/Page.astro";
+import { SlimefootCalculator } from "../../components/SlimefootCalculator.tsx";
+
+const table: Record<string, number>[] = Array.from({
+  length: 10,
+}).map((_, index) => {
+  const initialCount = index + 1;
+
+  let count = initialCount;
+  let triggers = 0;
+  let floatingMana = 0;
+  let rounds = 0;
+  while (count > 0) {
+    triggers += count;
+    const mana = count * 2 + floatingMana;
+    count = Math.floor(mana / 4);
+    floatingMana = mana % 4;
+    rounds += 1;
+  }
+
+  return {
+    "Sapperling Count": initialCount,
+    "Slimefoot triggers": triggers,
+    "Leftover Mana": floatingMana,
+    Rounds: rounds,
+  };
+});
+---
+
+<Page
+  title="Slimefoot combo calculator"
+  description="Damage / trigger calculator for Slimefoot + Ashnod's Altar + Fresh meat combo in MTG."
+>
+  <p>Hello world</p>
+
+  <SlimefootCalculator client:load />
+
+  <table>
+    <thead>
+      <tr>
+        {Object.keys(table[0]).map((key) => (
+          <td>{key}</td>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {table.map((row) => (
+        <tr>
+          {Object.values(row).map((value) => (
+            <td>{value}</td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</Page>
