@@ -1,0 +1,11 @@
+---
+import Page from "../../layouts/Page.astro";
+import { SlimefootCalculator } from "../../components/SlimefootCalculator.tsx";
+---
+
+<Page
+  title="Slimefoot combo calculator"
+  description="Damage / trigger calculator for Slimefoot + Ashnod's Altar + Fresh meat combo in MTG."
+>
+  <SlimefootCalculator client:load />
+</Page>
