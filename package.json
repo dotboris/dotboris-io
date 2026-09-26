@@ -17,7 +17,7 @@
     "check:lint": "astro sync && eslint .",
     "check:astro": "astro check"
   },
-  "packageManager": "pnpm@11.27.0",
+  "packageManager": "pnpm@12.5.1",
   "dependencies": {
     "@astrojs/mdx": "^7.0.8",
     "@astrojs/rss": "^4.0.19",
