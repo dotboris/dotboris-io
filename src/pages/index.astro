@@ -1,5 +1,6 @@
 ---
 import Page from "../layouts/Page.astro";
+import { GizmoCard } from "../components/GizmoCard";
 import { ProjectCard } from "../components/ProjectCard";
 import { DoubleArrowRightIcon } from "@radix-ui/react-icons";
 import { getCollection } from "astro:content";
@@ -85,4 +86,13 @@ articles.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
       </p>
     </article>
   ))}
+
+  <h2 id="giszmos">Gizmos</h2>
+  <div class="not-prose my-4 grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4">
+    <GizmoCard
+      title="Slimefoot Combo"
+      description="Damage / trigger calculator for a Slimefoot MTG commander deck I play."
+      slug="slimefoot-combo"
+    />
+  </div>
 </Page>
