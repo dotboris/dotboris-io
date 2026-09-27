@@ -1,4 +1,4 @@
-import { Link2Icon, MixIcon, RocketIcon } from "@radix-ui/react-icons";
+import { RocketIcon } from "@radix-ui/react-icons";
 import { Button } from "./Button";
 import {
   Card,
