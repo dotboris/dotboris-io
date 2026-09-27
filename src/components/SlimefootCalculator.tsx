@@ -40,14 +40,14 @@ export function SlimefootCalculator() {
   }, [initialCount, summonCost, maxRounds]);
 
   return (
-    <div>
+    <>
       <div className="grid-cols-2 gap-4 sm:grid">
         <div>
           <h2>Simulation Settings</h2>
-          <div className="grid grid-cols-[auto_5rem] items-center justify-start gap-3">
+          <div className="grid grid-cols-[auto_5rem] items-center justify-start gap-4">
             <label htmlFor={initialCountId}>Initial Sapproling count:</label>
             <input
-              className="rounded border border-gray-500 px-2 py-0.5"
+              className="rounded border border-gray-300 px-2 py-0.5"
               id={initialCountId}
               type="number"
               min="1"
@@ -57,7 +57,7 @@ export function SlimefootCalculator() {
             />
             <label htmlFor={summonCostId}>Sapproling mana cost:</label>
             <input
-              className="rounded border border-gray-500 px-2 py-0.5"
+              className="rounded border border-gray-300 px-2 py-0.5"
               id={summonCostId}
               type="number"
               min="1"
@@ -67,7 +67,7 @@ export function SlimefootCalculator() {
             />
             <label htmlFor={maxRoundsId}>Max simulation rounds:</label>
             <input
-              className="rounded border border-gray-500 px-2 py-0.5"
+              className="rounded border border-gray-300 px-2 py-0.5"
               id={maxRoundsId}
               type="number"
               min="1"
@@ -79,37 +79,35 @@ export function SlimefootCalculator() {
         </div>
         <div>
           <h2>Results</h2>
-          <dl className="not-prose grid grid-cols-[auto_5rem] justify-start gap-3">
+          <dl className="not-prose grid grid-cols-[auto_5rem] justify-start gap-4">
             <dt>Total Rounds:</dt>
-            <dd>{res.rounds}</dd>
+            <dd className="text-right">{res.rounds}</dd>
             <dt>Slimefoot Triggers:</dt>
-            <dd>{res.triggers}</dd>
+            <dd className="text-right">{res.triggers}</dd>
             <dt>Floating Leftover Mana:</dt>
-            <dd>{res.floatingMana}</dd>
+            <dd className="text-right">{res.floatingMana}</dd>
           </dl>
         </div>
       </div>
-      <div>
-        <h2>Round by Round Simulation</h2>
-        <table>
-          <thead>
-            <tr>
-              {Object.keys(res.trace[0]).map((key) => (
-                <td key={key}>{key}</td>
+      <h2>Round by Round Simulation</h2>
+      <table>
+        <thead>
+          <tr>
+            {Object.keys(res.trace[0]).map((key) => (
+              <td key={key}>{key}</td>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {res.trace.map((row, index) => (
+            <tr key={index}>
+              {Object.values(row).map((value, index) => (
+                <td key={index}>{value}</td>
               ))}
             </tr>
-          </thead>
-          <tbody>
-            {res.trace.map((row, index) => (
-              <tr key={index}>
-                {Object.values(row).map((value, index) => (
-                  <td key={index}>{value}</td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
+          ))}
+        </tbody>
+      </table>
+    </>
   );
 }

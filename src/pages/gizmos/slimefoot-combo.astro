@@ -4,8 +4,62 @@ import { SlimefootCalculator } from "../../components/SlimefootCalculator.tsx";
 ---
 
 <Page
-  title="Slimefoot combo calculator"
+  title="Slimefoot Combo Calculator"
   description="Damage / trigger calculator for Slimefoot + Ashnod's Altar + Fresh meat combo in MTG."
 >
+  <h1>Slimefoot Combo Calculator</h1>
+  <p>
+    This is a damage / trigger calculator for a Slimefoot-based commander deck
+    in Magic the Gathering. There are a few parts to this combo:
+  </p>
+  <ul>
+    <li>
+      <a href="https://gatherer.wizards.com/DOM/en-us/205/slimefoot-the-stowaway">
+        Slimefoot, the Stowaway
+      </a>{" "}
+      (the commander) can create{" "}
+      <a href="https://gatherer.wizards.com/DDE/en-us/3/saproling">
+        Saprolings
+      </a>{" "}
+      (1/1 green tokens) for 4 colorless as an activated ability.
+    </li>
+    <li>
+      <a href="https://gatherer.wizards.com/CMM/en-us/368/ashnods-altar">
+        Ashnod's Altar
+      </a>
+      , can sacrifice said Saprolings to generate 2 colorless mana.
+    </li>
+    <li>
+      Slimefoot deals 1 damage to all opponents and heals you for 1 every time a
+      Saproling dies.
+    </li>
+  </ul>
+  <p>
+    It goes like this: you pile up a bunch of Saprolings, sacrifice them to the
+    altar, get mana, deal damage, heal, create more Saprolings, repeat. All of
+    this happens at instant speed. Once it starts, it's nearly impossible to
+    stop. If someone reacts to this process, you can simply react to them and
+    continue.
+  </p>
+  <p>
+    That's the base loop. There's plenty of stuff in the deck that can tweak
+    that. Some cards let you create Saprolings on the cheap, some give
+    additional effects on Saproling death or on sacrifice.
+  </p>
+  <!--
+    The mb-0 here is to simulate margin collapse. The calculator starts with a
+    grid to do a 2 column layout. This creates a Block Formatting Context which
+    means that the heading inside that grid can't margin collapse with our
+    paragraph here. There's no way to force this so we simulate it instead.
+  -->
+  <p class="mb-0">
+    The following is a calculator that simulates the combo. You put in how many
+    Saprolings you start with, how much they cost to create and how long you
+    want the simulation to go on for. That last setting is important when the
+    cost of creating a Saproling is less than or equal to 2 since the combo goes
+    infinite. It then tells you how long it goes on for, how many times
+    Slimefoot was triggered and how much mana you have left at the end of it.
+    You also get a table that shows you the simulation round by round.
+  </p>
   <SlimefootCalculator client:load />
 </Page>
