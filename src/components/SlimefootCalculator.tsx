@@ -22,9 +22,9 @@ export function SlimefootCalculator() {
       floatingMana = mana % summonCost;
       trace.push({
         Round: rounds + 1,
-        "Sacrificed Sapprolings": count,
+        "Sacrificed Saprolings": count,
         "Available Mana": mana,
-        "Summoned Sapprolings": created,
+        "Summoned Saprolings": created,
         "Floating Mana Leftover": floatingMana,
       });
       count = created;
@@ -45,7 +45,7 @@ export function SlimefootCalculator() {
         <div>
           <h2>Simulation Settings</h2>
           <div className="grid grid-cols-[auto_5rem] items-center justify-start gap-4">
-            <label htmlFor={initialCountId}>Initial Sapproling count:</label>
+            <label htmlFor={initialCountId}>Initial Saproling count:</label>
             <input
               className="rounded border border-gray-300 px-2 py-0.5"
               id={initialCountId}
@@ -55,7 +55,7 @@ export function SlimefootCalculator() {
               value={initialCount}
               onChange={(e) => setInitialCount(parseInt(e.target.value, 10))}
             />
-            <label htmlFor={summonCostId}>Sapproling mana cost:</label>
+            <label htmlFor={summonCostId}>Saproling mana cost:</label>
             <input
               className="rounded border border-gray-300 px-2 py-0.5"
               id={summonCostId}
