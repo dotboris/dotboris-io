@@ -6,32 +6,31 @@ description: What am I up to these days?
 
 # What am I up to these days?
 
-I've been working on
-[`standard-backups`](https://github.com/dotboris/standard-backups/) in my free
-time. It's a generic backup orchestration solution that's meant to work with any
-backup tool. I haven't been very satisfied with what's out there so I figured
-that I'd write my own. Before you ask, yes I've seen [xkcd
-#927](https://xkcd.com/927/).
+I'm currently preparing a presentation on homelabbing and self hosting for the
+Techno Drinks Sherbrooke meetup. There's no planned date yet. It's been a fun
+ride. I've built a toy homelab with [Docker](https://www.docker.com/) and
+[Dockhand](https://dockhand.pro/). I've also played around with
+[TrueNAS](https://www.truenas.com/) and
+[ZimaOS](https://www.zimaspace.com/zimaos). It's been a great learning
+experience and I hope to turns out great.
 
-It's still pretty early but it's in a working state and I'm already running it
-on my [home
-server](https://github.com/dotboris/homelab/blob/main/modules/backups/default.nix).
-I think I'm getting close to releasing a first v0 for a wider audience. It
-currently supports basic backup and restore. Also, it only works with
-[`restic`](https://restic.net/). I want to support more backup tools and I need
-to write docs and guides so that people other than me can use it.
-
-I've also been working on this website. I recently discovered the indie web and
-I've been falling in love. It's really great to see people building their own
-little corners of the internet. This has motivated me to put some more effort
-into my own website.
+I work on this website on and off. I try to keep up with it when I can. I've
+been enjoying the indie web and I wanted to take part in it. It's really great
+to see people building their own little corners of the internet. This has
+motivated me to put some more effort into my own website.
 
 I run a [home server](https://github.com/dotboris/homelab) where I host a bunch
-of services. It's been really fun to see how much I can host myself without
-relying on cloud-hosted-services that harvest your data. Right now I'm hosting
-files, contacts, calendars, todos, search, RSS feed aggregation, document
-archiving, and network-wide ad-blocking. It runs great and is super stable.
-Next, I want to be able to share this with friends and family.
+of services. It's an ongoing forever project. I keep making changes and adding
+stuff to it. Check out my [uses page](./uses.md) to see what I'm running on
+there. It's been really fun to see how much I can host myself without relying
+on cloud-hosted-services that harvest your data. I started sharing this setup
+with my family. It's a slow start but hopefully this is something that can
+become useful to them.
+
+My dad and I have a thing where we meet up every other week to work on tech
+projects. These days, we've been building him a homelab. I've been teaching him
+about docker, linux, and all those kinds of things. After that, he'll teach me
+about electronics and audio. We'll be building a small audio setup for my home.
 
 I'm part of the organizational committee for [Techno Drinks
 Sherbrooke](https://www.meetup.com/techno-drinks/). It's a monthly meetup in my
@@ -39,7 +38,25 @@ city about tech stuff. There's usually a couple of talks with some food and
 drinks. It's a great time. What I really like about it is the community that's
 growing around it. So far, I've given a few talks which I'm really proud of.
 
+## Reading
+
+Every once in a while I get into the mood for some reading. It's been a great
+way to learn new things and to relax. Currently, I'm reading through "Searching
+for Alaska" by John Green.
+
+Here are some of my past reads:
+
+- The Mysterious Affair at Styles by Agatha Christie
+- Team Topologies by Matthew Skelton and Manuel Pais
+- The Adventures of Sherlock Holmes by Arthur Conan Doyle
+
 ## Old stuff
+
+April 2026: I released a mostly stable v0 of
+[`standard-backups`](https://github.com/dotboris/standard-backups). It's a
+pluggable backup orchestrator that I built for myself. I wanted something that
+I could configure once and easily swap between backup tools. I've been running
+it since and it's been a good time.
 
 January 2026: I've been playing [Drova - Forsaken
 Kin](https://store.steampowered.com/app/1585180/Drova__Forsaken_Kin/) and I've

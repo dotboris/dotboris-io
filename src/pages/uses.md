@@ -6,13 +6,25 @@ description: Hardware, software, and gear that I use for work or fun.
 
 # Stuff I use
 
-For the curious, here's the hardware, software, and gear that I use for work and for fun. It's not an exhaustive list but it covers the stuff that matters to me and that you might like to know about. I try to keep a lot of this as reproducible as possible in my Nix based [config](https://github.com/dotboris/config). This mostly covers software. I don't think that Nix is super accessible for most people but you should be able to read the code and get an idea of how I configure certain things.
+For the curious, here's the hardware, software, and gear that I use for work
+and for fun. It's not an exhaustive list but it covers the stuff that matters
+to me and that you might like to know about. I try to keep a lot of this as
+reproducible as possible in my Nix based
+[config](https://github.com/dotboris/config). This mostly covers software. I
+don't think that Nix is super accessible for most people but you should be able
+to read the code and get an idea of how I configure certain things.
 
 ## Computers
 
-**Desktop**: This is my primary workstation. I use this to work on personal projects, for gaming, and to browse the web. I've been upgrading this desktop for years now. I don't remember what it originally was anymore. [Is it even the same computer?](https://en.wikipedia.org/wiki/Ship_of_Theseus) Who knows?
+**Desktop**: This is my primary workstation. I use this to work on personal
+projects, for gaming, and to browse the web. I've been upgrading this desktop
+for years now. I don't remember what it originally was anymore. [Is it even the
+same computer?](https://en.wikipedia.org/wiki/Ship_of_Theseus) Who knows?
 
-The coolest thing I can say about this is that I've been carrying over the same installation of Arch Linux for years now (I forget how many). It even survived a few disk migrations through the power of [LVM](https://wiki.archlinux.org/title/LVM).
+The coolest thing I can say about this is that I've been carrying over the same
+installation of Arch Linux for years now (I forget how many). It even survived
+a few disk migrations through the power of
+[LVM](https://wiki.archlinux.org/title/LVM).
 
 - CPU: AMD Ryzen 7 3800X (8 cores, 16 threads, 3.9GHz)
 - Memory: 32GB (DDR4 @ 3600MHz)
@@ -21,11 +33,23 @@ The coolest thing I can say about this is that I've been carrying over the same 
 - OS: Arch Linux
 - Desktop: KDE Plasma
 
-**Laptop**: This is the computer that I carry around with me. I use it to work on personal projects and to browse the web. While it can do some gaming, I don't use it for that. I originally bought this because I was getting sick of only having my phone as a portable computing device. It was a great decision. If you can afford it, I recommend getting a laptop, it's wonderful.
+**Laptop**: This is the computer that I carry around with me. I use it to work
+on personal projects and to browse the web. While it can do some gaming, I
+don't use it for that. I originally bought this because I was getting sick of
+only having my phone as a portable computing device. It was a great decision.
+If you can afford it, I recommend getting a laptop, it's wonderful.
 
-I usually bring my laptop when I visit friends and family. When things quiet down and we run out of things to talk about, I can pull out my laptop and do a little work. It lets me hang out with people even when we don't have an activity or things to talk about. It also lets us take a break and get back to hanging out.
+I usually bring my laptop when I visit friends and family. When things quiet
+down and we run out of things to talk about, I can pull out my laptop and do a
+little work. It lets me hang out with people even when we don't have an
+activity or things to talk about. It also lets us take a break and get back to
+hanging out.
 
-My laptop's configuration is managed through NixOS and Home Manager. If you want to see exactly how things are set up, check the [files on GitHub](https://github.com/dotboris/config/tree/main/profiles/foxtrot). The Nix syntax and modules might not be accessible to everyone but you can get a good idea of how I've set things up.
+My laptop's configuration is managed through NixOS and Home Manager. If you
+want to see exactly how things are set up, check the [files on
+GitHub](https://github.com/dotboris/config/tree/main/profiles/foxtrot). The Nix
+syntax and modules might not be accessible to everyone but you can get a good
+idea of how I've set things up.
 
 - [Framework 13](https://frame.work/ca/en/laptop13)
 - CPU: AMD Ryzen AI 5 350 (6 cores, 12 threads, up to 4.6GHz)
@@ -34,34 +58,57 @@ My laptop's configuration is managed through NixOS and Home Manager. If you want
 - OS: NixOS
 - Desktop: KDE Plasma
 
-**Home Server**: This is an old computer that I use to host services that I find useful. See the [self-hosted services](#self-hosted-services) section below to get an idea of which services I run. It's an old Dell OptiPlex 3050 micro computer I got for cheap at a thrift store.
+## Homelab
 
-The server's full configuration is managed through NixOS and configuration as code. See the [repo on GitHub](https://github.com/dotboris/homelab/) for the gory details.
+I run a few servers at home. Sometimes it's to host services and sometimes it's
+to play around.
+
+**Main services host**: This is an old computer that I use to host services
+that I find useful. See the [self-hosted services](#self-hosted-services)
+section below to get an idea of which services I run. It's an old Dell OptiPlex
+3050 micro computer I got for cheap at a thrift store.
+
+The server's full configuration is managed through NixOS and configuration as
+code. See the [repo on GitHub](https://github.com/dotboris/homelab/) for the
+gory details.
 
 - CPU: Intel i5-7500 (4 cores, 2.7GHz)
 - Memory: 8GB (DDR4 @ 2400MHz)
 - Storage: 250GB SSD
 - OS: NixOS
 
-Previously, I ran my home server on an old media PC with an Intel Q6600 CPU and 8GB of DDR2 RAM that my buddy gave me. This was truly an ancient computer but it served me well for a few years.
+Previously, I ran my home server on an old media PC with an Intel Q6600 CPU and
+8GB of DDR2 RAM that my buddy gave me. This was truly an ancient computer but
+it served me well for a few years.
+
+**Virtualized playground**: I use this server to run VMs and containers when I
+want to test out and experiment with software. It's built out of a bunch of
+borrowed or donated hardware from people around me. My buddy lent me his old
+media server case and my dad gave me pretty much everything else. There's one
+SSD in there that came from a computer that I got from the thrift store.
+
+- CPU: Intel i5-4460 (4 cores, 3.20GHz)
+- Memory: 8GB (DDR3 @ 1600MHz)
+- Storage: 128GB SSD + 1TB HDD + 1.5TB HDD
+- OS: Proxmox
 
 ## Software
 
 [Thunderbird]: https://www.thunderbird.net
 [Nextcloud]: https://nextcloud.com/
-[VSCodium]: https://vscodium.com/
+[NeoVim]: https://neovim.io/
 
-- Editor / IDE: [VSCodium], VSCode without all the Microsoft crap. ([config](https://github.com/dotboris/config/blob/main/modules/home/vscode/default.nix))
+- Editor / IDE: [NeoVim] ([config](https://github.com/dotboris/config/tree/main/modules/home/neovim))
 - Terminal: [Ghostty](https://ghostty.org/) ([config](https://github.com/dotboris/config/blob/main/modules/home/ghostty.nix))
 - Shell: [Fish](https://fishshell.com/) with nice CLI apps. ([config](https://github.com/dotboris/config/blob/main/modules/home/shell.nix))
 - Search Engine: [SearXNG](https://searxng.org/), searches across multiple search engines and prevents them from tracking me.
 - Browser: [Firefox](https://www.firefox.com/) and [Zen Browser](https://zen-browser.app/).
 - Files: [Nextcloud] synced through their desktop and mobile apps.
 - Photos: [Nextcloud] synced through the mobile app.
-- Email: [Thunderbird] with Gmail. (I need to switch to something else.)
+- Email: [Thunderbird] with StartMail. (I've been slowly switching off Gmail.)
 - Calendar: [Thunderbird] on desktop + [Fossify Calendar](https://github.com/FossifyOrg/Calendar) on mobile + [Nextcloud] as the backend.
 - Todos: [Thunderbird] on desktop + [Tasks.org](https://tasks.org/) on mobile + [Nextcloud] as the backend.
-- Notes: Markdown files edited in [VSCodium] and synced to [Nextcloud].
+- Notes: Markdown files edited in [NeoVim] and synced to [Nextcloud].
 - Office suite: [Libreoffice](https://www.libreoffice.org/) with files synced to [Nextcloud].
 - Password manager: KeePass files synced through [Nextcloud]. ([KeePassXC](https://keepassxc.org/) on desktop, [Keepass2Android](https://github.com/PhilippC/keepass2android) on mobile)
 - Feed Reader: [FreshRSS](https://freshrss.org/) in my browser.
@@ -70,9 +117,16 @@ Previously, I ran my home server on an old media PC with an Intel Q6600 CPU and 
 
 ## Self-hosted services
 
-I host a bunch of services on my home server. This lets me escape the clutches of big tech and lets me control my data. As big tech has been trying more and more to push junk down our throats and milk us for every penny, it's nice to have this oasis of freedom. When I'm at home, I can connect to the server directly. When I'm on the go (laptop, phone, tablet), I use [Tailscale](https://tailscale.com/) for remote access.
+I host a bunch of services on my home server. This lets me escape the clutches
+of big tech and lets me control my data. As big tech has been trying more and
+more to push junk down our throats and milk us for every penny, it's nice to
+have this oasis of freedom. When I'm at home, I can connect to the server
+directly. When I'm on the go (laptop, phone, tablet), I use
+[Tailscale](https://tailscale.com/) for remote access.
 
-This server's configuration is all managed as code through NixOS. You can see the details in the [repo on GitHub](https://github.com/dotboris/homelab/). Here are the different services / features that I host on my home server:
+This server's configuration is all managed as code through NixOS. You can see
+the details in the [repo on GitHub](https://github.com/dotboris/homelab/). Here
+are the different services / features that I host on my home server:
 
 - Network-wide ad-blocking. ([config](https://github.com/dotboris/homelab/blob/main/modules/dns/default.nix))
 - [Nextcloud]: Files, calendar, contacts, todos, bookmarks. ([config](https://github.com/dotboris/homelab/blob/main/modules/nextcloud/default.nix))
@@ -81,8 +135,10 @@ This server's configuration is all managed as code through NixOS. You can see th
 - [FreshRSS](https://freshrss.org/): Feed reader. ([config](https://github.com/dotboris/homelab/blob/main/modules/feeds/default.nix))
 - Backups: [Standard Backups](https://github.com/dotboris/standard-backups) with [Restic](https://restic.net/). ([config](https://github.com/dotboris/homelab/blob/main/modules/backups/default.nix))
 - [Navidrome](https://www.navidrome.org/): Music streaming. ([config](https://github.com/dotboris/homelab/blob/main/modules/music/default.nix))
+- [Forgejo](https://forgejo.org/): Software forge hosting some of my personal projects. ([config](https://github.com/dotboris/homelab/tree/main/modules/code))
 
-For those curious about the inner workings, here are some of the behind-the-scenes pieces:
+For those curious about the inner workings, here are some of the
+behind-the-scenes pieces:
 
 - DNS Server: [CoreDNS](https://coredns.io/) ([config](https://github.com/dotboris/homelab/blob/main/modules/dns/default.nix))
 - Reverse Proxy: [Traefik](https://traefik.io/) ([config](https://github.com/dotboris/homelab/blob/main/modules/reverse-proxy/default.nix))
