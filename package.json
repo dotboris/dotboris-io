@@ -17,7 +17,7 @@
     "check:lint": "astro sync && eslint .",
     "check:astro": "astro check"
   },
-  "packageManager": "pnpm@12.5.1",
+  "packageManager": "pnpm@12.7.0",
   "dependencies": {
     "@astrojs/mdx": "^7.0.8",
     "@astrojs/rss": "^4.0.19",
@@ -45,21 +45,21 @@
     "@types/lodash-es": "^4.17.12",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "astro": "^7.3.3",
+    "astro": "^7.3.5",
     "eslint": "^10.11.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^3.2.1",
     "husky": "^9.1.7",
     "lint-staged": "^17.5.1",
-    "prettier": "^3.9.8",
-    "prettier-plugin-astro": "^1.0.1",
+    "prettier": "^3.9.9",
+    "prettier-plugin-astro": "^1.1.0",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "sharp": "^0.35.4",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.70.0",
+    "typescript-eslint": "^8.70.1",
     "vite": "^7.3.6",
-    "vitest": "^5.0.1"
+    "vitest": "^5.0.2"
   },
   "lint-staged": {
     "*.{ts,tsx,mjs,cjs,js,jsx,json,astro,css,md}": [
