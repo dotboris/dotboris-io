@@ -50,7 +50,6 @@ export class Simulation {
     // Update
     this.moveAnt(turn);
     this.cells[index] = newCell;
-    console.log(this);
   }
 
   private moveAnt(turn: 1 | -1) {
