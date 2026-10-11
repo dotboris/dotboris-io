@@ -37,7 +37,7 @@ export function LangtonsAnt() {
     return () => {
       clearInterval(handle);
     };
-  }, []);
+  }, [simulation]);
 
   return (
     <div>
