@@ -16,7 +16,9 @@ export class Simulation {
   constructor(w: number, h: number) {
     this.width = w;
     this.height = h;
-    this.antDirection = "up";
+    // Start on left so that the first move is to turn clockwise and so it'll
+    // start going up.
+    this.antDirection = "left";
     this.antX = Math.floor(this.width / 2);
     this.antY = Math.floor(this.height / 2);
     this.cells = new Uint8Array(this.width * this.height);
@@ -80,11 +82,13 @@ export class Simulation {
       }
     }
     this.antDirection = newDirection;
-    this.antX = clamp(antX, 0, this.width);
-    this.antY = clamp(antY, 0, this.height);
+    this.antX = wrap(antX, 0, this.width);
+    this.antY = wrap(antY, 0, this.height);
   }
 }
 
-function clamp(n: number, min: number, max: number): number {
-  return Math.min(Math.max(n, min), max);
+function wrap(n: number, min: number, max: number) {
+  if (n < min) return max - 1;
+  if (n >= max) return min;
+  return n;
 }
