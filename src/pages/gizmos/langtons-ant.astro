@@ -3,7 +3,25 @@ import Page from "../../layouts/Page.astro";
 import { LangtonsAnt } from "../../components/LangtonsAnt";
 ---
 
-<Page title="Langon's Ant" description="TODO">
+<Page
+  title="Langon's Ant"
+  description="Cellular automaton that simulates an ant moving around. Interesting behaviour emerges from its simple movement rules."
+>
   <h1>Langton's Ant</h1>
   <LangtonsAnt client:idle />
+  <p>
+    <a href="https://en.wikipedia.org/wiki/Langton%27s_ant">Langton's ant</a> is
+    a 2D{" "}
+    <a href="https://en.wikipedia.org/wiki/Cellular_automaton">
+      ceullular automaton
+    </a>{" "}
+    that simulates an ant moving around. The simulation follows very simple
+    rules from which interesting behaviour emerges. Every turn, the ant (pink
+    square) turns, flips the color of the cell and moves forward. The direction
+    of the turn is based on the color of the cell the ant is on:
+  </p>
+  <ul>
+    <li>When on a white square, it turns 90 degrees clockwise.</li>
+    <li>When on a black square, it turns 90 degrees counter-clockwise.</li>
+  </ul>
 </Page>

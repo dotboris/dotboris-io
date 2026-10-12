@@ -82,7 +82,7 @@ export function LangtonsAnt() {
         width={canvasWidth}
         height={canvasHeight}
       />
-      <div className="flex flex-1 flex-col gap-2">
+      <div className="flex grow flex-col gap-2">
         <label className="flex items-center gap-2">
           <span>Speed:</span>
           <Slider

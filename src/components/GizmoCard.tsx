@@ -15,11 +15,11 @@ export function GizmoCard(props: {
   slug: string;
 }) {
   return (
-    <Card>
+    <Card className="flex flex-col">
       <CardHeader>
         <CardTitle>{props.title}</CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className="grow">
         <CardDescription>{props.description}</CardDescription>
       </CardContent>
       <CardFooter>
