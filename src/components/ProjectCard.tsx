@@ -1,9 +1,16 @@
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./Card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./Card";
 import { Button } from "./Button";
 import { Badge } from "./Badge";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "../classnames";
+import { cn } from "cn";
 
 export interface ProjectCardProps {
   title: string;
@@ -42,7 +49,9 @@ export function ProjectCard({
           )}
         </CardTitle>
       </CardHeader>
-      <CardContent className="grow">{description}</CardContent>
+      <CardContent className="grow">
+        <CardDescription>{description}</CardDescription>
+      </CardContent>
       <CardFooter>
         <Button size="lg" asChild>
           <a

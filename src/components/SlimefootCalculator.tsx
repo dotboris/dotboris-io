@@ -1,4 +1,5 @@
 import { useId, useMemo, useState } from "react";
+import { Input } from "./Input";
 
 export function SlimefootCalculator() {
   const [initialCount, setInitialCount] = useState(8);
@@ -46,8 +47,7 @@ export function SlimefootCalculator() {
           <h2>Simulation Settings</h2>
           <div className="grid grid-cols-[auto_5rem] items-center justify-start gap-4">
             <label htmlFor={initialCountId}>Initial Saproling count:</label>
-            <input
-              className="rounded border border-gray-300 px-2 py-0.5"
+            <Input
               id={initialCountId}
               type="number"
               min="1"
@@ -56,8 +56,7 @@ export function SlimefootCalculator() {
               onChange={(e) => setInitialCount(parseInt(e.target.value, 10))}
             />
             <label htmlFor={summonCostId}>Saproling mana cost:</label>
-            <input
-              className="rounded border border-gray-300 px-2 py-0.5"
+            <Input
               id={summonCostId}
               type="number"
               min="1"
@@ -66,8 +65,7 @@ export function SlimefootCalculator() {
               onChange={(e) => setSummonCost(parseInt(e.target.value, 10))}
             />
             <label htmlFor={maxRoundsId}>Max simulation rounds:</label>
-            <input
-              className="rounded border border-gray-300 px-2 py-0.5"
+            <Input
               id={maxRoundsId}
               type="number"
               min="1"

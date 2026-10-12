@@ -1,4 +1,4 @@
-import { cn } from "../classnames";
+import { cn } from "cn";
 
 export function PublishDate({
   className,
