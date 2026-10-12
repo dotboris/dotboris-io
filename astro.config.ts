@@ -7,7 +7,7 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://dotboris.io",
-  integrations: [mdx(), react(), sitemap()],
+  integrations: [mdx(), react({ compiler: true }), sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },
