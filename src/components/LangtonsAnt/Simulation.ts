@@ -30,7 +30,7 @@ export class Simulation {
   }
 
   cell(x: number, y: number) {
-    const index = x * this.width + y;
+    const index = y * this.width + x;
     const value = this.cells[index];
     return { index, value };
   }

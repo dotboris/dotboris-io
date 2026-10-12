@@ -3,7 +3,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./Card";
 import { Button } from "./Button";
 import { Badge } from "./Badge";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "../classnames";
+import { cn } from "cn";
 
 export interface ProjectCardProps {
   title: string;

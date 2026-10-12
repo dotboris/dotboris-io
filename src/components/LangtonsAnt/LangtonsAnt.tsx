@@ -1,21 +1,32 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Simulation } from "./Simulation";
-
-const CELL_SIZE = 6;
+import { Slider } from "../Slider";
+import { Button } from "../Button";
+import { ReloadIcon } from "@radix-ui/react-icons";
+import { Input } from "../Input";
 
 export function LangtonsAnt() {
   const canvas = useRef<HTMLCanvasElement>(null);
-  const [simulation] = useState(() => new Simulation(100, 100));
+  const [width, setWidth] = useState(128);
+  const [height, setHeight] = useState(128);
+  const [simulation, setSimulation] = useState(
+    () => new Simulation(width, height),
+  );
+  const reset = useCallback(
+    () => setSimulation(new Simulation(width, height)),
+    [width, height],
+  );
   const [speed, setSpeed] = useState(10);
+  const [cellSize, setCellSize] = useState(8);
 
-  const canvasWidth = simulation.width * CELL_SIZE;
-  const canvasHeight = simulation.height * CELL_SIZE;
+  const canvasWidth = simulation.width * cellSize;
+  const canvasHeight = simulation.height * cellSize;
 
   useEffect(() => {
     const styles = getComputedStyle(document.documentElement);
-    const antColor = styles.getPropertyValue("--color-red-500");
-    const cellColor = styles.getPropertyValue("--color-gray-800");
-    const gridColor = styles.getPropertyValue("--color-gray-400");
+    const antColor = styles.getPropertyValue("--color-rose-300");
+    const cellColor = styles.getPropertyValue("--color-neutral-700");
+    const gridColor = styles.getPropertyValue("--color-neutral-300");
 
     const handle = setInterval(
       () => {
@@ -30,12 +41,12 @@ export function LangtonsAnt() {
         ctx.strokeStyle = gridColor;
         ctx.beginPath();
         for (let x = 1; x < simulation.width; x += 1) {
-          ctx.moveTo(x * CELL_SIZE, 0);
-          ctx.lineTo(x * CELL_SIZE, canvasHeight);
+          ctx.moveTo(x * cellSize, 0);
+          ctx.lineTo(x * cellSize, canvasHeight);
         }
         for (let y = 1; y < simulation.height; y += 1) {
-          ctx.moveTo(0, y * CELL_SIZE);
-          ctx.lineTo(canvasWidth, y * CELL_SIZE);
+          ctx.moveTo(0, y * cellSize);
+          ctx.lineTo(canvasWidth, y * cellSize);
         }
         ctx.stroke();
 
@@ -43,17 +54,17 @@ export function LangtonsAnt() {
         for (let x = 0; x < simulation.width; x += 1) {
           for (let y = 0; y < simulation.height; y += 1) {
             if (simulation.cell(x, y).value === 1) {
-              ctx.fillRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
+              ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
             }
           }
         }
 
         ctx.fillStyle = antColor;
         ctx.fillRect(
-          simulation.ant.x * CELL_SIZE,
-          simulation.ant.y * CELL_SIZE,
-          CELL_SIZE,
-          CELL_SIZE,
+          simulation.ant.x * cellSize,
+          simulation.ant.y * cellSize,
+          cellSize,
+          cellSize,
         );
       },
       (10 - speed) * 25,
@@ -61,33 +72,61 @@ export function LangtonsAnt() {
     return () => {
       clearInterval(handle);
     };
-  }, [simulation, speed]);
+  }, [simulation, speed, cellSize]);
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 lg:flex-row">
       <canvas
+        className="rounded border border-neutral-300 lg:w-3xl"
         ref={canvas}
         width={canvasWidth}
         height={canvasHeight}
-        className="w-full"
-        style={{
-          maxWidth: canvasWidth,
-        }}
       />
-      <div>
+      <div className="flex flex-1 flex-col gap-2">
         <label className="flex items-center gap-2">
           <span>Speed:</span>
-          <input
-            className="rounded border border-gray-500 px-2 py-0.5"
-            type="number"
-            min="1"
-            max="10"
-            value={speed}
-            onChange={(event) => {
-              setSpeed(event.target.valueAsNumber);
+          <Slider
+            min={1}
+            max={10}
+            value={[speed]}
+            onValueChange={([v]) => setSpeed(v)}
+          />
+        </label>
+        <label className="flex items-center gap-2">
+          <span className="text-nowrap">Cell Size:</span>
+          <Slider
+            min={2}
+            max={16}
+            value={[cellSize]}
+            onValueChange={([v]) => {
+              setCellSize(v);
             }}
           />
         </label>
+        <div className="flex items-center gap-2">
+          <span>Size:</span>
+          <Input
+            className="w-full md:w-32 lg:w-full"
+            type="number"
+            min={1}
+            max={256}
+            value={width}
+            onChange={(e) => setWidth(e.target.valueAsNumber)}
+          />
+          <span>x</span>
+          <Input
+            className="w-full md:w-32 lg:w-full"
+            type="number"
+            min={1}
+            max={256}
+            value={height}
+            onChange={(e) => setHeight(e.target.valueAsNumber)}
+          />
+        </div>
+        <Button className="flex gap-2" type="button" onClick={() => reset()}>
+          <ReloadIcon />
+          Restart Simulation
+        </Button>
       </div>
     </div>
   );

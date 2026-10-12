@@ -1,4 +1,4 @@
-import { cn } from "../../classnames";
+import { cn } from "cn";
 import { chatStore } from "./chatStore";
 import { useSelector } from "@xstate/store-react";
 
